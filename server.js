@@ -1,83 +1,369 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { DatabaseSync } = require('node:sqlite');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// Initialize SQLite database
-const dbPath = process.env.DB_PATH || path.join(__dirname, 'scheduler.db');
-const dbDir = path.dirname(dbPath);
-if (!fs.existsSync(dbDir)) {
-  fs.mkdirSync(dbDir, { recursive: true });
-}
-const db = new DatabaseSync(dbPath);
-
-// Enable WAL mode & foreign keys
-db.exec('PRAGMA journal_mode = WAL;');
-db.exec('PRAGMA foreign_keys = ON;');
-
-// Create tables
-db.exec(`
-  CREATE TABLE IF NOT EXISTS groups (
-    id TEXT PRIMARY KEY,
-    group_name TEXT NOT NULL,
-    repo TEXT NOT NULL,
-    repo_short TEXT NOT NULL,
-    issues_json TEXT NOT NULL,
-    count INTEGER NOT NULL,
-    booked_by TEXT DEFAULT NULL,
-    booked_at TEXT DEFAULT NULL,
-    device_id TEXT DEFAULT NULL
-  );
-
-  CREATE TABLE IF NOT EXISTS reservations (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    group_id TEXT NOT NULL UNIQUE,
-    username TEXT NOT NULL COLLATE NOCASE UNIQUE,
-    device_id TEXT NOT NULL UNIQUE,
-    created_at TEXT NOT NULL,
-    FOREIGN KEY(group_id) REFERENCES groups(id)
-  );
-`);
-
-// Seed groups if not present
 const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'groups.json'), 'utf8'));
-const insertGroupStmt = db.prepare(`
-  INSERT OR IGNORE INTO groups (id, group_name, repo, repo_short, issues_json, count)
-  VALUES (?, ?, ?, ?, ?, ?)
-`);
 
-for (const item of seedData) {
-  insertGroupStmt.run(
-    item.id,
-    item.group_name,
-    item.repo,
-    item.repo_short,
-    JSON.stringify(item.issues),
-    item.count
-  );
+// Database Adapter (PostgreSQL if DATABASE_URL is set, else SQLite)
+let dbAdapter;
+
+if (process.env.DATABASE_URL) {
+  const { Pool } = require('pg');
+  const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+  });
+
+  dbAdapter = {
+    type: 'postgres',
+    async init() {
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS groups (
+          id TEXT PRIMARY KEY,
+          group_name TEXT NOT NULL,
+          repo TEXT NOT NULL,
+          repo_short TEXT NOT NULL,
+          issues_json TEXT NOT NULL,
+          count INTEGER NOT NULL,
+          booked_by TEXT DEFAULT NULL,
+          booked_at TEXT DEFAULT NULL,
+          device_id TEXT DEFAULT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS reservations (
+          id SERIAL PRIMARY KEY,
+          group_id TEXT NOT NULL UNIQUE REFERENCES groups(id),
+          username TEXT NOT NULL,
+          device_id TEXT NOT NULL UNIQUE,
+          created_at TEXT NOT NULL
+        );
+
+        CREATE UNIQUE INDEX IF NOT EXISTS idx_res_user_lower ON reservations (LOWER(username));
+      `);
+
+      // Seed missing groups if needed
+      const countRes = await pool.query('SELECT COUNT(*) FROM groups');
+      if (parseInt(countRes.rows[0].count) < seedData.length) {
+        for (const item of seedData) {
+          await pool.query(
+            `INSERT INTO groups (id, group_name, repo, repo_short, issues_json, count)
+             VALUES ($1, $2, $3, $4, $5, $6)
+             ON CONFLICT (id) DO NOTHING`,
+            [item.id, item.group_name, item.repo, item.repo_short, JSON.stringify(item.issues), item.count]
+          );
+        }
+      }
+      console.log('Connected to PostgreSQL (Neon). Seed verification complete.');
+    },
+
+    async getGroups() {
+      const res = await pool.query(`
+        SELECT id, group_name, repo, repo_short, issues_json, count, booked_by, booked_at
+        FROM groups
+        ORDER BY repo_short ASC, id ASC
+      `);
+      return res.rows.map(r => ({
+        id: r.id,
+        group_name: r.group_name,
+        repo: r.repo,
+        repo_short: r.repo_short,
+        issues: JSON.parse(r.issues_json),
+        count: r.count,
+        booked_by: r.booked_by,
+        booked_at: r.booked_at,
+        is_available: r.booked_by === null
+      }));
+    },
+
+    async getUserStatus(username, deviceId) {
+      if (deviceId) {
+        const dev = await pool.query(
+          `SELECT r.*, g.group_name, g.repo, g.issues_json
+           FROM reservations r JOIN groups g ON r.group_id = g.id
+           WHERE r.device_id = $1`,
+          [deviceId]
+        );
+        if (dev.rows.length > 0) {
+          const r = dev.rows[0];
+          return { has_booked: true, reason: 'device_limit', reservation: {
+            group_id: r.group_id, group_name: r.group_name, username: r.username,
+            repo: r.repo, issues: JSON.parse(r.issues_json), created_at: r.created_at
+          }};
+        }
+      }
+
+      if (username) {
+        const usr = await pool.query(
+          `SELECT r.*, g.group_name, g.repo, g.issues_json
+           FROM reservations r JOIN groups g ON r.group_id = g.id
+           WHERE LOWER(r.username) = LOWER($1)`,
+          [username]
+        );
+        if (usr.rows.length > 0) {
+          const r = usr.rows[0];
+          return { has_booked: true, reason: 'username_limit', reservation: {
+            group_id: r.group_id, group_name: r.group_name, username: r.username,
+            repo: r.repo, issues: JSON.parse(r.issues_json), created_at: r.created_at
+          }};
+        }
+      }
+
+      return { has_booked: false, reservation: null };
+    },
+
+    async book(groupId, username, deviceId, nowIso) {
+      const client = await pool.connect();
+      try {
+        await client.query('BEGIN');
+
+        // Check device
+        const devCheck = await client.query('SELECT * FROM reservations WHERE device_id = $1', [deviceId]);
+        if (devCheck.rows.length > 0) {
+          await client.query('ROLLBACK');
+          return { error: `This device has already reserved group "${devCheck.rows[0].group_id}". 1 booking per device allowed.` };
+        }
+
+        // Check user
+        const userCheck = await client.query('SELECT * FROM reservations WHERE LOWER(username) = LOWER($1)', [username]);
+        if (userCheck.rows.length > 0) {
+          await client.query('ROLLBACK');
+          return { error: `Contributor "${username}" has already reserved group "${userCheck.rows[0].group_id}". 1 booking allowed.` };
+        }
+
+        // Check group
+        const grpCheck = await client.query('SELECT * FROM groups WHERE id = $1 FOR UPDATE', [groupId]);
+        if (grpCheck.rows.length === 0) {
+          await client.query('ROLLBACK');
+          return { notFound: true };
+        }
+        if (grpCheck.rows[0].booked_by !== null) {
+          await client.query('ROLLBACK');
+          return { error: `Group already claimed by @${grpCheck.rows[0].booked_by}. Choose another group.` };
+        }
+
+        await client.query(
+          'INSERT INTO reservations (group_id, username, device_id, created_at) VALUES ($1, $2, $3, $4)',
+          [groupId, username, deviceId, nowIso]
+        );
+
+        await client.query(
+          'UPDATE groups SET booked_by = $1, booked_at = $2, device_id = $3 WHERE id = $4',
+          [username, nowIso, deviceId, groupId]
+        );
+
+        await client.query('COMMIT');
+        return {
+          group_name: grpCheck.rows[0].group_name,
+          repo: grpCheck.rows[0].repo,
+          issues: JSON.parse(grpCheck.rows[0].issues_json)
+        };
+      } catch (err) {
+        await client.query('ROLLBACK');
+        throw err;
+      } finally {
+        client.release();
+      }
+    },
+
+    async getAdminReservations() {
+      const rows = await pool.query(`
+        SELECT r.id as reservation_id, r.group_id, g.group_name, g.repo, g.issues_json, r.username, r.device_id, r.created_at
+        FROM reservations r JOIN groups g ON r.group_id = g.id
+        ORDER BY r.created_at DESC
+      `);
+      const totalGroups = (await pool.query('SELECT COUNT(*) as count FROM groups')).rows[0].count;
+      return {
+        total_groups: parseInt(totalGroups, 10),
+        total_reserved: rows.rows.length,
+        available_count: parseInt(totalGroups, 10) - rows.rows.length,
+        reservations: rows.rows.map(r => ({
+          reservation_id: r.reservation_id,
+          group_id: r.group_id,
+          group_name: r.group_name,
+          repo: r.repo,
+          issues: JSON.parse(r.issues_json),
+          username: r.username,
+          device_id: r.device_id,
+          created_at: r.created_at
+        }))
+      };
+    },
+
+    async release(groupId) {
+      const existing = (await pool.query('SELECT * FROM groups WHERE id = $1', [groupId])).rows[0];
+      if (!existing || !existing.booked_by) return null;
+
+      const client = await pool.connect();
+      try {
+        await client.query('BEGIN');
+        await client.query('DELETE FROM reservations WHERE group_id = $1', [groupId]);
+        await client.query('UPDATE groups SET booked_by = NULL, booked_at = NULL, device_id = NULL WHERE id = $1', [groupId]);
+        await client.query('COMMIT');
+        return existing;
+      } catch (e) {
+        await client.query('ROLLBACK');
+        throw e;
+      } finally {
+        client.release();
+      }
+    }
+  };
+
+} else {
+  // SQLite Fallback
+  const { DatabaseSync } = require('node:sqlite');
+  const dbPath = process.env.DB_PATH || path.join(__dirname, 'scheduler.db');
+  const db = new DatabaseSync(dbPath);
+
+  db.exec('PRAGMA journal_mode = WAL;');
+  db.exec('PRAGMA foreign_keys = ON;');
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS groups (
+      id TEXT PRIMARY KEY,
+      group_name TEXT NOT NULL,
+      repo TEXT NOT NULL,
+      repo_short TEXT NOT NULL,
+      issues_json TEXT NOT NULL,
+      count INTEGER NOT NULL,
+      booked_by TEXT DEFAULT NULL,
+      booked_at TEXT DEFAULT NULL,
+      device_id TEXT DEFAULT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS reservations (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      group_id TEXT NOT NULL UNIQUE,
+      username TEXT NOT NULL COLLATE NOCASE UNIQUE,
+      device_id TEXT NOT NULL UNIQUE,
+      created_at TEXT NOT NULL,
+      FOREIGN KEY(group_id) REFERENCES groups(id)
+    );
+  `);
+
+  const insertGroupStmt = db.prepare(`
+    INSERT OR IGNORE INTO groups (id, group_name, repo, repo_short, issues_json, count)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `);
+
+  for (const item of seedData) {
+    insertGroupStmt.run(item.id, item.group_name, item.repo, item.repo_short, JSON.stringify(item.issues), item.count);
+  }
+
+  dbAdapter = {
+    type: 'sqlite',
+    async init() {
+      console.log(`Connected to SQLite at ${dbPath}`);
+    },
+    async getGroups() {
+      const rows = db.prepare(`
+        SELECT id, group_name, repo, repo_short, issues_json, count, booked_by, booked_at
+        FROM groups ORDER BY repo_short ASC, id ASC
+      `).all();
+      return rows.map(r => ({
+        id: r.id, group_name: r.group_name, repo: r.repo, repo_short: r.repo_short,
+        issues: JSON.parse(r.issues_json), count: r.count, booked_by: r.booked_by,
+        booked_at: r.booked_at, is_available: r.booked_by === null
+      }));
+    },
+    async getUserStatus(username, deviceId) {
+      if (deviceId) {
+        const dev = db.prepare(`
+          SELECT r.*, g.group_name, g.repo, g.issues_json
+          FROM reservations r JOIN groups g ON r.group_id = g.id WHERE r.device_id = ?
+        `).get(deviceId);
+        if (dev) {
+          return { has_booked: true, reason: 'device_limit', reservation: {
+            group_id: dev.group_id, group_name: dev.group_name, username: dev.username,
+            repo: dev.repo, issues: JSON.parse(dev.issues_json), created_at: dev.created_at
+          }};
+        }
+      }
+      if (username) {
+        const usr = db.prepare(`
+          SELECT r.*, g.group_name, g.repo, g.issues_json
+          FROM reservations r JOIN groups g ON r.group_id = g.id WHERE r.username = ? COLLATE NOCASE
+        `).get(username);
+        if (usr) {
+          return { has_booked: true, reason: 'username_limit', reservation: {
+            group_id: usr.group_id, group_name: usr.group_name, username: usr.username,
+            repo: usr.repo, issues: JSON.parse(usr.issues_json), created_at: usr.created_at
+          }};
+        }
+      }
+      return { has_booked: false, reservation: null };
+    },
+    async book(groupId, username, deviceId, nowIso) {
+      const existingDevice = db.prepare('SELECT * FROM reservations WHERE device_id = ?').get(deviceId);
+      if (existingDevice) return { error: `This device has already reserved "${existingDevice.group_id}". 1 booking allowed.` };
+
+      const existingUser = db.prepare('SELECT * FROM reservations WHERE username = ? COLLATE NOCASE').get(username);
+      if (existingUser) return { error: `Contributor "${username}" has already reserved "${existingUser.group_id}". 1 booking allowed.` };
+
+      const targetGroup = db.prepare('SELECT * FROM groups WHERE id = ?').get(groupId);
+      if (!targetGroup) return { notFound: true };
+      if (targetGroup.booked_by !== null) return { error: `Group already claimed by @${targetGroup.booked_by}. Choose another group.` };
+
+      db.exec('BEGIN TRANSACTION;');
+      try {
+        db.prepare('INSERT INTO reservations (group_id, username, device_id, created_at) VALUES (?, ?, ?, ?)').run(groupId, username, deviceId, nowIso);
+        db.prepare('UPDATE groups SET booked_by = ?, booked_at = ?, device_id = ? WHERE id = ?').run(username, nowIso, deviceId, groupId);
+        db.exec('COMMIT;');
+      } catch (e) {
+        db.exec('ROLLBACK;');
+        throw e;
+      }
+      return {
+        group_name: targetGroup.group_name, repo: targetGroup.repo, issues: JSON.parse(targetGroup.issues_json)
+      };
+    },
+    async getAdminReservations() {
+      const rows = db.prepare(`
+        SELECT r.id as reservation_id, r.group_id, g.group_name, g.repo, g.issues_json, r.username, r.device_id, r.created_at
+        FROM reservations r JOIN groups g ON r.group_id = g.id ORDER BY r.created_at DESC
+      `).all();
+      const totalGroups = db.prepare('SELECT COUNT(*) as count FROM groups').get().count;
+      return {
+        total_groups: totalGroups, total_reserved: rows.length, available_count: totalGroups - rows.length,
+        reservations: rows.map(r => ({
+          reservation_id: r.reservation_id, group_id: r.group_id, group_name: r.group_name,
+          repo: r.repo, issues: JSON.parse(r.issues_json), username: r.username,
+          device_id: r.device_id, created_at: r.created_at
+        }))
+      };
+    },
+    async release(groupId) {
+      const existing = db.prepare('SELECT * FROM groups WHERE id = ?').get(groupId);
+      if (!existing || !existing.booked_by) return null;
+      db.exec('BEGIN TRANSACTION;');
+      try {
+        db.prepare('DELETE FROM reservations WHERE group_id = ?').run(groupId);
+        db.prepare('UPDATE groups SET booked_by = NULL, booked_at = NULL, device_id = NULL WHERE id = ?').run(groupId);
+        db.exec('COMMIT;');
+        return existing;
+      } catch (e) {
+        db.exec('ROLLBACK;');
+        throw e;
+      }
+    }
+  };
 }
 
+// App middlewares & routes
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Server-Sent Events (SSE) Client List
+// SSE
 const sseClients = new Set();
-
 function broadcastEvent(eventType, data) {
   const payload = `event: ${eventType}\ndata: ${JSON.stringify(data)}\n\n`;
   for (const client of sseClients) {
-    try {
-      client.write(payload);
-    } catch (err) {
-      sseClients.delete(client);
-    }
+    try { client.write(payload); } catch (e) { sseClients.delete(client); }
   }
 }
 
-// SSE stream endpoint
 app.get('/api/events', (req, res) => {
   res.writeHead(200, {
     'Content-Type': 'text/event-stream',
@@ -86,189 +372,67 @@ app.get('/api/events', (req, res) => {
     'Access-Control-Allow-Origin': '*'
   });
   res.write(': connected\n\n');
-
   sseClients.add(res);
-
-  // Keep-alive heartbeat every 20 seconds
-  const heartbeat = setInterval(() => {
-    res.write(': heartbeat\n\n');
-  }, 20000);
-
-  req.on('close', () => {
-    clearInterval(heartbeat);
-    sseClients.delete(res);
-  });
+  const hb = setInterval(() => res.write(': heartbeat\n\n'), 20000);
+  req.on('close', () => { clearInterval(hb); sseClients.delete(res); });
 });
 
-// GET /api/groups - List all groups with availability
-app.get('/api/groups', (req, res) => {
+// GET /api/groups
+app.get('/api/groups', async (req, res) => {
   try {
-    const rows = db.prepare(`
-      SELECT id, group_name, repo, repo_short, issues_json, count, booked_by, booked_at
-      FROM groups
-      ORDER BY repo_short ASC, id ASC
-    `).all();
-
-    const result = rows.map(r => ({
-      id: r.id,
-      group_name: r.group_name,
-      repo: r.repo,
-      repo_short: r.repo_short,
-      issues: JSON.parse(r.issues_json),
-      count: r.count,
-      booked_by: r.booked_by,
-      booked_at: r.booked_at,
-      is_available: r.booked_by === null
-    }));
-
-    res.json({ success: true, groups: result });
+    const groups = await dbAdapter.getGroups();
+    res.json({ success: true, groups });
   } catch (err) {
+    console.error('getGroups error:', err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-// GET /api/user-status - Check if username or device has booked
-app.get('/api/user-status', (req, res) => {
+// GET /api/user-status
+app.get('/api/user-status', async (req, res) => {
   const username = (req.query.username || '').trim();
   const device_id = (req.query.device_id || '').trim();
-
-  if (!device_id) {
-    return res.status(400).json({ success: false, error: 'device_id is required' });
-  }
+  if (!device_id) return res.status(400).json({ success: false, error: 'device_id is required' });
 
   try {
-    // Check device reservation
-    const deviceRes = db.prepare(`
-      SELECT r.*, g.group_name, g.repo, g.issues_json 
-      FROM reservations r 
-      JOIN groups g ON r.group_id = g.id 
-      WHERE r.device_id = ?
-    `).get(device_id);
-
-    if (deviceRes) {
-      return res.json({
-        has_booked: true,
-        reason: 'device_limit',
-        reservation: {
-          group_id: deviceRes.group_id,
-          group_name: deviceRes.group_name,
-          username: deviceRes.username,
-          repo: deviceRes.repo,
-          issues: JSON.parse(deviceRes.issues_json),
-          created_at: deviceRes.created_at
-        }
-      });
-    }
-
-    // Check username reservation if provided
-    if (username) {
-      const userRes = db.prepare(`
-        SELECT r.*, g.group_name, g.repo, g.issues_json 
-        FROM reservations r 
-        JOIN groups g ON r.group_id = g.id 
-        WHERE r.username = ? COLLATE NOCASE
-      `).get(username);
-
-      if (userRes) {
-        return res.json({
-          has_booked: true,
-          reason: 'username_limit',
-          reservation: {
-            group_id: userRes.group_id,
-            group_name: userRes.group_name,
-            username: userRes.username,
-            repo: userRes.repo,
-            issues: JSON.parse(userRes.issues_json),
-            created_at: userRes.created_at
-          }
-        });
-      }
-    }
-
-    res.json({ has_booked: false, reservation: null });
+    const status = await dbAdapter.getUserStatus(username, device_id);
+    res.json(status);
   } catch (err) {
+    console.error('userStatus error:', err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-// POST /api/book - Reserve a group atomically
-app.post('/api/book', (req, res) => {
-  const { group_id, username, device_id } = req.body;
+// POST /api/book
+app.post('/api/book', async (req, res) => {
+  const cleanUser = (req.body.username || '').trim();
+  const cleanDevice = (req.body.device_id || '').trim();
+  const cleanGroup = (req.body.group_id || '').trim();
 
-  const cleanUser = (username || '').trim();
-  const cleanDevice = (device_id || '').trim();
-  const cleanGroup = (group_id || '').trim();
-
-  if (!cleanUser || cleanUser.length < 2 || cleanUser.length > 40) {
-    return res.status(400).json({ success: false, error: 'Valid username (2-40 characters) is required.' });
+  if (!cleanUser || cleanUser.length < 2 || cleanUser.length > 40 || !/^[a-zA-Z0-9_\-]+$/.test(cleanUser)) {
+    return res.status(400).json({ success: false, error: 'Valid username (letters, numbers, _, -) required.' });
   }
-
-  if (!/^[a-zA-Z0-9_\-]+$/.test(cleanUser)) {
-    return res.status(400).json({ success: false, error: 'Username must contain only letters, numbers, hyphens, and underscores.' });
-  }
-
   if (!cleanDevice || cleanDevice.length < 10) {
-    return res.status(400).json({ success: false, error: 'Valid device identifier is required.' });
+    return res.status(400).json({ success: false, error: 'Valid device identifier required.' });
   }
-
   if (!cleanGroup) {
     return res.status(400).json({ success: false, error: 'Group ID is required.' });
   }
 
+  const nowIso = new Date().toISOString();
+
   try {
-    // 1. Check if device has already booked
-    const existingDevice = db.prepare(`SELECT * FROM reservations WHERE device_id = ?`).get(cleanDevice);
-    if (existingDevice) {
-      return res.status(409).json({
-        success: false,
-        error: `This device has already reserved group "${existingDevice.group_id}". One reservation per device is permitted.`
-      });
+    const result = await dbAdapter.book(cleanGroup, cleanUser, cleanDevice, nowIso);
+    if (result.notFound) {
+      return res.status(404).json({ success: false, error: 'Group not found.' });
+    }
+    if (result.error) {
+      return res.status(409).json({ success: false, error: result.error });
     }
 
-    // 2. Check if username has already booked
-    const existingUser = db.prepare(`SELECT * FROM reservations WHERE username = ? COLLATE NOCASE`).get(cleanUser);
-    if (existingUser) {
-      return res.status(409).json({
-        success: false,
-        error: `Contributor "${cleanUser}" has already reserved group "${existingUser.group_id}". Only one reservation per username is permitted.`
-      });
-    }
+    // Explicit audit log to stdout for permanent log tracing
+    console.log(`[BOOKING] @${cleanUser} reserved "${cleanGroup}" at ${nowIso} (device: ${cleanDevice})`);
 
-    // 3. Check if group exists and is available
-    const targetGroup = db.prepare(`SELECT * FROM groups WHERE id = ?`).get(cleanGroup);
-    if (!targetGroup) {
-      return res.status(404).json({ success: false, error: 'Selected issue group was not found.' });
-    }
-
-    if (targetGroup.booked_by !== null) {
-      return res.status(409).json({
-        success: false,
-        error: `This group has already been claimed by @${targetGroup.booked_by}. Please choose another available group.`
-      });
-    }
-
-    // 4. Atomic booking
-    const nowIso = new Date().toISOString();
-    db.exec('BEGIN TRANSACTION;');
-    try {
-      db.prepare(`
-        INSERT INTO reservations (group_id, username, device_id, created_at)
-        VALUES (?, ?, ?, ?)
-      `).run(cleanGroup, cleanUser, cleanDevice, nowIso);
-
-      db.prepare(`
-        UPDATE groups 
-        SET booked_by = ?, booked_at = ?, device_id = ? 
-        WHERE id = ?
-      `).run(cleanUser, nowIso, cleanDevice, cleanGroup);
-
-      db.exec('COMMIT;');
-    } catch (txErr) {
-      db.exec('ROLLBACK;');
-      throw txErr;
-    }
-
-    // 5. Broadcast real-time event to all connected clients
     broadcastEvent('booked', {
       group_id: cleanGroup,
       booked_by: cleanUser,
@@ -277,99 +441,55 @@ app.post('/api/book', (req, res) => {
 
     res.json({
       success: true,
-      message: `Group ${targetGroup.group_name} reserved successfully!`,
+      message: `Group ${result.group_name} reserved successfully!`,
       reservation: {
         group_id: cleanGroup,
-        group_name: targetGroup.group_name,
+        group_name: result.group_name,
         username: cleanUser,
-        repo: targetGroup.repo,
-        issues: JSON.parse(targetGroup.issues_json),
+        repo: result.repo,
+        issues: result.issues,
         created_at: nowIso
       }
     });
-
   } catch (err) {
+    console.error('Booking error:', err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-// GET /api/admin/reservations - Admin list of all booked groups
-app.get('/api/admin/reservations', (req, res) => {
+// GET /api/admin/reservations
+app.get('/api/admin/reservations', async (req, res) => {
   try {
-    const rows = db.prepare(`
-      SELECT 
-        r.id as reservation_id,
-        r.group_id,
-        g.group_name,
-        g.repo,
-        g.issues_json,
-        r.username,
-        r.device_id,
-        r.created_at
-      FROM reservations r
-      JOIN groups g ON r.group_id = g.id
-      ORDER BY r.created_at DESC
-    `).all();
-
-    const formatted = rows.map(r => ({
-      reservation_id: r.reservation_id,
-      group_id: r.group_id,
-      group_name: r.group_name,
-      repo: r.repo,
-      issues: JSON.parse(r.issues_json),
-      username: r.username,
-      device_id: r.device_id,
-      created_at: r.created_at
-    }));
-
-    const totalGroups = db.prepare('SELECT COUNT(*) as count FROM groups').get().count;
-
-    res.json({
-      success: true,
-      total_groups: totalGroups,
-      total_reserved: formatted.length,
-      available_count: totalGroups - formatted.length,
-      reservations: formatted
-    });
+    const data = await dbAdapter.getAdminReservations();
+    res.json({ success: true, ...data });
   } catch (err) {
+    console.error('adminReservations error:', err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-// POST /api/admin/release - Release / cancel a reservation
-app.post('/api/admin/release', (req, res) => {
+// POST /api/admin/release
+app.post('/api/admin/release', async (req, res) => {
   const { group_id } = req.body;
   if (!group_id) return res.status(400).json({ success: false, error: 'group_id required' });
 
   try {
-    const existing = db.prepare('SELECT * FROM groups WHERE id = ?').get(group_id);
-    if (!existing || !existing.booked_by) {
-      return res.status(404).json({ success: false, error: 'Group is not currently reserved' });
-    }
+    const released = await dbAdapter.release(group_id);
+    if (!released) return res.status(404).json({ success: false, error: 'Group not currently booked' });
 
-    db.exec('BEGIN TRANSACTION;');
-    try {
-      db.prepare('DELETE FROM reservations WHERE group_id = ?').run(group_id);
-      db.prepare('UPDATE groups SET booked_by = NULL, booked_at = NULL, device_id = NULL WHERE id = ?').run(group_id);
-      db.exec('COMMIT;');
-    } catch (txErr) {
-      db.exec('ROLLBACK;');
-      throw txErr;
-    }
-
-    // Broadcast update
-    broadcastEvent('booked', {
-      group_id: group_id,
-      booked_by: null,
-      booked_at: null
-    });
-
-    res.json({ success: true, message: `Reservation for ${existing.group_name} released.` });
+    console.log(`[RELEASE] Reservation for "${group_id}" released.`);
+    broadcastEvent('booked', { group_id, booked_by: null, booked_at: null });
+    res.json({ success: true, message: `Reservation for ${released.group_name} released.` });
   } catch (err) {
+    console.error('release error:', err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Issue Scheduler Server running on http://localhost:${PORT}`);
-});
+// Start server
+(async () => {
+  await dbAdapter.init();
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Issue Scheduler Server running on http://localhost:${PORT} [${dbAdapter.type.toUpperCase()}]`);
+  });
+})();
