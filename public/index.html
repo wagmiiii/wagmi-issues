@@ -177,10 +177,10 @@
     <!-- Filter & Search Controls Bar -->
     <section class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-800 pb-4">
       
-      <!-- Repository Filters -->
+      <!-- Repository Filters (Available counts only) -->
       <div class="flex flex-wrap items-center gap-1.5">
         <button data-filter="all" class="filter-tab px-3 py-1.5 text-xs mono uppercase border border-white bg-white text-black font-semibold transition">
-          All [ <span id="countAll">84</span> ]
+          All Available [ <span id="countAvailable">84</span> ]
         </button>
         <button data-filter="guage" class="filter-tab px-3 py-1.5 text-xs mono uppercase btn-outline">
           guage [ <span id="countGuage">42</span> ]
@@ -190,19 +190,14 @@
         </button>
       </div>
 
-      <!-- Search & Availability Toggle -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-        <label class="inline-flex items-center gap-2 text-xs mono uppercase text-neutral-300 border border-neutral-800 px-3 py-1.5 cursor-pointer hover:border-neutral-700 transition">
-          <input type="checkbox" id="availableOnlyToggle" class="accent-white w-3.5 h-3.5" />
-          <span>Available Only (<span id="countAvailable" class="text-white font-bold">84</span>)</span>
-        </label>
-
+      <!-- Search Input -->
+      <div class="flex items-center gap-3">
         <div class="relative">
           <input 
             type="text" 
             id="searchInput" 
-            placeholder="FILTER #ISSUE / GROUP..." 
-            class="pl-3 pr-3 py-1.5 bg-black border border-neutral-800 text-xs mono uppercase text-white placeholder-neutral-600 focus:outline-none focus:border-white w-full sm:w-60 transition"
+            placeholder="FILTER OPEN #ISSUE / GROUP..." 
+            class="pl-3 pr-3 py-1.5 bg-black border border-neutral-800 text-xs mono uppercase text-white placeholder-neutral-600 focus:outline-none focus:border-white w-full sm:w-64 transition"
           />
         </div>
       </div>
@@ -262,7 +257,6 @@
     const countX402 = document.getElementById('countX402');
     const navReservedCount = document.getElementById('navReservedCount');
     const searchInput = document.getElementById('searchInput');
-    const availableOnlyToggle = document.getElementById('availableOnlyToggle');
     const filterTabs = document.querySelectorAll('.filter-tab');
     const connectionStatus = document.getElementById('connectionStatus');
 
@@ -358,25 +352,29 @@
     }
 
     function updateCounters() {
-      const avail = groups.filter(g => g.is_available).length;
+      const openGroups = groups.filter(g => g.is_available);
+      const avail = openGroups.length;
       const booked = groups.length - avail;
-      const guage = groups.filter(g => g.repo_short === 'guage').length;
-      const x402 = groups.filter(g => g.repo_short === 'x402-facilitator-stellar').length;
+      const guageAvail = openGroups.filter(g => g.repo_short === 'guage').length;
+      const x402Avail = openGroups.filter(g => g.repo_short === 'x402-facilitator-stellar').length;
 
       countAvailable.textContent = avail;
-      countAll.textContent = groups.length;
-      countGuage.textContent = guage;
-      countX402.textContent = x402;
+      countGuage.textContent = guageAvail;
+      countX402.textContent = x402Avail;
       navReservedCount.textContent = booked;
     }
 
-    // Render Grid
+    // Render Grid - STRICTLY AVAILABLE SLOTS ONLY
     function renderGroups() {
       const filtered = groups.filter(g => {
+        // Exclude all booked/filled slots from this view
+        if (!g.is_available) return false;
+
+        // Repository filters
         if (activeFilter === 'guage' && g.repo_short !== 'guage') return false;
         if (activeFilter === 'x402' && g.repo_short !== 'x402-facilitator-stellar') return false;
-        if (availableOnly && !g.is_available) return false;
 
+        // Search query
         if (searchQuery) {
           const q = searchQuery.toLowerCase();
           const matchName = g.group_name.toLowerCase().includes(q);
@@ -394,18 +392,6 @@
       document.getElementById('noResults').classList.add('hidden');
 
       groupsGrid.innerHTML = filtered.map(g => {
-        const isMine = myReservation && myReservation.group_id === g.id;
-        const isBooked = !g.is_available;
-
-        let statusLabel = '';
-        if (isMine) {
-          statusLabel = `<span class="px-2 py-0.5 text-[10px] mono uppercase bg-white text-black font-bold">YOURS</span>`;
-        } else if (isBooked) {
-          statusLabel = `<span class="px-2 py-0.5 text-[10px] mono uppercase border border-neutral-800 text-neutral-500">@${escapeHtml(g.booked_by)}</span>`;
-        } else {
-          statusLabel = `<span class="px-2 py-0.5 text-[10px] mono uppercase border border-neutral-700 text-neutral-300">OPEN</span>`;
-        }
-
         const issuesHtml = g.issues.map(iss => `
           <a href="${iss.url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-black border border-neutral-800 hover:border-white text-neutral-300 hover:text-white text-xs mono transition">
             #${iss.number}
@@ -413,14 +399,10 @@
         `).join('');
 
         let actionBtn = '';
-        if (isMine) {
-          actionBtn = `<button disabled class="w-full py-2 bg-neutral-900 border border-neutral-800 text-white text-xs mono uppercase cursor-not-allowed">RESERVED BY YOU</button>`;
-        } else if (isBooked) {
-          actionBtn = `<button disabled class="w-full py-2 bg-neutral-950 border border-neutral-900 text-neutral-600 text-xs mono uppercase cursor-not-allowed">UNAVAILABLE</button>`;
-        } else if (!currentUser) {
+        if (!currentUser) {
           actionBtn = `<button onclick="usernameInput.focus()" class="w-full py-2 border border-neutral-800 hover:border-white text-neutral-300 text-xs mono uppercase transition">ENTER HANDLE TO BOOK</button>`;
         } else if (myReservation) {
-          actionBtn = `<button disabled class="w-full py-2 bg-neutral-950 border border-neutral-900 text-neutral-600 text-xs mono uppercase cursor-not-allowed">1 BOOKING LIMIT MET</button>`;
+          actionBtn = `<button disabled class="w-full py-2 bg-neutral-950 border border-neutral-900 text-neutral-600 text-xs mono uppercase cursor-not-allowed">1 BOOKING LIMIT REACHED</button>`;
         } else {
           actionBtn = `
             <button 
@@ -433,17 +415,15 @@
           `;
         }
 
-        const cardBorder = isMine ? 'border-white bg-neutral-950' : 'border-neutral-800 hover:border-neutral-700 bg-black';
-
         return `
-          <div class="border ${cardBorder} p-4 flex flex-col justify-between gap-4 transition">
+          <div class="border border-neutral-800 hover:border-neutral-700 bg-black p-4 flex flex-col justify-between gap-4 transition">
             <div class="space-y-3">
               <div class="flex items-start justify-between gap-2 border-b border-neutral-900 pb-2.5">
                 <div>
                   <div class="text-[10px] mono uppercase tracking-wider text-neutral-500">${escapeHtml(g.repo)}</div>
                   <h3 class="text-sm font-bold text-white mono uppercase mt-0.5">${escapeHtml(g.group_name)}</h3>
                 </div>
-                ${statusLabel}
+                <span class="px-2 py-0.5 text-[10px] mono uppercase border border-neutral-700 text-neutral-300">OPEN</span>
               </div>
 
               <div class="flex flex-wrap gap-1.5 pt-1">
@@ -550,11 +530,6 @@
         activeFilter = tab.getAttribute('data-filter');
         renderGroups();
       });
-    });
-
-    availableOnlyToggle.addEventListener('change', (e) => {
-      availableOnly = e.target.checked;
-      renderGroups();
     });
 
     searchInput.addEventListener('input', (e) => {
