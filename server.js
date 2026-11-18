@@ -6,6 +6,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'groups.json'), 'utf8'));
 
+// Track assigned contributors on GitHub
+function getAssignedUsersSet() {
+  try {
+    const list = JSON.parse(fs.readFileSync(path.join(__dirname, 'assigned_users.json'), 'utf8'));
+    return new Set(list.map(u => u.toLowerCase()));
+  } catch (e) {
+    return new Set();
+  }
+}
+
 // Database Adapter (PostgreSQL if DATABASE_URL is set, else SQLite)
 let dbAdapter;
 
@@ -78,6 +88,7 @@ if (process.env.DATABASE_URL) {
     },
 
     async getUserStatus(username, deviceId) {
+      const assigned = getAssignedUsersSet();
       if (deviceId) {
         const dev = await pool.query(
           `SELECT r.*, g.group_name, g.repo, g.issues_json
@@ -89,7 +100,8 @@ if (process.env.DATABASE_URL) {
           const r = dev.rows[0];
           return { has_booked: true, reason: 'device_limit', reservation: {
             group_id: r.group_id, group_name: r.group_name, username: r.username,
-            repo: r.repo, issues: JSON.parse(r.issues_json), created_at: r.created_at
+            repo: r.repo, issues: JSON.parse(r.issues_json), created_at: r.created_at,
+            is_assigned: assigned.has(r.username.toLowerCase())
           }};
         }
       }
@@ -105,7 +117,8 @@ if (process.env.DATABASE_URL) {
           const r = usr.rows[0];
           return { has_booked: true, reason: 'username_limit', reservation: {
             group_id: r.group_id, group_name: r.group_name, username: r.username,
-            repo: r.repo, issues: JSON.parse(r.issues_json), created_at: r.created_at
+            repo: r.repo, issues: JSON.parse(r.issues_json), created_at: r.created_at,
+            is_assigned: assigned.has(r.username.toLowerCase())
           }};
         }
       }
@@ -168,26 +181,31 @@ if (process.env.DATABASE_URL) {
     },
 
     async getAdminReservations() {
+      const assigned = getAssignedUsersSet();
       const rows = await pool.query(`
         SELECT r.id as reservation_id, r.group_id, g.group_name, g.repo, g.issues_json, r.username, r.device_id, r.created_at
         FROM reservations r JOIN groups g ON r.group_id = g.id
         ORDER BY r.created_at DESC
       `);
       const totalGroups = (await pool.query('SELECT COUNT(*) as count FROM groups')).rows[0].count;
+      const formatted = rows.rows.map(r => ({
+        reservation_id: r.reservation_id,
+        group_id: r.group_id,
+        group_name: r.group_name,
+        repo: r.repo,
+        issues: JSON.parse(r.issues_json),
+        username: r.username,
+        device_id: r.device_id,
+        created_at: r.created_at,
+        is_assigned: assigned.has(r.username.toLowerCase())
+      }));
       return {
         total_groups: parseInt(totalGroups, 10),
-        total_reserved: rows.rows.length,
-        available_count: parseInt(totalGroups, 10) - rows.rows.length,
-        reservations: rows.rows.map(r => ({
-          reservation_id: r.reservation_id,
-          group_id: r.group_id,
-          group_name: r.group_name,
-          repo: r.repo,
-          issues: JSON.parse(r.issues_json),
-          username: r.username,
-          device_id: r.device_id,
-          created_at: r.created_at
-        }))
+        total_reserved: formatted.length,
+        total_assigned: formatted.filter(r => r.is_assigned).length,
+        total_unassigned: formatted.filter(r => !r.is_assigned).length,
+        available_count: parseInt(totalGroups, 10) - formatted.length,
+        reservations: formatted
       };
     },
 
@@ -269,6 +287,7 @@ if (process.env.DATABASE_URL) {
       }));
     },
     async getUserStatus(username, deviceId) {
+      const assigned = getAssignedUsersSet();
       if (deviceId) {
         const dev = db.prepare(`
           SELECT r.*, g.group_name, g.repo, g.issues_json
@@ -277,7 +296,8 @@ if (process.env.DATABASE_URL) {
         if (dev) {
           return { has_booked: true, reason: 'device_limit', reservation: {
             group_id: dev.group_id, group_name: dev.group_name, username: dev.username,
-            repo: dev.repo, issues: JSON.parse(dev.issues_json), created_at: dev.created_at
+            repo: dev.repo, issues: JSON.parse(dev.issues_json), created_at: dev.created_at,
+            is_assigned: assigned.has(dev.username.toLowerCase())
           }};
         }
       }
@@ -289,7 +309,8 @@ if (process.env.DATABASE_URL) {
         if (usr) {
           return { has_booked: true, reason: 'username_limit', reservation: {
             group_id: usr.group_id, group_name: usr.group_name, username: usr.username,
-            repo: usr.repo, issues: JSON.parse(usr.issues_json), created_at: usr.created_at
+            repo: usr.repo, issues: JSON.parse(usr.issues_json), created_at: usr.created_at,
+            is_assigned: assigned.has(usr.username.toLowerCase())
           }};
         }
       }
@@ -320,18 +341,25 @@ if (process.env.DATABASE_URL) {
       };
     },
     async getAdminReservations() {
+      const assigned = getAssignedUsersSet();
       const rows = db.prepare(`
         SELECT r.id as reservation_id, r.group_id, g.group_name, g.repo, g.issues_json, r.username, r.device_id, r.created_at
         FROM reservations r JOIN groups g ON r.group_id = g.id ORDER BY r.created_at DESC
       `).all();
       const totalGroups = db.prepare('SELECT COUNT(*) as count FROM groups').get().count;
+      const formatted = rows.map(r => ({
+        reservation_id: r.reservation_id, group_id: r.group_id, group_name: r.group_name,
+        repo: r.repo, issues: JSON.parse(r.issues_json), username: r.username,
+        device_id: r.device_id, created_at: r.created_at,
+        is_assigned: assigned.has(r.username.toLowerCase())
+      }));
       return {
-        total_groups: totalGroups, total_reserved: rows.length, available_count: totalGroups - rows.length,
-        reservations: rows.map(r => ({
-          reservation_id: r.reservation_id, group_id: r.group_id, group_name: r.group_name,
-          repo: r.repo, issues: JSON.parse(r.issues_json), username: r.username,
-          device_id: r.device_id, created_at: r.created_at
-        }))
+        total_groups: totalGroups,
+        total_reserved: formatted.length,
+        total_assigned: formatted.filter(r => r.is_assigned).length,
+        total_unassigned: formatted.filter(r => !r.is_assigned).length,
+        available_count: totalGroups - formatted.length,
+        reservations: formatted
       };
     },
     async release(groupId) {

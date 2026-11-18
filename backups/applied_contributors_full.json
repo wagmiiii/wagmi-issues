@@ -1,0 +1,2350 @@
+{
+  "total_reservations": 84,
+  "applied_count": 33,
+  "not_applied_count": 51,
+  "applied": [
+    {
+      "reservation_id": 1,
+      "booked_username": "Odutola657-lab",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-25",
+      "group_name": "x402-facilitator-stellar - Group 25",
+      "reserved_issues": [
+        723,
+        724,
+        725
+      ],
+      "commented_issues": [
+        723,
+        724,
+        725
+      ],
+      "actual_author": "odutola657-lab",
+      "comments": [
+        {
+          "issue_number": 723,
+          "author": "odutola657-lab",
+          "created_at": "2026-11-18T14:48:57Z",
+          "body_snippet": "@odutola657-lab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:068199d4-a7",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/723#issuecomment-6982015369"
+        },
+        {
+          "issue_number": 724,
+          "author": "odutola657-lab",
+          "created_at": "2026-11-18T14:49:21Z",
+          "body_snippet": "@odutola657-lab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:162e5861-e0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/724#issuecomment-6982025306"
+        },
+        {
+          "issue_number": 725,
+          "author": "odutola657-lab",
+          "created_at": "2026-11-18T14:49:45Z",
+          "body_snippet": "@odutola657-lab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:abcd89ba-5e",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/725#issuecomment-6982035558"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 2,
+      "booked_username": "Adeyemi-cmd",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-24",
+      "group_name": "guage - Group 24",
+      "reserved_issues": [
+        160,
+        161,
+        162
+      ],
+      "commented_issues": [
+        160,
+        161,
+        162
+      ],
+      "actual_author": "Adeyemi-cmd",
+      "comments": [
+        {
+          "issue_number": 160,
+          "author": "Adeyemi-cmd",
+          "created_at": "2026-11-18T14:30:52Z",
+          "body_snippet": "@Adeyemi-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:c2e50858-dc53-",
+          "url": "https://github.com/posture-sec/guage/issues/160#issuecomment-6981542088"
+        },
+        {
+          "issue_number": 161,
+          "author": "Adeyemi-cmd",
+          "created_at": "2026-11-18T14:31:46Z",
+          "body_snippet": "@Adeyemi-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ecd94c9e-678a-",
+          "url": "https://github.com/posture-sec/guage/issues/161#issuecomment-6981565610"
+        },
+        {
+          "issue_number": 162,
+          "author": "Adeyemi-cmd",
+          "created_at": "2026-11-18T14:32:27Z",
+          "body_snippet": "@Adeyemi-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3b22dee6-c581-",
+          "url": "https://github.com/posture-sec/guage/issues/162#issuecomment-6981583759"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 5,
+      "booked_username": "OG-wura",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-20",
+      "group_name": "guage - Group 20",
+      "reserved_issues": [
+        148,
+        149,
+        150
+      ],
+      "commented_issues": [
+        148,
+        149,
+        150
+      ],
+      "actual_author": "OG-wura",
+      "comments": [
+        {
+          "issue_number": 148,
+          "author": "OG-wura",
+          "created_at": "2026-11-18T14:34:20Z",
+          "body_snippet": "@OG-wura has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:168030b5-a1d7-4143",
+          "url": "https://github.com/posture-sec/guage/issues/148#issuecomment-6981632407"
+        },
+        {
+          "issue_number": 149,
+          "author": "OG-wura",
+          "created_at": "2026-11-18T14:34:58Z",
+          "body_snippet": "@OG-wura has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:270f8159-94cf-436a",
+          "url": "https://github.com/posture-sec/guage/issues/149#issuecomment-6981649452"
+        },
+        {
+          "issue_number": 150,
+          "author": "OG-wura",
+          "created_at": "2026-11-18T14:35:26Z",
+          "body_snippet": "@OG-wura has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:41e888fe-0335-4ef8",
+          "url": "https://github.com/posture-sec/guage/issues/150#issuecomment-6981661584"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 12,
+      "booked_username": "Grazial-hash",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-37",
+      "group_name": "x402-facilitator-stellar - Group 37",
+      "reserved_issues": [
+        759,
+        760,
+        761
+      ],
+      "commented_issues": [
+        759,
+        760,
+        761
+      ],
+      "actual_author": "Grazial-hash",
+      "comments": [
+        {
+          "issue_number": 759,
+          "author": "Grazial-hash",
+          "created_at": "2026-11-18T14:46:59Z",
+          "body_snippet": "@Grazial-hash has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:8ddd0663-d12f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/759#issuecomment-6981963360"
+        },
+        {
+          "issue_number": 760,
+          "author": "Grazial-hash",
+          "created_at": "2026-11-18T14:47:22Z",
+          "body_snippet": "@Grazial-hash has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:95413663-5834",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/760#issuecomment-6981973755"
+        },
+        {
+          "issue_number": 761,
+          "author": "Grazial-hash",
+          "created_at": "2026-11-18T14:47:48Z",
+          "body_snippet": "@Grazial-hash has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a1afffcf-ea67",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/761#issuecomment-6981985173"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 13,
+      "booked_username": "composure-lad",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-19",
+      "group_name": "guage - Group 19",
+      "reserved_issues": [
+        145,
+        146,
+        147
+      ],
+      "commented_issues": [
+        145,
+        146,
+        147
+      ],
+      "actual_author": "composure-lad",
+      "comments": [
+        {
+          "issue_number": 145,
+          "author": "composure-lad",
+          "created_at": "2026-11-18T14:37:57Z",
+          "body_snippet": "@composure-lad has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9ad1ade9-9fa",
+          "url": "https://github.com/posture-sec/guage/issues/145#issuecomment-6981726216"
+        },
+        {
+          "issue_number": 146,
+          "author": "composure-lad",
+          "created_at": "2026-11-18T14:38:35Z",
+          "body_snippet": "@composure-lad has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:abda51a1-a08",
+          "url": "https://github.com/posture-sec/guage/issues/146#issuecomment-6981742247"
+        },
+        {
+          "issue_number": 147,
+          "author": "composure-lad",
+          "created_at": "2026-11-18T14:39:47Z",
+          "body_snippet": "@composure-lad has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:4bcb6880-31d",
+          "url": "https://github.com/posture-sec/guage/issues/147#issuecomment-6981773349"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 15,
+      "booked_username": "Ayooo-web",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-27",
+      "group_name": "x402-facilitator-stellar - Group 27",
+      "reserved_issues": [
+        729,
+        730,
+        731
+      ],
+      "commented_issues": [
+        729,
+        730,
+        731
+      ],
+      "actual_author": "Ayooo-web",
+      "comments": [
+        {
+          "issue_number": 729,
+          "author": "Ayooo-web",
+          "created_at": "2026-11-18T14:51:05Z",
+          "body_snippet": "@Ayooo-web has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6be00903-f620-46",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/729#issuecomment-6982071059"
+        },
+        {
+          "issue_number": 730,
+          "author": "Ayooo-web",
+          "created_at": "2026-11-18T14:51:29Z",
+          "body_snippet": "@Ayooo-web has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d8dffdb1-345a-49",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/730#issuecomment-6982081397"
+        },
+        {
+          "issue_number": 731,
+          "author": "Ayooo-web",
+          "created_at": "2026-11-18T14:51:57Z",
+          "body_snippet": "@Ayooo-web has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:543105d9-377e-40",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/731#issuecomment-6982093864"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 17,
+      "booked_username": "chykason77",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-15",
+      "group_name": "guage - Group 15",
+      "reserved_issues": [
+        133,
+        134,
+        135
+      ],
+      "commented_issues": [
+        133,
+        134,
+        135
+      ],
+      "actual_author": "chykason77-blip",
+      "comments": [
+        {
+          "issue_number": 133,
+          "author": "chykason77-blip",
+          "created_at": "2026-11-18T14:08:14Z",
+          "body_snippet": "@chykason77-blip has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:489f7726-f",
+          "url": "https://github.com/posture-sec/guage/issues/133#issuecomment-6980965288"
+        },
+        {
+          "issue_number": 134,
+          "author": "chykason77-blip",
+          "created_at": "2026-11-18T14:08:57Z",
+          "body_snippet": "@chykason77-blip has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:c81494ff-e",
+          "url": "https://github.com/posture-sec/guage/issues/134#issuecomment-6980983238"
+        },
+        {
+          "issue_number": 135,
+          "author": "chykason77-blip",
+          "created_at": "2026-11-18T14:09:41Z",
+          "body_snippet": "@chykason77-blip has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:221b0d1c-1",
+          "url": "https://github.com/posture-sec/guage/issues/135#issuecomment-6981002360"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 18,
+      "booked_username": "Olu-cmd",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-38",
+      "group_name": "x402-facilitator-stellar - Group 38",
+      "reserved_issues": [
+        762,
+        763,
+        764
+      ],
+      "commented_issues": [
+        762,
+        763,
+        764
+      ],
+      "actual_author": "olu-cmd",
+      "comments": [
+        {
+          "issue_number": 762,
+          "author": "olu-cmd",
+          "created_at": "2026-11-18T14:44:08Z",
+          "body_snippet": "@olu-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:7f976fca-7183-4e85",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/762#issuecomment-6981887974"
+        },
+        {
+          "issue_number": 763,
+          "author": "olu-cmd",
+          "created_at": "2026-11-18T14:44:30Z",
+          "body_snippet": "@olu-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e888f3dd-c16b-40f0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/763#issuecomment-6981897804"
+        },
+        {
+          "issue_number": 764,
+          "author": "olu-cmd",
+          "created_at": "2026-11-18T14:45:06Z",
+          "body_snippet": "@olu-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b59cb7af-f769-45c2",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/764#issuecomment-6981914082"
+        }
+      ],
+      "other_comments": [
+        {
+          "issue_number": 762,
+          "author": "marvel060",
+          "created_at": "2026-11-18T14:27:48Z",
+          "body_snippet": "@marvel060 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:570ca8b4-a5c2-47",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/762#issuecomment-6981463699"
+        }
+      ]
+    },
+    {
+      "reservation_id": 19,
+      "booked_username": "melanindebbie",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-17",
+      "group_name": "guage - Group 17",
+      "reserved_issues": [
+        139,
+        140,
+        141
+      ],
+      "commented_issues": [
+        139,
+        140,
+        141
+      ],
+      "actual_author": "melanindebbie",
+      "comments": [
+        {
+          "issue_number": 139,
+          "author": "melanindebbie",
+          "created_at": "2026-11-18T14:03:40Z",
+          "body_snippet": "@melanindebbie has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:54261788-330",
+          "url": "https://github.com/posture-sec/guage/issues/139#issuecomment-6980849313"
+        },
+        {
+          "issue_number": 140,
+          "author": "melanindebbie",
+          "created_at": "2026-11-18T14:04:26Z",
+          "body_snippet": "@melanindebbie has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b88339c5-13c",
+          "url": "https://github.com/posture-sec/guage/issues/140#issuecomment-6980867947"
+        },
+        {
+          "issue_number": 141,
+          "author": "melanindebbie",
+          "created_at": "2026-11-18T14:05:02Z",
+          "body_snippet": "@melanindebbie has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3008fb9c-6a4",
+          "url": "https://github.com/posture-sec/guage/issues/141#issuecomment-6980883292"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 20,
+      "booked_username": "Hikmaholadele",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-18",
+      "group_name": "guage - Group 18",
+      "reserved_issues": [
+        142,
+        143,
+        144
+      ],
+      "commented_issues": [
+        142,
+        143,
+        144
+      ],
+      "actual_author": "Hikmaholadele",
+      "comments": [
+        {
+          "issue_number": 142,
+          "author": "Hikmaholadele",
+          "created_at": "2026-11-18T14:03:36Z",
+          "body_snippet": "@Hikmaholadele has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:00580ee4-f19",
+          "url": "https://github.com/posture-sec/guage/issues/142#issuecomment-6980847250"
+        },
+        {
+          "issue_number": 143,
+          "author": "Hikmaholadele",
+          "created_at": "2026-11-18T14:04:05Z",
+          "body_snippet": "@Hikmaholadele has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d67c45f2-666",
+          "url": "https://github.com/posture-sec/guage/issues/143#issuecomment-6980859436"
+        },
+        {
+          "issue_number": 144,
+          "author": "Hikmaholadele",
+          "created_at": "2026-11-18T14:04:52Z",
+          "body_snippet": "@Hikmaholadele has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d534c213-5c9",
+          "url": "https://github.com/posture-sec/guage/issues/144#issuecomment-6980878989"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 27,
+      "booked_username": "Samlogy1",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-32",
+      "group_name": "guage - Group 32",
+      "reserved_issues": [
+        184,
+        185,
+        186
+      ],
+      "commented_issues": [
+        184,
+        185,
+        186
+      ],
+      "actual_author": "samlogy1",
+      "comments": [
+        {
+          "issue_number": 184,
+          "author": "samlogy1",
+          "created_at": "2026-11-18T14:55:10Z",
+          "body_snippet": "@samlogy1 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:8537d702-5d94-459",
+          "url": "https://github.com/posture-sec/guage/issues/184#issuecomment-6982180187"
+        },
+        {
+          "issue_number": 185,
+          "author": "samlogy1",
+          "created_at": "2026-11-18T14:55:45Z",
+          "body_snippet": "@samlogy1 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cb6dfdd9-d44d-4c7",
+          "url": "https://github.com/posture-sec/guage/issues/185#issuecomment-6982195513"
+        },
+        {
+          "issue_number": 186,
+          "author": "samlogy1",
+          "created_at": "2026-11-18T14:56:28Z",
+          "body_snippet": "@samlogy1 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:94e6a604-be41-405",
+          "url": "https://github.com/posture-sec/guage/issues/186#issuecomment-6982214177"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 31,
+      "booked_username": "vrse-vrde",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-3",
+      "group_name": "guage - Group 3",
+      "reserved_issues": [
+        48,
+        49,
+        50
+      ],
+      "commented_issues": [
+        48,
+        49,
+        50
+      ],
+      "actual_author": "vrse-vrde",
+      "comments": [
+        {
+          "issue_number": 48,
+          "author": "vrse-vrde",
+          "created_at": "2026-11-18T14:11:30Z",
+          "body_snippet": "@vrse-vrde has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:20836fdc-805a-46",
+          "url": "https://github.com/posture-sec/guage/issues/48#issuecomment-6981047639"
+        },
+        {
+          "issue_number": 49,
+          "author": "vrse-vrde",
+          "created_at": "2026-11-18T14:12:39Z",
+          "body_snippet": "@vrse-vrde has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ccf9a40c-9f16-48",
+          "url": "https://github.com/posture-sec/guage/issues/49#issuecomment-6981076359"
+        },
+        {
+          "issue_number": 50,
+          "author": "vrse-vrde",
+          "created_at": "2026-11-18T14:10:44Z",
+          "body_snippet": "@vrse-vrde has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5fcdcdbc-0ae8-4b",
+          "url": "https://github.com/posture-sec/guage/issues/50#issuecomment-6981028282"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 33,
+      "booked_username": "Uboho-prog",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-31",
+      "group_name": "guage - Group 31",
+      "reserved_issues": [
+        181,
+        182,
+        183
+      ],
+      "commented_issues": [
+        181,
+        182,
+        183
+      ],
+      "actual_author": "uboho-prog",
+      "comments": [
+        {
+          "issue_number": 181,
+          "author": "uboho-prog",
+          "created_at": "2026-11-18T14:39:39Z",
+          "body_snippet": "@uboho-prog has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f1eb6b25-5006-4",
+          "url": "https://github.com/posture-sec/guage/issues/181#issuecomment-6981769761"
+        },
+        {
+          "issue_number": 182,
+          "author": "uboho-prog",
+          "created_at": "2026-11-18T14:40:11Z",
+          "body_snippet": "@uboho-prog has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:eb259d0a-9c44-4",
+          "url": "https://github.com/posture-sec/guage/issues/182#issuecomment-6981783540"
+        },
+        {
+          "issue_number": 183,
+          "author": "uboho-prog",
+          "created_at": "2026-11-18T14:40:40Z",
+          "body_snippet": "@uboho-prog has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:08d898cd-7de0-4",
+          "url": "https://github.com/posture-sec/guage/issues/183#issuecomment-6981796005"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 34,
+      "booked_username": "carterdev-001",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-33",
+      "group_name": "guage - Group 33",
+      "reserved_issues": [
+        187,
+        188,
+        189
+      ],
+      "commented_issues": [
+        187,
+        188,
+        189
+      ],
+      "actual_author": "carterdev-001",
+      "comments": [
+        {
+          "issue_number": 187,
+          "author": "carterdev-001",
+          "created_at": "2026-11-18T14:09:56Z",
+          "body_snippet": "@carterdev-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cf6652ba-1d7",
+          "url": "https://github.com/posture-sec/guage/issues/187#issuecomment-6981008495"
+        },
+        {
+          "issue_number": 188,
+          "author": "carterdev-001",
+          "created_at": "2026-11-18T14:15:40Z",
+          "body_snippet": "@carterdev-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cd862fbc-345",
+          "url": "https://github.com/posture-sec/guage/issues/188#issuecomment-6981153651"
+        },
+        {
+          "issue_number": 189,
+          "author": "carterdev-001",
+          "created_at": "2026-11-18T14:16:58Z",
+          "body_snippet": "@carterdev-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dad1b033-8fa",
+          "url": "https://github.com/posture-sec/guage/issues/189#issuecomment-6981186319"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 38,
+      "booked_username": "DANTE1903",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-36",
+      "group_name": "guage - Group 36",
+      "reserved_issues": [
+        196,
+        197,
+        198
+      ],
+      "commented_issues": [
+        196,
+        197,
+        198
+      ],
+      "actual_author": "DANTE-1903",
+      "comments": [
+        {
+          "issue_number": 196,
+          "author": "DANTE-1903",
+          "created_at": "2026-11-18T14:12:19Z",
+          "body_snippet": "@DANTE-1903 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:973c493a-46ba-4",
+          "url": "https://github.com/posture-sec/guage/issues/196#issuecomment-6981067817"
+        },
+        {
+          "issue_number": 197,
+          "author": "DANTE-1903",
+          "created_at": "2026-11-18T14:12:57Z",
+          "body_snippet": "@DANTE-1903 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:152974d4-8cca-4",
+          "url": "https://github.com/posture-sec/guage/issues/197#issuecomment-6981083961"
+        },
+        {
+          "issue_number": 198,
+          "author": "DANTE-1903",
+          "created_at": "2026-11-18T14:13:28Z",
+          "body_snippet": "@DANTE-1903 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3d63f1f1-8cec-4",
+          "url": "https://github.com/posture-sec/guage/issues/198#issuecomment-6981097403"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 40,
+      "booked_username": "zainabwahab_eth",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-37",
+      "group_name": "guage - Group 37",
+      "reserved_issues": [
+        199,
+        200,
+        201
+      ],
+      "commented_issues": [
+        199,
+        201
+      ],
+      "actual_author": "zainabwahab-eth",
+      "comments": [
+        {
+          "issue_number": 199,
+          "author": "zainabwahab-eth",
+          "created_at": "2026-11-18T14:57:51Z",
+          "body_snippet": "@zainabwahab-eth has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d5f1ace5-e",
+          "url": "https://github.com/posture-sec/guage/issues/199#issuecomment-6982249877"
+        },
+        {
+          "issue_number": 201,
+          "author": "zainabwahab-eth",
+          "created_at": "2026-11-18T14:59:35Z",
+          "body_snippet": "@zainabwahab-eth has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b47ff623-e",
+          "url": "https://github.com/posture-sec/guage/issues/201#issuecomment-6982295439"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 41,
+      "booked_username": "Jubilee-001",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-42",
+      "group_name": "guage - Group 42",
+      "reserved_issues": [
+        214,
+        215
+      ],
+      "commented_issues": [
+        214,
+        215
+      ],
+      "actual_author": "Jubilee-001",
+      "comments": [
+        {
+          "issue_number": 214,
+          "author": "Jubilee-001",
+          "created_at": "2026-11-18T14:06:24Z",
+          "body_snippet": "@Jubilee-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:90918bd5-fc40-",
+          "url": "https://github.com/posture-sec/guage/issues/214#issuecomment-6980917810"
+        },
+        {
+          "issue_number": 215,
+          "author": "Jubilee-001",
+          "created_at": "2026-11-18T14:07:18Z",
+          "body_snippet": "@Jubilee-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5c0b77de-eab4-",
+          "url": "https://github.com/posture-sec/guage/issues/215#issuecomment-6980941835"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 43,
+      "booked_username": "Bheesty",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-38",
+      "group_name": "guage - Group 38",
+      "reserved_issues": [
+        202,
+        203,
+        204
+      ],
+      "commented_issues": [
+        202,
+        203,
+        204
+      ],
+      "actual_author": "bheesty",
+      "comments": [
+        {
+          "issue_number": 202,
+          "author": "bheesty",
+          "created_at": "2026-11-18T14:35:35Z",
+          "body_snippet": "@bheesty has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:fa94e8b6-a552-4699",
+          "url": "https://github.com/posture-sec/guage/issues/202#issuecomment-6981665456"
+        },
+        {
+          "issue_number": 203,
+          "author": "bheesty",
+          "created_at": "2026-11-18T14:36:05Z",
+          "body_snippet": "@bheesty has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:62176887-6459-47a6",
+          "url": "https://github.com/posture-sec/guage/issues/203#issuecomment-6981678517"
+        },
+        {
+          "issue_number": 204,
+          "author": "bheesty",
+          "created_at": "2026-11-18T14:36:29Z",
+          "body_snippet": "@bheesty has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9e031ba8-19c7-49ce",
+          "url": "https://github.com/posture-sec/guage/issues/204#issuecomment-6981688770"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 44,
+      "booked_username": "ollypee22",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-10",
+      "group_name": "x402-facilitator-stellar - Group 10",
+      "reserved_issues": [
+        677,
+        678,
+        679
+      ],
+      "commented_issues": [
+        677,
+        678,
+        679
+      ],
+      "actual_author": "ollypee22",
+      "comments": [
+        {
+          "issue_number": 677,
+          "author": "ollypee22",
+          "created_at": "2026-11-18T14:05:10Z",
+          "body_snippet": "@ollypee22 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cc8e8051-a91d-4c",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/677#issuecomment-6980886913"
+        },
+        {
+          "issue_number": 678,
+          "author": "ollypee22",
+          "created_at": "2026-11-18T14:04:38Z",
+          "body_snippet": "@ollypee22 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dcf22e91-b5a7-4f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/678#issuecomment-6980873052"
+        },
+        {
+          "issue_number": 679,
+          "author": "ollypee22",
+          "created_at": "2026-11-18T14:04:52Z",
+          "body_snippet": "@ollypee22 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f4ca51d4-9eb6-48",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/679#issuecomment-6980879222"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 47,
+      "booked_username": "DevRushd",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-7",
+      "group_name": "guage - Group 7",
+      "reserved_issues": [
+        60,
+        61,
+        62
+      ],
+      "commented_issues": [
+        60,
+        61,
+        62
+      ],
+      "actual_author": "DevRushd",
+      "comments": [
+        {
+          "issue_number": 60,
+          "author": "DevRushd",
+          "created_at": "2026-11-18T14:11:17Z",
+          "body_snippet": "@DevRushd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:863ab42a-926b-405",
+          "url": "https://github.com/posture-sec/guage/issues/60#issuecomment-6981042188"
+        },
+        {
+          "issue_number": 61,
+          "author": "DevRushd",
+          "created_at": "2026-11-18T14:09:58Z",
+          "body_snippet": "@DevRushd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d8764bb0-82ed-4e1",
+          "url": "https://github.com/posture-sec/guage/issues/61#issuecomment-6981009290"
+        },
+        {
+          "issue_number": 62,
+          "author": "DevRushd",
+          "created_at": "2026-11-18T14:10:38Z",
+          "body_snippet": "@DevRushd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:fd639fc4-2e29-496",
+          "url": "https://github.com/posture-sec/guage/issues/62#issuecomment-6981025873"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 50,
+      "booked_username": "webdevayo",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-6",
+      "group_name": "guage - Group 6",
+      "reserved_issues": [
+        57,
+        58,
+        59
+      ],
+      "commented_issues": [
+        57,
+        58,
+        59
+      ],
+      "actual_author": "webdevayo",
+      "comments": [
+        {
+          "issue_number": 57,
+          "author": "webdevayo",
+          "created_at": "2026-11-18T14:08:37Z",
+          "body_snippet": "@webdevayo has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9489f400-ddbc-4f",
+          "url": "https://github.com/posture-sec/guage/issues/57#issuecomment-6980975096"
+        },
+        {
+          "issue_number": 58,
+          "author": "webdevayo",
+          "created_at": "2026-11-18T14:07:24Z",
+          "body_snippet": "@webdevayo has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a8a3a3c6-4939-46",
+          "url": "https://github.com/posture-sec/guage/issues/58#issuecomment-6980944512"
+        },
+        {
+          "issue_number": 59,
+          "author": "webdevayo",
+          "created_at": "2026-11-18T14:08:02Z",
+          "body_snippet": "@webdevayo has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a941f052-df1b-45",
+          "url": "https://github.com/posture-sec/guage/issues/59#issuecomment-6980960057"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 51,
+      "booked_username": "Dahmeezy",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-14",
+      "group_name": "x402-facilitator-stellar - Group 14",
+      "reserved_issues": [
+        689,
+        690,
+        691
+      ],
+      "commented_issues": [
+        689,
+        690,
+        691
+      ],
+      "actual_author": "dahmeezy",
+      "comments": [
+        {
+          "issue_number": 689,
+          "author": "dahmeezy",
+          "created_at": "2026-11-18T14:14:43Z",
+          "body_snippet": "@dahmeezy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:8b401434-b04b-453",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/689#issuecomment-6981129003"
+        },
+        {
+          "issue_number": 690,
+          "author": "dahmeezy",
+          "created_at": "2026-11-18T14:21:21Z",
+          "body_snippet": "@dahmeezy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:124a5175-db59-4ae",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/690#issuecomment-6981297174"
+        },
+        {
+          "issue_number": 691,
+          "author": "dahmeezy",
+          "created_at": "2026-11-18T14:15:57Z",
+          "body_snippet": "@dahmeezy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:27ef237b-5698-4e0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/691#issuecomment-6981160856"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 53,
+      "booked_username": "Jacinth-star",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-9",
+      "group_name": "guage - Group 9",
+      "reserved_issues": [
+        66,
+        67,
+        69
+      ],
+      "commented_issues": [
+        66
+      ],
+      "actual_author": "Jacinth-star",
+      "comments": [
+        {
+          "issue_number": 66,
+          "author": "Jacinth-star",
+          "created_at": "2026-11-18T14:12:26Z",
+          "body_snippet": "@Jacinth-star has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:eeb385f4-e685",
+          "url": "https://github.com/posture-sec/guage/issues/66#issuecomment-6981070760"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 54,
+      "booked_username": "raymondidahor-bot",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-1",
+      "group_name": "x402-facilitator-stellar - Group 1",
+      "reserved_issues": [
+        571,
+        575,
+        649
+      ],
+      "commented_issues": [
+        571,
+        575,
+        649
+      ],
+      "actual_author": "raymondidahor-bot",
+      "comments": [
+        {
+          "issue_number": 571,
+          "author": "raymondidahor-bot",
+          "created_at": "2026-11-18T14:40:04Z",
+          "body_snippet": "@raymondidahor-bot has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:bcf40317",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/571#issuecomment-6981780416"
+        },
+        {
+          "issue_number": 575,
+          "author": "raymondidahor-bot",
+          "created_at": "2026-11-18T14:38:36Z",
+          "body_snippet": "@raymondidahor-bot has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:234d461b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/575#issuecomment-6981742647"
+        },
+        {
+          "issue_number": 649,
+          "author": "raymondidahor-bot",
+          "created_at": "2026-11-18T14:36:50Z",
+          "body_snippet": "@raymondidahor-bot has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5d24d240",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/649#issuecomment-6981697721"
+        }
+      ],
+      "other_comments": [
+        {
+          "issue_number": 571,
+          "author": "graceshaba93",
+          "created_at": "2026-10-15T13:50:12Z",
+          "body_snippet": "@graceshaba93 has applied to work on this issue as part of the **Stellar Wave Program**'s 10th wave.  <!-- wave:application-id:dc2ad9e1-d166",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/571#issuecomment-6193682281"
+        },
+        {
+          "issue_number": 571,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-10-15T14:37:49Z",
+          "body_snippet": "Congratulations, @graceshaba93! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on October 22, 2026**.  **",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/571#issuecomment-6194696882"
+        },
+        {
+          "issue_number": 575,
+          "author": "graceshaba93",
+          "created_at": "2026-10-15T13:48:04Z",
+          "body_snippet": "@graceshaba93 has applied to work on this issue as part of the **Stellar Wave Program**'s 10th wave.  <!-- wave:application-id:4c8a6f46-1705",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/575#issuecomment-6193635025"
+        },
+        {
+          "issue_number": 575,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-10-15T14:37:02Z",
+          "body_snippet": "Congratulations, @graceshaba93! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on October 22, 2026**.  **",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/575#issuecomment-6194680253"
+        }
+      ]
+    },
+    {
+      "reservation_id": 62,
+      "booked_username": "Shakourllahfashola-dev",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-15",
+      "group_name": "x402-facilitator-stellar - Group 15",
+      "reserved_issues": [
+        692,
+        693,
+        694
+      ],
+      "commented_issues": [
+        692,
+        693,
+        694
+      ],
+      "actual_author": "shakourllahfashola-dev",
+      "comments": [
+        {
+          "issue_number": 692,
+          "author": "shakourllahfashola-dev",
+          "created_at": "2026-11-18T14:07:40Z",
+          "body_snippet": "@shakourllahfashola-dev has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5b0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/692#issuecomment-6980950979"
+        },
+        {
+          "issue_number": 693,
+          "author": "shakourllahfashola-dev",
+          "created_at": "2026-11-18T14:08:23Z",
+          "body_snippet": "@shakourllahfashola-dev has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6ec",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/693#issuecomment-6980969279"
+        },
+        {
+          "issue_number": 694,
+          "author": "shakourllahfashola-dev",
+          "created_at": "2026-11-18T14:09:02Z",
+          "body_snippet": "@shakourllahfashola-dev has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:941",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/694#issuecomment-6980985532"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 66,
+      "booked_username": "The-Najaah",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-39",
+      "group_name": "x402-facilitator-stellar - Group 39",
+      "reserved_issues": [
+        765,
+        766,
+        767
+      ],
+      "commented_issues": [
+        765,
+        766,
+        767
+      ],
+      "actual_author": "The-Najaah",
+      "comments": [
+        {
+          "issue_number": 765,
+          "author": "The-Najaah",
+          "created_at": "2026-11-18T14:48:44Z",
+          "body_snippet": "@The-Najaah has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:988624fa-282c-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/765#issuecomment-6982009357"
+        },
+        {
+          "issue_number": 766,
+          "author": "The-Najaah",
+          "created_at": "2026-11-18T14:49:15Z",
+          "body_snippet": "@The-Najaah has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e4db34d4-3bc7-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/766#issuecomment-6982022877"
+        },
+        {
+          "issue_number": 767,
+          "author": "The-Najaah",
+          "created_at": "2026-11-18T14:49:54Z",
+          "body_snippet": "@The-Najaah has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f49f3174-1819-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/767#issuecomment-6982039838"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 68,
+      "booked_username": "Ebby46",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-23",
+      "group_name": "x402-facilitator-stellar - Group 23",
+      "reserved_issues": [
+        717,
+        718,
+        719
+      ],
+      "commented_issues": [
+        717
+      ],
+      "actual_author": "Ebby46",
+      "comments": [
+        {
+          "issue_number": 717,
+          "author": "Ebby46",
+          "created_at": "2026-11-18T14:59:25Z",
+          "body_snippet": "@Ebby46 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ff448313-889f-4b59-",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/717#issuecomment-6982290983"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 74,
+      "booked_username": "Mskdylan",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-30",
+      "group_name": "x402-facilitator-stellar - Group 30",
+      "reserved_issues": [
+        738,
+        739,
+        740
+      ],
+      "commented_issues": [
+        738,
+        739,
+        740
+      ],
+      "actual_author": "mskdylan",
+      "comments": [
+        {
+          "issue_number": 738,
+          "author": "mskdylan",
+          "created_at": "2026-11-18T14:02:23Z",
+          "body_snippet": "@mskdylan has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:626ea7de-c850-423",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/738#issuecomment-6980817018"
+        },
+        {
+          "issue_number": 739,
+          "author": "mskdylan",
+          "created_at": "2026-11-18T14:11:01Z",
+          "body_snippet": "@mskdylan has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:1b40f0ed-b72b-445",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/739#issuecomment-6981035359"
+        },
+        {
+          "issue_number": 740,
+          "author": "mskdylan",
+          "created_at": "2026-11-18T14:14:47Z",
+          "body_snippet": "@mskdylan has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e1c3de3e-324b-445",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/740#issuecomment-6981131048"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 75,
+      "booked_username": "Schorlani07678",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-41",
+      "group_name": "x402-facilitator-stellar - Group 41",
+      "reserved_issues": [
+        771,
+        772,
+        773
+      ],
+      "commented_issues": [
+        771,
+        772,
+        773
+      ],
+      "actual_author": "Schorlani07678",
+      "comments": [
+        {
+          "issue_number": 771,
+          "author": "Schorlani07678",
+          "created_at": "2026-11-18T14:03:10Z",
+          "body_snippet": "@Schorlani07678 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dd6d3706-15",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/771#issuecomment-6980836791"
+        },
+        {
+          "issue_number": 772,
+          "author": "Schorlani07678",
+          "created_at": "2026-11-18T14:04:29Z",
+          "body_snippet": "@Schorlani07678 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:22c89429-f0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/772#issuecomment-6980869299"
+        },
+        {
+          "issue_number": 773,
+          "author": "Schorlani07678",
+          "created_at": "2026-11-18T14:07:19Z",
+          "body_snippet": "@Schorlani07678 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b0250059-e6",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/773#issuecomment-6980942003"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 76,
+      "booked_username": "Dev-Marcy",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-35",
+      "group_name": "x402-facilitator-stellar - Group 35",
+      "reserved_issues": [
+        753,
+        754,
+        755
+      ],
+      "commented_issues": [
+        753,
+        754,
+        755
+      ],
+      "actual_author": "Dev-Marcy",
+      "comments": [
+        {
+          "issue_number": 753,
+          "author": "Dev-Marcy",
+          "created_at": "2026-11-18T14:14:27Z",
+          "body_snippet": "@Dev-Marcy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f74e2e25-186d-4b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/753#issuecomment-6981122284"
+        },
+        {
+          "issue_number": 754,
+          "author": "Dev-Marcy",
+          "created_at": "2026-11-18T14:14:57Z",
+          "body_snippet": "@Dev-Marcy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b25ebd5c-2ee0-49",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/754#issuecomment-6981135495"
+        },
+        {
+          "issue_number": 755,
+          "author": "Dev-Marcy",
+          "created_at": "2026-11-18T14:15:30Z",
+          "body_snippet": "@Dev-Marcy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b96eb8a8-473d-4f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/755#issuecomment-6981149382"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 79,
+      "booked_username": "affy-exe",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-34",
+      "group_name": "x402-facilitator-stellar - Group 34",
+      "reserved_issues": [
+        750,
+        751,
+        752
+      ],
+      "commented_issues": [
+        750,
+        751,
+        752
+      ],
+      "actual_author": "affy-exe",
+      "comments": [
+        {
+          "issue_number": 750,
+          "author": "affy-exe",
+          "created_at": "2026-11-18T14:13:07Z",
+          "body_snippet": "@affy-exe has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5e22294c-5652-488",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/750#issuecomment-6981087952"
+        },
+        {
+          "issue_number": 751,
+          "author": "affy-exe",
+          "created_at": "2026-11-18T14:11:13Z",
+          "body_snippet": "@affy-exe has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d7186415-6e46-414",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/751#issuecomment-6981040613"
+        },
+        {
+          "issue_number": 752,
+          "author": "affy-exe",
+          "created_at": "2026-11-18T14:12:05Z",
+          "body_snippet": "@affy-exe has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:49a62e40-5695-4fa",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/752#issuecomment-6981061899"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 80,
+      "booked_username": "RealOla",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-40",
+      "group_name": "x402-facilitator-stellar - Group 40",
+      "reserved_issues": [
+        768,
+        769,
+        770
+      ],
+      "commented_issues": [
+        768,
+        769,
+        770
+      ],
+      "actual_author": "Real-Ola",
+      "comments": [
+        {
+          "issue_number": 768,
+          "author": "Real-Ola",
+          "created_at": "2026-11-18T14:21:30Z",
+          "body_snippet": "@Real-Ola has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:825761d9-eb1f-47d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/768#issuecomment-6981301001"
+        },
+        {
+          "issue_number": 769,
+          "author": "Real-Ola",
+          "created_at": "2026-11-18T14:22:04Z",
+          "body_snippet": "@Real-Ola has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:020db768-381c-4fe",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/769#issuecomment-6981315416"
+        },
+        {
+          "issue_number": 770,
+          "author": "Real-Ola",
+          "created_at": "2026-11-18T14:40:15Z",
+          "body_snippet": "@Real-Ola has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:4877e35b-7988-4fe",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/770#issuecomment-6981785381"
+        }
+      ],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 84,
+      "booked_username": "Martinsbab",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-5",
+      "group_name": "x402-facilitator-stellar - Group 5",
+      "reserved_issues": [
+        662,
+        663,
+        664
+      ],
+      "commented_issues": [
+        662,
+        663,
+        664
+      ],
+      "actual_author": "Martinsbab",
+      "comments": [
+        {
+          "issue_number": 662,
+          "author": "Martinsbab",
+          "created_at": "2026-11-18T14:43:04Z",
+          "body_snippet": "@Martinsbab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5a2c359a-10c4-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/662#issuecomment-6981859811"
+        },
+        {
+          "issue_number": 663,
+          "author": "Martinsbab",
+          "created_at": "2026-11-18T14:47:25Z",
+          "body_snippet": "@Martinsbab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5e91fbd6-01c1-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/663#issuecomment-6981975129"
+        },
+        {
+          "issue_number": 664,
+          "author": "Martinsbab",
+          "created_at": "2026-11-18T14:45:20Z",
+          "body_snippet": "@Martinsbab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a9370e18-41ea-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/664#issuecomment-6981919983"
+        }
+      ],
+      "other_comments": [
+        {
+          "issue_number": 663,
+          "author": "Mustax963",
+          "created_at": "2026-11-18T14:31:21Z",
+          "body_snippet": "@Mustax963 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:26083dd0-7b31-49",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/663#issuecomment-6981554575"
+        }
+      ]
+    }
+  ],
+  "not_applied": [
+    {
+      "reservation_id": 3,
+      "booked_username": "oluwa1to9-web",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-10",
+      "group_name": "guage - Group 10",
+      "reserved_issues": [
+        70,
+        71,
+        72
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 4,
+      "booked_username": "Chase3020",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-13",
+      "group_name": "guage - Group 13",
+      "reserved_issues": [
+        127,
+        128,
+        129
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 127,
+          "author": "bigearner852",
+          "created_at": "2026-11-18T14:19:12Z",
+          "body_snippet": "@bigearner852 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3abf0063-a56c",
+          "url": "https://github.com/posture-sec/guage/issues/127#issuecomment-6981242262"
+        }
+      ]
+    },
+    {
+      "reservation_id": 6,
+      "booked_username": "cerome360",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-1",
+      "group_name": "guage - Group 1",
+      "reserved_issues": [
+        7,
+        17,
+        42
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 7,
+      "booked_username": "smaug-1",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-42",
+      "group_name": "x402-facilitator-stellar - Group 42",
+      "reserved_issues": [
+        774,
+        775
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 8,
+      "booked_username": "mayokun-max",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-12",
+      "group_name": "guage - Group 12",
+      "reserved_issues": [
+        77,
+        125,
+        126
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 9,
+      "booked_username": "wagmiiii",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-14",
+      "group_name": "guage - Group 14",
+      "reserved_issues": [
+        130,
+        131,
+        132
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 10,
+      "booked_username": "cyber-dawg",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-6",
+      "group_name": "x402-facilitator-stellar - Group 6",
+      "reserved_issues": [
+        665,
+        666,
+        667
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 11,
+      "booked_username": "bellogodfrey281-oss",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-16",
+      "group_name": "guage - Group 16",
+      "reserved_issues": [
+        136,
+        137,
+        138
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 138,
+          "author": "AbdRahmanYus",
+          "created_at": "2026-11-18T14:29:51Z",
+          "body_snippet": "@AbdRahmanYus has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:930205b5-86ad",
+          "url": "https://github.com/posture-sec/guage/issues/138#issuecomment-6981515689"
+        }
+      ]
+    },
+    {
+      "reservation_id": 14,
+      "booked_username": "princewille277-dotcom",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-25",
+      "group_name": "guage - Group 25",
+      "reserved_issues": [
+        163,
+        164,
+        165
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 16,
+      "booked_username": "odarome132",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-11",
+      "group_name": "guage - Group 11",
+      "reserved_issues": [
+        73,
+        74,
+        75
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 21,
+      "booked_username": "pwrhaus",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-2",
+      "group_name": "guage - Group 2",
+      "reserved_issues": [
+        43,
+        44,
+        47
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 22,
+      "booked_username": "Adediwura-dev",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-21",
+      "group_name": "guage - Group 21",
+      "reserved_issues": [
+        151,
+        152,
+        153
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 152,
+          "author": "Dahniehl",
+          "created_at": "2026-11-18T14:25:25Z",
+          "body_snippet": "@Dahniehl has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6ce29550-7f0c-404",
+          "url": "https://github.com/posture-sec/guage/issues/152#issuecomment-6981401902"
+        }
+      ]
+    },
+    {
+      "reservation_id": 23,
+      "booked_username": "Adejumo-2",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-2",
+      "group_name": "x402-facilitator-stellar - Group 2",
+      "reserved_issues": [
+        650,
+        653,
+        655
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 650,
+          "author": "dhyabi2",
+          "created_at": "2026-10-28T00:17:23Z",
+          "body_snippet": "Grounded observation on the calibration itself, from the settlement-shape angle:  The ceiling you are calibrating (`MAX_TX_FEE_STROOPS_PUBNE",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/650#issuecomment-6457151801"
+        },
+        {
+          "issue_number": 653,
+          "author": "mallison031",
+          "created_at": "2026-10-29T13:36:39Z",
+          "body_snippet": "Update: #652 and #651 are merged and `main` CI is green. A testnet facilitator with the `pact` scheme is live at https://pactwright-facilita",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/653#issuecomment-6498180300"
+        },
+        {
+          "issue_number": 653,
+          "author": "marvel060",
+          "created_at": "2026-11-18T14:26:06Z",
+          "body_snippet": "@marvel060 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a0ad2755-72ac-4b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/653#issuecomment-6981420046"
+        }
+      ]
+    },
+    {
+      "reservation_id": 24,
+      "booked_username": "Orah-dev",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-26",
+      "group_name": "guage - Group 26",
+      "reserved_issues": [
+        166,
+        167,
+        168
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 25,
+      "booked_username": "elthelthetallgirl",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-22",
+      "group_name": "guage - Group 22",
+      "reserved_issues": [
+        154,
+        155,
+        156
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 26,
+      "booked_username": "aojomo",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-29",
+      "group_name": "guage - Group 29",
+      "reserved_issues": [
+        175,
+        176,
+        177
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 28,
+      "booked_username": "favoursamuel-dotcom",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-27",
+      "group_name": "guage - Group 27",
+      "reserved_issues": [
+        169,
+        170,
+        171
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 171,
+          "author": "niftymoney01",
+          "created_at": "2026-11-18T14:23:43Z",
+          "body_snippet": "@niftymoney01 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:86537b07-eebf",
+          "url": "https://github.com/posture-sec/guage/issues/171#issuecomment-6981357608"
+        },
+        {
+          "issue_number": 171,
+          "author": "Sunnybadman",
+          "created_at": "2026-11-18T14:24:02Z",
+          "body_snippet": "@Sunnybadman has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3282988f-22da-",
+          "url": "https://github.com/posture-sec/guage/issues/171#issuecomment-6981365301"
+        },
+        {
+          "issue_number": 171,
+          "author": "emmyafolly123-coder",
+          "created_at": "2026-11-18T14:25:20Z",
+          "body_snippet": "@emmyafolly123-coder has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:650082",
+          "url": "https://github.com/posture-sec/guage/issues/171#issuecomment-6981399738"
+        }
+      ]
+    },
+    {
+      "reservation_id": 29,
+      "booked_username": "kathy-ai-art",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-23",
+      "group_name": "guage - Group 23",
+      "reserved_issues": [
+        157,
+        158,
+        159
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 30,
+      "booked_username": "Kazeemmariam98-art",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-28",
+      "group_name": "guage - Group 28",
+      "reserved_issues": [
+        172,
+        173,
+        174
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 32,
+      "booked_username": "Faith3112",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-30",
+      "group_name": "guage - Group 30",
+      "reserved_issues": [
+        178,
+        179,
+        180
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 178,
+          "author": "Dayz-tech-co",
+          "created_at": "2026-11-18T14:34:18Z",
+          "body_snippet": "@Dayz-tech-co has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cfa058e9-ab12",
+          "url": "https://github.com/posture-sec/guage/issues/178#issuecomment-6981631572"
+        }
+      ]
+    },
+    {
+      "reservation_id": 35,
+      "booked_username": "Babaella101",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-34",
+      "group_name": "guage - Group 34",
+      "reserved_issues": [
+        190,
+        191,
+        192
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 36,
+      "booked_username": "posi14",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-35",
+      "group_name": "guage - Group 35",
+      "reserved_issues": [
+        193,
+        194,
+        195
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 37,
+      "booked_username": "Widadullahi",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-40",
+      "group_name": "guage - Group 40",
+      "reserved_issues": [
+        208,
+        209,
+        210
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 39,
+      "booked_username": "Toy-tech",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-11",
+      "group_name": "x402-facilitator-stellar - Group 11",
+      "reserved_issues": [
+        680,
+        681,
+        682
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 42,
+      "booked_username": "feyisayoadetunji2-jpg",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-39",
+      "group_name": "guage - Group 39",
+      "reserved_issues": [
+        205,
+        206,
+        207
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 45,
+      "booked_username": "nwabaj2017",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-41",
+      "group_name": "guage - Group 41",
+      "reserved_issues": [
+        211,
+        212,
+        213
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 46,
+      "booked_username": "Fave2",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-4",
+      "group_name": "guage - Group 4",
+      "reserved_issues": [
+        51,
+        52,
+        53
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 48,
+      "booked_username": "Perfected1",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-17",
+      "group_name": "x402-facilitator-stellar - Group 17",
+      "reserved_issues": [
+        698,
+        699,
+        700
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 49,
+      "booked_username": "Timmatt112",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-5",
+      "group_name": "guage - Group 5",
+      "reserved_issues": [
+        54,
+        55,
+        56
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 52,
+      "booked_username": "Legittv-bit",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-8",
+      "group_name": "guage - Group 8",
+      "reserved_issues": [
+        63,
+        64,
+        65
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 55,
+      "booked_username": "timo126",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-12",
+      "group_name": "x402-facilitator-stellar - Group 12",
+      "reserved_issues": [
+        683,
+        684,
+        685
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 683,
+          "author": "Deemexlyon",
+          "created_at": "2026-11-18T14:21:15Z",
+          "body_snippet": "@Deemexlyon has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e39dc903-c06a-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/683#issuecomment-6981294621"
+        },
+        {
+          "issue_number": 684,
+          "author": "Deemexlyon",
+          "created_at": "2026-11-18T14:22:24Z",
+          "body_snippet": "@Deemexlyon has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3e4892e6-3795-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/684#issuecomment-6981323981"
+        },
+        {
+          "issue_number": 685,
+          "author": "Deemexlyon",
+          "created_at": "2026-11-18T14:23:18Z",
+          "body_snippet": "@Deemexlyon has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b5ccad17-b219-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/685#issuecomment-6981347052"
+        }
+      ]
+    },
+    {
+      "reservation_id": 56,
+      "booked_username": "Bayovictor",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-3",
+      "group_name": "x402-facilitator-stellar - Group 3",
+      "reserved_issues": [
+        656,
+        657,
+        658
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 657,
+          "author": "niftymoney01",
+          "created_at": "2026-11-18T14:40:45Z",
+          "body_snippet": "@niftymoney01 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:46645dee-dfba",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/657#issuecomment-6981798157"
+        }
+      ]
+    },
+    {
+      "reservation_id": 57,
+      "booked_username": "Damilorlar",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-13",
+      "group_name": "x402-facilitator-stellar - Group 13",
+      "reserved_issues": [
+        686,
+        687,
+        688
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 58,
+      "booked_username": "idazea",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-8",
+      "group_name": "x402-facilitator-stellar - Group 8",
+      "reserved_issues": [
+        671,
+        672,
+        673
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 59,
+      "booked_username": "smog123",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-16",
+      "group_name": "x402-facilitator-stellar - Group 16",
+      "reserved_issues": [
+        695,
+        696,
+        697
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 60,
+      "booked_username": "Nwoyemartha",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-19",
+      "group_name": "x402-facilitator-stellar - Group 19",
+      "reserved_issues": [
+        704,
+        705,
+        706
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 61,
+      "booked_username": "alagbesadat208-prog",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-28",
+      "group_name": "x402-facilitator-stellar - Group 28",
+      "reserved_issues": [
+        732,
+        733,
+        734
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 63,
+      "booked_username": "Imole-loj",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-21",
+      "group_name": "x402-facilitator-stellar - Group 21",
+      "reserved_issues": [
+        711,
+        712,
+        713
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 64,
+      "booked_username": "soliatabdullahi",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-18",
+      "group_name": "x402-facilitator-stellar - Group 18",
+      "reserved_issues": [
+        701,
+        702,
+        703
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 65,
+      "booked_username": "Omolola-art",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-20",
+      "group_name": "x402-facilitator-stellar - Group 20",
+      "reserved_issues": [
+        707,
+        708,
+        709
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 67,
+      "booked_username": "Davidolanrewaju",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-22",
+      "group_name": "x402-facilitator-stellar - Group 22",
+      "reserved_issues": [
+        714,
+        715,
+        716
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 69,
+      "booked_username": "baba-billy",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-24",
+      "group_name": "x402-facilitator-stellar - Group 24",
+      "reserved_issues": [
+        720,
+        721,
+        722
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 720,
+          "author": "GilbertPrevail",
+          "created_at": "2026-11-18T14:06:45Z",
+          "body_snippet": "@GilbertPrevail has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:85398193-0f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/720#issuecomment-6980927145"
+        }
+      ]
+    },
+    {
+      "reservation_id": 70,
+      "booked_username": "omoh5",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-31",
+      "group_name": "x402-facilitator-stellar - Group 31",
+      "reserved_issues": [
+        741,
+        742,
+        743
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 71,
+      "booked_username": "Realdone",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-26",
+      "group_name": "x402-facilitator-stellar - Group 26",
+      "reserved_issues": [
+        726,
+        727,
+        728
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 72,
+      "booked_username": "Yodomite",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-29",
+      "group_name": "x402-facilitator-stellar - Group 29",
+      "reserved_issues": [
+        735,
+        736,
+        737
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 73,
+      "booked_username": "oyebolarotimi269-ai",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-33",
+      "group_name": "x402-facilitator-stellar - Group 33",
+      "reserved_issues": [
+        747,
+        748,
+        749
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 77,
+      "booked_username": "achiever",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-32",
+      "group_name": "x402-facilitator-stellar - Group 32",
+      "reserved_issues": [
+        744,
+        745,
+        746
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 745,
+          "author": "Mustax963",
+          "created_at": "2026-11-18T14:27:47Z",
+          "body_snippet": "@Mustax963 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:0edbac9d-ad82-4b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/745#issuecomment-6981463265"
+        }
+      ]
+    },
+    {
+      "reservation_id": 78,
+      "booked_username": "anitahhh",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-36",
+      "group_name": "x402-facilitator-stellar - Group 36",
+      "reserved_issues": [
+        756,
+        757,
+        758
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": [
+        {
+          "issue_number": 756,
+          "author": "Theraxia",
+          "created_at": "2026-11-18T14:40:21Z",
+          "body_snippet": "@Theraxia has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b3e2bf14-2cfb-478",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/756#issuecomment-6981787741"
+        },
+        {
+          "issue_number": 757,
+          "author": "Theraxia",
+          "created_at": "2026-11-18T14:40:53Z",
+          "body_snippet": "@Theraxia has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:45165012-7b4b-469",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/757#issuecomment-6981801611"
+        },
+        {
+          "issue_number": 758,
+          "author": "Theraxia",
+          "created_at": "2026-11-18T14:41:30Z",
+          "body_snippet": "@Theraxia has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a6e4a3c3-d7b8-400",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/758#issuecomment-6981818352"
+        }
+      ]
+    },
+    {
+      "reservation_id": 81,
+      "booked_username": "Ayfataan",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-7",
+      "group_name": "x402-facilitator-stellar - Group 7",
+      "reserved_issues": [
+        668,
+        669,
+        670
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 82,
+      "booked_username": "jessicacinderella9-cloud",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-4",
+      "group_name": "x402-facilitator-stellar - Group 4",
+      "reserved_issues": [
+        659,
+        660,
+        661
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    },
+    {
+      "reservation_id": 83,
+      "booked_username": "amonehin",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-9",
+      "group_name": "x402-facilitator-stellar - Group 9",
+      "reserved_issues": [
+        674,
+        675,
+        676
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": [],
+      "other_comments": []
+    }
+  ]
+}

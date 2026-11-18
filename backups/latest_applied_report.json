@@ -1,0 +1,3054 @@
+{
+  "total": 84,
+  "applied_count": 46,
+  "not_applied_count": 38,
+  "applied": [
+    {
+      "reservation_id": 1,
+      "booked_username": "Odutola657-lab",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-25",
+      "group_name": "x402-facilitator-stellar - Group 25",
+      "reserved_issues": [
+        723,
+        724,
+        725
+      ],
+      "commented_issues": [
+        723,
+        724,
+        725
+      ],
+      "actual_author": "odutola657-lab",
+      "comments": [
+        {
+          "issue_number": 723,
+          "author": "odutola657-lab",
+          "created_at": "2026-11-18T14:48:57Z",
+          "body_snippet": "@odutola657-lab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:068199d4-a7",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/723#issuecomment-6982015369"
+        },
+        {
+          "issue_number": 723,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:10:38Z",
+          "body_snippet": "Congratulations, @odutola657-lab! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**. ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/723#issuecomment-6982588572"
+        },
+        {
+          "issue_number": 724,
+          "author": "odutola657-lab",
+          "created_at": "2026-11-18T14:49:21Z",
+          "body_snippet": "@odutola657-lab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:162e5861-e0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/724#issuecomment-6982025306"
+        },
+        {
+          "issue_number": 724,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:09Z",
+          "body_snippet": "Congratulations, @odutola657-lab! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**. ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/724#issuecomment-6982602211"
+        },
+        {
+          "issue_number": 725,
+          "author": "odutola657-lab",
+          "created_at": "2026-11-18T14:49:45Z",
+          "body_snippet": "@odutola657-lab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:abcd89ba-5e",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/725#issuecomment-6982035558"
+        },
+        {
+          "issue_number": 725,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:12Z",
+          "body_snippet": "Congratulations, @odutola657-lab! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**. ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/725#issuecomment-6982603643"
+        }
+      ]
+    },
+    {
+      "reservation_id": 2,
+      "booked_username": "Adeyemi-cmd",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-24",
+      "group_name": "guage - Group 24",
+      "reserved_issues": [
+        160,
+        161,
+        162
+      ],
+      "commented_issues": [
+        160,
+        161,
+        162
+      ],
+      "actual_author": "Adeyemi-cmd",
+      "comments": [
+        {
+          "issue_number": 160,
+          "author": "Adeyemi-cmd",
+          "created_at": "2026-11-18T14:30:52Z",
+          "body_snippet": "@Adeyemi-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:c2e50858-dc53-",
+          "url": "https://github.com/posture-sec/guage/issues/160#issuecomment-6981542088"
+        },
+        {
+          "issue_number": 160,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:13Z",
+          "body_snippet": "Congratulations, @Adeyemi-cmd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **",
+          "url": "https://github.com/posture-sec/guage/issues/160#issuecomment-6982662415"
+        },
+        {
+          "issue_number": 161,
+          "author": "Adeyemi-cmd",
+          "created_at": "2026-11-18T14:31:46Z",
+          "body_snippet": "@Adeyemi-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ecd94c9e-678a-",
+          "url": "https://github.com/posture-sec/guage/issues/161#issuecomment-6981565610"
+        },
+        {
+          "issue_number": 161,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:16Z",
+          "body_snippet": "Congratulations, @Adeyemi-cmd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **",
+          "url": "https://github.com/posture-sec/guage/issues/161#issuecomment-6982663915"
+        },
+        {
+          "issue_number": 162,
+          "author": "Adeyemi-cmd",
+          "created_at": "2026-11-18T14:32:27Z",
+          "body_snippet": "@Adeyemi-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3b22dee6-c581-",
+          "url": "https://github.com/posture-sec/guage/issues/162#issuecomment-6981583759"
+        },
+        {
+          "issue_number": 162,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:19Z",
+          "body_snippet": "Congratulations, @Adeyemi-cmd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **",
+          "url": "https://github.com/posture-sec/guage/issues/162#issuecomment-6982665332"
+        }
+      ]
+    },
+    {
+      "reservation_id": 4,
+      "booked_username": "Chase3020",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-13",
+      "group_name": "guage - Group 13",
+      "reserved_issues": [
+        127,
+        128,
+        129
+      ],
+      "commented_issues": [
+        128,
+        129
+      ],
+      "actual_author": "CHASE3020",
+      "comments": [
+        {
+          "issue_number": 128,
+          "author": "CHASE3020",
+          "created_at": "2026-11-18T15:16:16Z",
+          "body_snippet": "@CHASE3020 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:73ebf249-c355-43",
+          "url": "https://github.com/posture-sec/guage/issues/128#issuecomment-6982745060"
+        },
+        {
+          "issue_number": 129,
+          "author": "CHASE3020",
+          "created_at": "2026-11-18T15:15:28Z",
+          "body_snippet": "@CHASE3020 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:7c742a0d-8d00-4f",
+          "url": "https://github.com/posture-sec/guage/issues/129#issuecomment-6982723367"
+        }
+      ]
+    },
+    {
+      "reservation_id": 5,
+      "booked_username": "OG-wura",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-20",
+      "group_name": "guage - Group 20",
+      "reserved_issues": [
+        148,
+        149,
+        150
+      ],
+      "commented_issues": [
+        148,
+        149,
+        150
+      ],
+      "actual_author": "OG-wura",
+      "comments": [
+        {
+          "issue_number": 148,
+          "author": "OG-wura",
+          "created_at": "2026-11-18T14:34:20Z",
+          "body_snippet": "@OG-wura has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:168030b5-a1d7-4143",
+          "url": "https://github.com/posture-sec/guage/issues/148#issuecomment-6981632407"
+        },
+        {
+          "issue_number": 148,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:19Z",
+          "body_snippet": "Congratulations, @OG-wura! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/posture-sec/guage/issues/148#issuecomment-6982665684"
+        },
+        {
+          "issue_number": 149,
+          "author": "OG-wura",
+          "created_at": "2026-11-18T14:34:58Z",
+          "body_snippet": "@OG-wura has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:270f8159-94cf-436a",
+          "url": "https://github.com/posture-sec/guage/issues/149#issuecomment-6981649452"
+        },
+        {
+          "issue_number": 149,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:22Z",
+          "body_snippet": "Congratulations, @OG-wura! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/posture-sec/guage/issues/149#issuecomment-6982666834"
+        },
+        {
+          "issue_number": 150,
+          "author": "OG-wura",
+          "created_at": "2026-11-18T14:35:26Z",
+          "body_snippet": "@OG-wura has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:41e888fe-0335-4ef8",
+          "url": "https://github.com/posture-sec/guage/issues/150#issuecomment-6981661584"
+        },
+        {
+          "issue_number": 150,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:24Z",
+          "body_snippet": "Congratulations, @OG-wura! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/posture-sec/guage/issues/150#issuecomment-6982667917"
+        }
+      ]
+    },
+    {
+      "reservation_id": 12,
+      "booked_username": "Grazial-hash",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-37",
+      "group_name": "x402-facilitator-stellar - Group 37",
+      "reserved_issues": [
+        759,
+        760,
+        761
+      ],
+      "commented_issues": [
+        759,
+        760,
+        761
+      ],
+      "actual_author": "Grazial-hash",
+      "comments": [
+        {
+          "issue_number": 759,
+          "author": "Grazial-hash",
+          "created_at": "2026-11-18T14:46:59Z",
+          "body_snippet": "@Grazial-hash has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:8ddd0663-d12f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/759#issuecomment-6981963360"
+        },
+        {
+          "issue_number": 759,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:16Z",
+          "body_snippet": "Congratulations, @Grazial-hash! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  *",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/759#issuecomment-6982605275"
+        },
+        {
+          "issue_number": 760,
+          "author": "Grazial-hash",
+          "created_at": "2026-11-18T14:47:22Z",
+          "body_snippet": "@Grazial-hash has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:95413663-5834",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/760#issuecomment-6981973755"
+        },
+        {
+          "issue_number": 760,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:19Z",
+          "body_snippet": "Congratulations, @Grazial-hash! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  *",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/760#issuecomment-6982606637"
+        },
+        {
+          "issue_number": 761,
+          "author": "Grazial-hash",
+          "created_at": "2026-11-18T14:47:48Z",
+          "body_snippet": "@Grazial-hash has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a1afffcf-ea67",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/761#issuecomment-6981985173"
+        },
+        {
+          "issue_number": 761,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:21Z",
+          "body_snippet": "Congratulations, @Grazial-hash! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  *",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/761#issuecomment-6982607758"
+        }
+      ]
+    },
+    {
+      "reservation_id": 13,
+      "booked_username": "composure-lad",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-19",
+      "group_name": "guage - Group 19",
+      "reserved_issues": [
+        145,
+        146,
+        147
+      ],
+      "commented_issues": [
+        145,
+        146,
+        147
+      ],
+      "actual_author": "composure-lad",
+      "comments": [
+        {
+          "issue_number": 145,
+          "author": "composure-lad",
+          "created_at": "2026-11-18T14:37:57Z",
+          "body_snippet": "@composure-lad has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9ad1ade9-9fa",
+          "url": "https://github.com/posture-sec/guage/issues/145#issuecomment-6981726216"
+        },
+        {
+          "issue_number": 145,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:27Z",
+          "body_snippet": "Congratulations, @composure-lad! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/145#issuecomment-6982669416"
+        },
+        {
+          "issue_number": 146,
+          "author": "composure-lad",
+          "created_at": "2026-11-18T14:38:35Z",
+          "body_snippet": "@composure-lad has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:abda51a1-a08",
+          "url": "https://github.com/posture-sec/guage/issues/146#issuecomment-6981742247"
+        },
+        {
+          "issue_number": 146,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:29Z",
+          "body_snippet": "Congratulations, @composure-lad! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/146#issuecomment-6982669989"
+        },
+        {
+          "issue_number": 147,
+          "author": "composure-lad",
+          "created_at": "2026-11-18T14:39:47Z",
+          "body_snippet": "@composure-lad has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:4bcb6880-31d",
+          "url": "https://github.com/posture-sec/guage/issues/147#issuecomment-6981773349"
+        },
+        {
+          "issue_number": 147,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:32Z",
+          "body_snippet": "Congratulations, @composure-lad! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/147#issuecomment-6982671342"
+        }
+      ]
+    },
+    {
+      "reservation_id": 14,
+      "booked_username": "princewille277-dotcom",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-25",
+      "group_name": "guage - Group 25",
+      "reserved_issues": [
+        163,
+        164,
+        165
+      ],
+      "commented_issues": [
+        163,
+        164,
+        165
+      ],
+      "actual_author": "princewille277-dotcom",
+      "comments": [
+        {
+          "issue_number": 163,
+          "author": "princewille277-dotcom",
+          "created_at": "2026-11-18T15:01:11Z",
+          "body_snippet": "@princewille277-dotcom has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:bc5a",
+          "url": "https://github.com/posture-sec/guage/issues/163#issuecomment-6982337528"
+        },
+        {
+          "issue_number": 164,
+          "author": "princewille277-dotcom",
+          "created_at": "2026-11-18T15:01:39Z",
+          "body_snippet": "@princewille277-dotcom has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9878",
+          "url": "https://github.com/posture-sec/guage/issues/164#issuecomment-6982349872"
+        },
+        {
+          "issue_number": 165,
+          "author": "princewille277-dotcom",
+          "created_at": "2026-11-18T15:02:11Z",
+          "body_snippet": "@princewille277-dotcom has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:c8b4",
+          "url": "https://github.com/posture-sec/guage/issues/165#issuecomment-6982364193"
+        }
+      ]
+    },
+    {
+      "reservation_id": 15,
+      "booked_username": "Ayooo-web",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-27",
+      "group_name": "x402-facilitator-stellar - Group 27",
+      "reserved_issues": [
+        729,
+        730,
+        731
+      ],
+      "commented_issues": [
+        729,
+        730,
+        731
+      ],
+      "actual_author": "Ayooo-web",
+      "comments": [
+        {
+          "issue_number": 729,
+          "author": "Ayooo-web",
+          "created_at": "2026-11-18T14:51:05Z",
+          "body_snippet": "@Ayooo-web has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6be00903-f620-46",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/729#issuecomment-6982071059"
+        },
+        {
+          "issue_number": 729,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:25Z",
+          "body_snippet": "Congratulations, @Ayooo-web! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/729#issuecomment-6982609506"
+        },
+        {
+          "issue_number": 730,
+          "author": "Ayooo-web",
+          "created_at": "2026-11-18T14:51:29Z",
+          "body_snippet": "@Ayooo-web has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d8dffdb1-345a-49",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/730#issuecomment-6982081397"
+        },
+        {
+          "issue_number": 730,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:27Z",
+          "body_snippet": "Congratulations, @Ayooo-web! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/730#issuecomment-6982610351"
+        },
+        {
+          "issue_number": 731,
+          "author": "Ayooo-web",
+          "created_at": "2026-11-18T14:51:57Z",
+          "body_snippet": "@Ayooo-web has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:543105d9-377e-40",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/731#issuecomment-6982093864"
+        },
+        {
+          "issue_number": 731,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:30Z",
+          "body_snippet": "Congratulations, @Ayooo-web! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/731#issuecomment-6982611646"
+        }
+      ]
+    },
+    {
+      "reservation_id": 17,
+      "booked_username": "chykason77",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-15",
+      "group_name": "guage - Group 15",
+      "reserved_issues": [
+        133,
+        134,
+        135
+      ],
+      "commented_issues": [
+        133,
+        134,
+        135
+      ],
+      "actual_author": "chykason77-blip",
+      "comments": [
+        {
+          "issue_number": 133,
+          "author": "chykason77-blip",
+          "created_at": "2026-11-18T14:08:14Z",
+          "body_snippet": "@chykason77-blip has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:489f7726-f",
+          "url": "https://github.com/posture-sec/guage/issues/133#issuecomment-6980965288"
+        },
+        {
+          "issue_number": 133,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:35Z",
+          "body_snippet": "Congratulations, @chykason77-blip! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.",
+          "url": "https://github.com/posture-sec/guage/issues/133#issuecomment-6982672743"
+        },
+        {
+          "issue_number": 134,
+          "author": "chykason77-blip",
+          "created_at": "2026-11-18T14:08:57Z",
+          "body_snippet": "@chykason77-blip has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:c81494ff-e",
+          "url": "https://github.com/posture-sec/guage/issues/134#issuecomment-6980983238"
+        },
+        {
+          "issue_number": 134,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:38Z",
+          "body_snippet": "Congratulations, @chykason77-blip! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.",
+          "url": "https://github.com/posture-sec/guage/issues/134#issuecomment-6982674058"
+        },
+        {
+          "issue_number": 135,
+          "author": "chykason77-blip",
+          "created_at": "2026-11-18T14:09:41Z",
+          "body_snippet": "@chykason77-blip has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:221b0d1c-1",
+          "url": "https://github.com/posture-sec/guage/issues/135#issuecomment-6981002360"
+        },
+        {
+          "issue_number": 135,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:38Z",
+          "body_snippet": "Congratulations, @chykason77-blip! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.",
+          "url": "https://github.com/posture-sec/guage/issues/135#issuecomment-6982673965"
+        }
+      ]
+    },
+    {
+      "reservation_id": 18,
+      "booked_username": "Olu-cmd",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-38",
+      "group_name": "x402-facilitator-stellar - Group 38",
+      "reserved_issues": [
+        762,
+        763,
+        764
+      ],
+      "commented_issues": [
+        762,
+        763,
+        764
+      ],
+      "actual_author": "olu-cmd",
+      "comments": [
+        {
+          "issue_number": 762,
+          "author": "olu-cmd",
+          "created_at": "2026-11-18T14:44:08Z",
+          "body_snippet": "@olu-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:7f976fca-7183-4e85",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/762#issuecomment-6981887974"
+        },
+        {
+          "issue_number": 762,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:32Z",
+          "body_snippet": "Congratulations, @olu-cmd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/762#issuecomment-6982612700"
+        },
+        {
+          "issue_number": 763,
+          "author": "olu-cmd",
+          "created_at": "2026-11-18T14:44:30Z",
+          "body_snippet": "@olu-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e888f3dd-c16b-40f0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/763#issuecomment-6981897804"
+        },
+        {
+          "issue_number": 763,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:34Z",
+          "body_snippet": "Congratulations, @olu-cmd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/763#issuecomment-6982613437"
+        },
+        {
+          "issue_number": 764,
+          "author": "olu-cmd",
+          "created_at": "2026-11-18T14:45:06Z",
+          "body_snippet": "@olu-cmd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b59cb7af-f769-45c2",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/764#issuecomment-6981914082"
+        },
+        {
+          "issue_number": 764,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:37Z",
+          "body_snippet": "Congratulations, @olu-cmd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/764#issuecomment-6982614999"
+        }
+      ]
+    },
+    {
+      "reservation_id": 19,
+      "booked_username": "melanindebbie",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-17",
+      "group_name": "guage - Group 17",
+      "reserved_issues": [
+        139,
+        140,
+        141
+      ],
+      "commented_issues": [
+        139,
+        140,
+        141
+      ],
+      "actual_author": "melanindebbie",
+      "comments": [
+        {
+          "issue_number": 139,
+          "author": "melanindebbie",
+          "created_at": "2026-11-18T14:03:40Z",
+          "body_snippet": "@melanindebbie has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:54261788-330",
+          "url": "https://github.com/posture-sec/guage/issues/139#issuecomment-6980849313"
+        },
+        {
+          "issue_number": 139,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:40Z",
+          "body_snippet": "Congratulations, @melanindebbie! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/139#issuecomment-6982675276"
+        },
+        {
+          "issue_number": 140,
+          "author": "melanindebbie",
+          "created_at": "2026-11-18T14:04:26Z",
+          "body_snippet": "@melanindebbie has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b88339c5-13c",
+          "url": "https://github.com/posture-sec/guage/issues/140#issuecomment-6980867947"
+        },
+        {
+          "issue_number": 140,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:44Z",
+          "body_snippet": "Congratulations, @melanindebbie! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/140#issuecomment-6982676582"
+        },
+        {
+          "issue_number": 141,
+          "author": "melanindebbie",
+          "created_at": "2026-11-18T14:05:02Z",
+          "body_snippet": "@melanindebbie has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3008fb9c-6a4",
+          "url": "https://github.com/posture-sec/guage/issues/141#issuecomment-6980883292"
+        },
+        {
+          "issue_number": 141,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:44Z",
+          "body_snippet": "Congratulations, @melanindebbie! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/141#issuecomment-6982676712"
+        }
+      ]
+    },
+    {
+      "reservation_id": 20,
+      "booked_username": "Hikmaholadele",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-18",
+      "group_name": "guage - Group 18",
+      "reserved_issues": [
+        142,
+        143,
+        144
+      ],
+      "commented_issues": [
+        142,
+        143,
+        144
+      ],
+      "actual_author": "Hikmaholadele",
+      "comments": [
+        {
+          "issue_number": 142,
+          "author": "Hikmaholadele",
+          "created_at": "2026-11-18T14:03:36Z",
+          "body_snippet": "@Hikmaholadele has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:00580ee4-f19",
+          "url": "https://github.com/posture-sec/guage/issues/142#issuecomment-6980847250"
+        },
+        {
+          "issue_number": 142,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:47Z",
+          "body_snippet": "Congratulations, @Hikmaholadele! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/142#issuecomment-6982678180"
+        },
+        {
+          "issue_number": 143,
+          "author": "Hikmaholadele",
+          "created_at": "2026-11-18T14:04:05Z",
+          "body_snippet": "@Hikmaholadele has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d67c45f2-666",
+          "url": "https://github.com/posture-sec/guage/issues/143#issuecomment-6980859436"
+        },
+        {
+          "issue_number": 143,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:49Z",
+          "body_snippet": "Congratulations, @Hikmaholadele! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/143#issuecomment-6982678956"
+        },
+        {
+          "issue_number": 144,
+          "author": "Hikmaholadele",
+          "created_at": "2026-11-18T14:04:52Z",
+          "body_snippet": "@Hikmaholadele has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d534c213-5c9",
+          "url": "https://github.com/posture-sec/guage/issues/144#issuecomment-6980878989"
+        },
+        {
+          "issue_number": 144,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:52Z",
+          "body_snippet": "Congratulations, @Hikmaholadele! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/144#issuecomment-6982680229"
+        }
+      ]
+    },
+    {
+      "reservation_id": 23,
+      "booked_username": "Adejumo-2",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-2",
+      "group_name": "x402-facilitator-stellar - Group 2",
+      "reserved_issues": [
+        650,
+        653,
+        655
+      ],
+      "commented_issues": [
+        650,
+        653,
+        655
+      ],
+      "actual_author": "Adejumo-2",
+      "comments": [
+        {
+          "issue_number": 650,
+          "author": "Adejumo-2",
+          "created_at": "2026-11-18T15:11:24Z",
+          "body_snippet": "@Adejumo-2 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:bd04ebb1-0cdc-45",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/650#issuecomment-6982609159"
+        },
+        {
+          "issue_number": 653,
+          "author": "Adejumo-2",
+          "created_at": "2026-11-18T15:12:25Z",
+          "body_snippet": "@Adejumo-2 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6bbe51a7-4b23-4c",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/653#issuecomment-6982639408"
+        },
+        {
+          "issue_number": 655,
+          "author": "Adejumo-2",
+          "created_at": "2026-11-18T15:13:30Z",
+          "body_snippet": "@Adejumo-2 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6a263cfc-5647-46",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/655#issuecomment-6982670596"
+        }
+      ]
+    },
+    {
+      "reservation_id": 27,
+      "booked_username": "Samlogy1",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-32",
+      "group_name": "guage - Group 32",
+      "reserved_issues": [
+        184,
+        185,
+        186
+      ],
+      "commented_issues": [
+        184,
+        185,
+        186
+      ],
+      "actual_author": "samlogy1",
+      "comments": [
+        {
+          "issue_number": 184,
+          "author": "samlogy1",
+          "created_at": "2026-11-18T14:55:10Z",
+          "body_snippet": "@samlogy1 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:8537d702-5d94-459",
+          "url": "https://github.com/posture-sec/guage/issues/184#issuecomment-6982180187"
+        },
+        {
+          "issue_number": 184,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:53Z",
+          "body_snippet": "Congratulations, @samlogy1! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/posture-sec/guage/issues/184#issuecomment-6982680809"
+        },
+        {
+          "issue_number": 185,
+          "author": "samlogy1",
+          "created_at": "2026-11-18T14:55:45Z",
+          "body_snippet": "@samlogy1 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cb6dfdd9-d44d-4c7",
+          "url": "https://github.com/posture-sec/guage/issues/185#issuecomment-6982195513"
+        },
+        {
+          "issue_number": 185,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:56Z",
+          "body_snippet": "Congratulations, @samlogy1! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/posture-sec/guage/issues/185#issuecomment-6982682080"
+        },
+        {
+          "issue_number": 186,
+          "author": "samlogy1",
+          "created_at": "2026-11-18T14:56:28Z",
+          "body_snippet": "@samlogy1 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:94e6a604-be41-405",
+          "url": "https://github.com/posture-sec/guage/issues/186#issuecomment-6982214177"
+        },
+        {
+          "issue_number": 186,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:59Z",
+          "body_snippet": "Congratulations, @samlogy1! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/posture-sec/guage/issues/186#issuecomment-6982683435"
+        }
+      ]
+    },
+    {
+      "reservation_id": 28,
+      "booked_username": "favoursamuel-dotcom",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-27",
+      "group_name": "guage - Group 27",
+      "reserved_issues": [
+        169,
+        170,
+        171
+      ],
+      "commented_issues": [
+        169
+      ],
+      "actual_author": "favoursamuel-dotcom",
+      "comments": [
+        {
+          "issue_number": 169,
+          "author": "favoursamuel-dotcom",
+          "created_at": "2026-11-18T15:17:46Z",
+          "body_snippet": "@favoursamuel-dotcom has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:733334",
+          "url": "https://github.com/posture-sec/guage/issues/169#issuecomment-6982785489"
+        }
+      ]
+    },
+    {
+      "reservation_id": 31,
+      "booked_username": "vrse-vrde",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-3",
+      "group_name": "guage - Group 3",
+      "reserved_issues": [
+        48,
+        49,
+        50
+      ],
+      "commented_issues": [
+        48,
+        49,
+        50
+      ],
+      "actual_author": "vrse-vrde",
+      "comments": [
+        {
+          "issue_number": 48,
+          "author": "vrse-vrde",
+          "created_at": "2026-11-18T14:11:30Z",
+          "body_snippet": "@vrse-vrde has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:20836fdc-805a-46",
+          "url": "https://github.com/posture-sec/guage/issues/48#issuecomment-6981047639"
+        },
+        {
+          "issue_number": 48,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:59Z",
+          "body_snippet": "Congratulations, @vrse-vrde! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/posture-sec/guage/issues/48#issuecomment-6982683573"
+        },
+        {
+          "issue_number": 49,
+          "author": "vrse-vrde",
+          "created_at": "2026-11-18T14:12:39Z",
+          "body_snippet": "@vrse-vrde has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ccf9a40c-9f16-48",
+          "url": "https://github.com/posture-sec/guage/issues/49#issuecomment-6981076359"
+        },
+        {
+          "issue_number": 49,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:03Z",
+          "body_snippet": "Congratulations, @vrse-vrde! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/posture-sec/guage/issues/49#issuecomment-6982685096"
+        },
+        {
+          "issue_number": 50,
+          "author": "vrse-vrde",
+          "created_at": "2026-11-18T14:10:44Z",
+          "body_snippet": "@vrse-vrde has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5fcdcdbc-0ae8-4b",
+          "url": "https://github.com/posture-sec/guage/issues/50#issuecomment-6981028282"
+        },
+        {
+          "issue_number": 50,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:05Z",
+          "body_snippet": "Congratulations, @vrse-vrde! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/posture-sec/guage/issues/50#issuecomment-6982685834"
+        }
+      ]
+    },
+    {
+      "reservation_id": 32,
+      "booked_username": "Faith3112",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-30",
+      "group_name": "guage - Group 30",
+      "reserved_issues": [
+        178,
+        179,
+        180
+      ],
+      "commented_issues": [
+        178,
+        179,
+        180
+      ],
+      "actual_author": "Faith3112",
+      "comments": [
+        {
+          "issue_number": 178,
+          "author": "Faith3112",
+          "created_at": "2026-11-18T15:07:26Z",
+          "body_snippet": "@Faith3112 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dbf67d3c-37b7-4b",
+          "url": "https://github.com/posture-sec/guage/issues/178#issuecomment-6982504058"
+        },
+        {
+          "issue_number": 179,
+          "author": "Faith3112",
+          "created_at": "2026-11-18T15:08:08Z",
+          "body_snippet": "@Faith3112 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5c674ae8-ce0f-4c",
+          "url": "https://github.com/posture-sec/guage/issues/179#issuecomment-6982522468"
+        },
+        {
+          "issue_number": 180,
+          "author": "Faith3112",
+          "created_at": "2026-11-18T15:08:34Z",
+          "body_snippet": "@Faith3112 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9f406238-7977-4e",
+          "url": "https://github.com/posture-sec/guage/issues/180#issuecomment-6982533745"
+        }
+      ]
+    },
+    {
+      "reservation_id": 33,
+      "booked_username": "Uboho-prog",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-31",
+      "group_name": "guage - Group 31",
+      "reserved_issues": [
+        181,
+        182,
+        183
+      ],
+      "commented_issues": [
+        181,
+        182,
+        183
+      ],
+      "actual_author": "uboho-prog",
+      "comments": [
+        {
+          "issue_number": 181,
+          "author": "uboho-prog",
+          "created_at": "2026-11-18T14:39:39Z",
+          "body_snippet": "@uboho-prog has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f1eb6b25-5006-4",
+          "url": "https://github.com/posture-sec/guage/issues/181#issuecomment-6981769761"
+        },
+        {
+          "issue_number": 181,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:08Z",
+          "body_snippet": "Congratulations, @uboho-prog! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/posture-sec/guage/issues/181#issuecomment-6982687129"
+        },
+        {
+          "issue_number": 182,
+          "author": "uboho-prog",
+          "created_at": "2026-11-18T14:40:11Z",
+          "body_snippet": "@uboho-prog has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:eb259d0a-9c44-4",
+          "url": "https://github.com/posture-sec/guage/issues/182#issuecomment-6981783540"
+        },
+        {
+          "issue_number": 182,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:10Z",
+          "body_snippet": "Congratulations, @uboho-prog! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/posture-sec/guage/issues/182#issuecomment-6982687979"
+        },
+        {
+          "issue_number": 183,
+          "author": "uboho-prog",
+          "created_at": "2026-11-18T14:40:40Z",
+          "body_snippet": "@uboho-prog has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:08d898cd-7de0-4",
+          "url": "https://github.com/posture-sec/guage/issues/183#issuecomment-6981796005"
+        },
+        {
+          "issue_number": 183,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:11Z",
+          "body_snippet": "Congratulations, @uboho-prog! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/posture-sec/guage/issues/183#issuecomment-6982688495"
+        }
+      ]
+    },
+    {
+      "reservation_id": 34,
+      "booked_username": "carterdev-001",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-33",
+      "group_name": "guage - Group 33",
+      "reserved_issues": [
+        187,
+        188,
+        189
+      ],
+      "commented_issues": [
+        187,
+        188,
+        189
+      ],
+      "actual_author": "carterdev-001",
+      "comments": [
+        {
+          "issue_number": 187,
+          "author": "carterdev-001",
+          "created_at": "2026-11-18T14:09:56Z",
+          "body_snippet": "@carterdev-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cf6652ba-1d7",
+          "url": "https://github.com/posture-sec/guage/issues/187#issuecomment-6981008495"
+        },
+        {
+          "issue_number": 187,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:15Z",
+          "body_snippet": "Congratulations, @carterdev-001! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/187#issuecomment-6982690301"
+        },
+        {
+          "issue_number": 188,
+          "author": "carterdev-001",
+          "created_at": "2026-11-18T14:15:40Z",
+          "body_snippet": "@carterdev-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cd862fbc-345",
+          "url": "https://github.com/posture-sec/guage/issues/188#issuecomment-6981153651"
+        },
+        {
+          "issue_number": 188,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:18Z",
+          "body_snippet": "Congratulations, @carterdev-001! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/188#issuecomment-6982691652"
+        },
+        {
+          "issue_number": 189,
+          "author": "carterdev-001",
+          "created_at": "2026-11-18T14:16:58Z",
+          "body_snippet": "@carterdev-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dad1b033-8fa",
+          "url": "https://github.com/posture-sec/guage/issues/189#issuecomment-6981186319"
+        },
+        {
+          "issue_number": 189,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:21Z",
+          "body_snippet": "Congratulations, @carterdev-001! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  ",
+          "url": "https://github.com/posture-sec/guage/issues/189#issuecomment-6982693136"
+        }
+      ]
+    },
+    {
+      "reservation_id": 36,
+      "booked_username": "posi14",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-35",
+      "group_name": "guage - Group 35",
+      "reserved_issues": [
+        193,
+        194,
+        195
+      ],
+      "commented_issues": [
+        193,
+        194,
+        195
+      ],
+      "actual_author": "posi14",
+      "comments": [
+        {
+          "issue_number": 193,
+          "author": "posi14",
+          "created_at": "2026-11-18T15:10:03Z",
+          "body_snippet": "@posi14 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e27a8187-fc45-4018-",
+          "url": "https://github.com/posture-sec/guage/issues/193#issuecomment-6982572947"
+        },
+        {
+          "issue_number": 194,
+          "author": "posi14",
+          "created_at": "2026-11-18T15:10:34Z",
+          "body_snippet": "@posi14 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dbfcaf04-52ca-4855-",
+          "url": "https://github.com/posture-sec/guage/issues/194#issuecomment-6982586894"
+        },
+        {
+          "issue_number": 195,
+          "author": "posi14",
+          "created_at": "2026-11-18T15:11:03Z",
+          "body_snippet": "@posi14 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ce42ac02-2b11-4842-",
+          "url": "https://github.com/posture-sec/guage/issues/195#issuecomment-6982599571"
+        }
+      ]
+    },
+    {
+      "reservation_id": 38,
+      "booked_username": "DANTE1903",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-36",
+      "group_name": "guage - Group 36",
+      "reserved_issues": [
+        196,
+        197,
+        198
+      ],
+      "commented_issues": [
+        196,
+        197,
+        198
+      ],
+      "actual_author": "DANTE-1903",
+      "comments": [
+        {
+          "issue_number": 196,
+          "author": "DANTE-1903",
+          "created_at": "2026-11-18T14:12:19Z",
+          "body_snippet": "@DANTE-1903 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:973c493a-46ba-4",
+          "url": "https://github.com/posture-sec/guage/issues/196#issuecomment-6981067817"
+        },
+        {
+          "issue_number": 197,
+          "author": "DANTE-1903",
+          "created_at": "2026-11-18T14:12:57Z",
+          "body_snippet": "@DANTE-1903 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:152974d4-8cca-4",
+          "url": "https://github.com/posture-sec/guage/issues/197#issuecomment-6981083961"
+        },
+        {
+          "issue_number": 198,
+          "author": "DANTE-1903",
+          "created_at": "2026-11-18T14:13:28Z",
+          "body_snippet": "@DANTE-1903 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:3d63f1f1-8cec-4",
+          "url": "https://github.com/posture-sec/guage/issues/198#issuecomment-6981097403"
+        }
+      ]
+    },
+    {
+      "reservation_id": 40,
+      "booked_username": "zainabwahab_eth",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-37",
+      "group_name": "guage - Group 37",
+      "reserved_issues": [
+        199,
+        200,
+        201
+      ],
+      "commented_issues": [
+        199,
+        200,
+        201
+      ],
+      "actual_author": "zainabwahab-eth",
+      "comments": [
+        {
+          "issue_number": 199,
+          "author": "zainabwahab-eth",
+          "created_at": "2026-11-18T14:57:51Z",
+          "body_snippet": "@zainabwahab-eth has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d5f1ace5-e",
+          "url": "https://github.com/posture-sec/guage/issues/199#issuecomment-6982249877"
+        },
+        {
+          "issue_number": 200,
+          "author": "zainabwahab-eth",
+          "created_at": "2026-11-18T15:00:04Z",
+          "body_snippet": "@zainabwahab-eth has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:606cb3b1-1",
+          "url": "https://github.com/posture-sec/guage/issues/200#issuecomment-6982307458"
+        },
+        {
+          "issue_number": 201,
+          "author": "zainabwahab-eth",
+          "created_at": "2026-11-18T14:59:35Z",
+          "body_snippet": "@zainabwahab-eth has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b47ff623-e",
+          "url": "https://github.com/posture-sec/guage/issues/201#issuecomment-6982295439"
+        }
+      ]
+    },
+    {
+      "reservation_id": 41,
+      "booked_username": "Jubilee-001",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-42",
+      "group_name": "guage - Group 42",
+      "reserved_issues": [
+        214,
+        215
+      ],
+      "commented_issues": [
+        214,
+        215
+      ],
+      "actual_author": "Jubilee-001",
+      "comments": [
+        {
+          "issue_number": 214,
+          "author": "Jubilee-001",
+          "created_at": "2026-11-18T14:06:24Z",
+          "body_snippet": "@Jubilee-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:90918bd5-fc40-",
+          "url": "https://github.com/posture-sec/guage/issues/214#issuecomment-6980917810"
+        },
+        {
+          "issue_number": 214,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:35Z",
+          "body_snippet": "Congratulations, @Jubilee-001! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **",
+          "url": "https://github.com/posture-sec/guage/issues/214#issuecomment-6982699482"
+        },
+        {
+          "issue_number": 215,
+          "author": "Jubilee-001",
+          "created_at": "2026-11-18T14:07:18Z",
+          "body_snippet": "@Jubilee-001 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5c0b77de-eab4-",
+          "url": "https://github.com/posture-sec/guage/issues/215#issuecomment-6980941835"
+        },
+        {
+          "issue_number": 215,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:37Z",
+          "body_snippet": "Congratulations, @Jubilee-001! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **",
+          "url": "https://github.com/posture-sec/guage/issues/215#issuecomment-6982700323"
+        }
+      ]
+    },
+    {
+      "reservation_id": 42,
+      "booked_username": "feyisayoadetunji2-jpg",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-39",
+      "group_name": "guage - Group 39",
+      "reserved_issues": [
+        205,
+        206,
+        207
+      ],
+      "commented_issues": [
+        205,
+        206,
+        207
+      ],
+      "actual_author": "feyisayoadetunji2-jpg",
+      "comments": [
+        {
+          "issue_number": 205,
+          "author": "feyisayoadetunji2-jpg",
+          "created_at": "2026-11-18T15:09:56Z",
+          "body_snippet": "@feyisayoadetunji2-jpg has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:0463",
+          "url": "https://github.com/posture-sec/guage/issues/205#issuecomment-6982569743"
+        },
+        {
+          "issue_number": 206,
+          "author": "feyisayoadetunji2-jpg",
+          "created_at": "2026-11-18T15:11:27Z",
+          "body_snippet": "@feyisayoadetunji2-jpg has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:0542",
+          "url": "https://github.com/posture-sec/guage/issues/206#issuecomment-6982610484"
+        },
+        {
+          "issue_number": 207,
+          "author": "feyisayoadetunji2-jpg",
+          "created_at": "2026-11-18T15:12:38Z",
+          "body_snippet": "@feyisayoadetunji2-jpg has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:2c5f",
+          "url": "https://github.com/posture-sec/guage/issues/207#issuecomment-6982645255"
+        }
+      ]
+    },
+    {
+      "reservation_id": 43,
+      "booked_username": "Bheesty",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-38",
+      "group_name": "guage - Group 38",
+      "reserved_issues": [
+        202,
+        203,
+        204
+      ],
+      "commented_issues": [
+        202,
+        203,
+        204
+      ],
+      "actual_author": "bheesty",
+      "comments": [
+        {
+          "issue_number": 202,
+          "author": "bheesty",
+          "created_at": "2026-11-18T14:35:35Z",
+          "body_snippet": "@bheesty has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:fa94e8b6-a552-4699",
+          "url": "https://github.com/posture-sec/guage/issues/202#issuecomment-6981665456"
+        },
+        {
+          "issue_number": 202,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:40Z",
+          "body_snippet": "Congratulations, @bheesty! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/posture-sec/guage/issues/202#issuecomment-6982701884"
+        },
+        {
+          "issue_number": 203,
+          "author": "bheesty",
+          "created_at": "2026-11-18T14:36:05Z",
+          "body_snippet": "@bheesty has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:62176887-6459-47a6",
+          "url": "https://github.com/posture-sec/guage/issues/203#issuecomment-6981678517"
+        },
+        {
+          "issue_number": 203,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:42Z",
+          "body_snippet": "Congratulations, @bheesty! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/posture-sec/guage/issues/203#issuecomment-6982702682"
+        },
+        {
+          "issue_number": 204,
+          "author": "bheesty",
+          "created_at": "2026-11-18T14:36:29Z",
+          "body_snippet": "@bheesty has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9e031ba8-19c7-49ce",
+          "url": "https://github.com/posture-sec/guage/issues/204#issuecomment-6981688770"
+        },
+        {
+          "issue_number": 204,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:44Z",
+          "body_snippet": "Congratulations, @bheesty! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb ",
+          "url": "https://github.com/posture-sec/guage/issues/204#issuecomment-6982703506"
+        }
+      ]
+    },
+    {
+      "reservation_id": 44,
+      "booked_username": "ollypee22",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-10",
+      "group_name": "x402-facilitator-stellar - Group 10",
+      "reserved_issues": [
+        677,
+        678,
+        679
+      ],
+      "commented_issues": [
+        677,
+        678,
+        679
+      ],
+      "actual_author": "ollypee22",
+      "comments": [
+        {
+          "issue_number": 677,
+          "author": "ollypee22",
+          "created_at": "2026-11-18T14:05:10Z",
+          "body_snippet": "@ollypee22 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:cc8e8051-a91d-4c",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/677#issuecomment-6980886913"
+        },
+        {
+          "issue_number": 677,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:40Z",
+          "body_snippet": "Congratulations, @ollypee22! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/677#issuecomment-6982616524"
+        },
+        {
+          "issue_number": 678,
+          "author": "ollypee22",
+          "created_at": "2026-11-18T14:04:38Z",
+          "body_snippet": "@ollypee22 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dcf22e91-b5a7-4f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/678#issuecomment-6980873052"
+        },
+        {
+          "issue_number": 678,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:42Z",
+          "body_snippet": "Congratulations, @ollypee22! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/678#issuecomment-6982617345"
+        },
+        {
+          "issue_number": 679,
+          "author": "ollypee22",
+          "created_at": "2026-11-18T14:04:52Z",
+          "body_snippet": "@ollypee22 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f4ca51d4-9eb6-48",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/679#issuecomment-6980879222"
+        },
+        {
+          "issue_number": 679,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:45Z",
+          "body_snippet": "Congratulations, @ollypee22! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/679#issuecomment-6982618836"
+        }
+      ]
+    },
+    {
+      "reservation_id": 46,
+      "booked_username": "Fave2",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-4",
+      "group_name": "guage - Group 4",
+      "reserved_issues": [
+        51,
+        52,
+        53
+      ],
+      "commented_issues": [
+        51,
+        52,
+        53
+      ],
+      "actual_author": "Fave2",
+      "comments": [
+        {
+          "issue_number": 51,
+          "author": "Fave2",
+          "created_at": "2026-11-18T15:12:51Z",
+          "body_snippet": "@Fave2 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:02b1d308-3c8b-40c3-a",
+          "url": "https://github.com/posture-sec/guage/issues/51#issuecomment-6982651574"
+        },
+        {
+          "issue_number": 52,
+          "author": "Fave2",
+          "created_at": "2026-11-18T15:13:34Z",
+          "body_snippet": "@Fave2 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:4a9beb17-d6a1-43e6-9",
+          "url": "https://github.com/posture-sec/guage/issues/52#issuecomment-6982672678"
+        },
+        {
+          "issue_number": 53,
+          "author": "Fave2",
+          "created_at": "2026-11-18T15:14:06Z",
+          "body_snippet": "@Fave2 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:c416c708-b468-497b-a",
+          "url": "https://github.com/posture-sec/guage/issues/53#issuecomment-6982686557"
+        }
+      ]
+    },
+    {
+      "reservation_id": 47,
+      "booked_username": "DevRushd",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-7",
+      "group_name": "guage - Group 7",
+      "reserved_issues": [
+        60,
+        61,
+        62
+      ],
+      "commented_issues": [
+        60,
+        61,
+        62
+      ],
+      "actual_author": "DevRushd",
+      "comments": [
+        {
+          "issue_number": 60,
+          "author": "DevRushd",
+          "created_at": "2026-11-18T14:11:17Z",
+          "body_snippet": "@DevRushd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:863ab42a-926b-405",
+          "url": "https://github.com/posture-sec/guage/issues/60#issuecomment-6981042188"
+        },
+        {
+          "issue_number": 60,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:48Z",
+          "body_snippet": "Congratulations, @DevRushd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/posture-sec/guage/issues/60#issuecomment-6982705426"
+        },
+        {
+          "issue_number": 61,
+          "author": "DevRushd",
+          "created_at": "2026-11-18T14:09:58Z",
+          "body_snippet": "@DevRushd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d8764bb0-82ed-4e1",
+          "url": "https://github.com/posture-sec/guage/issues/61#issuecomment-6981009290"
+        },
+        {
+          "issue_number": 61,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:51Z",
+          "body_snippet": "Congratulations, @DevRushd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/posture-sec/guage/issues/61#issuecomment-6982706751"
+        },
+        {
+          "issue_number": 62,
+          "author": "DevRushd",
+          "created_at": "2026-11-18T14:10:38Z",
+          "body_snippet": "@DevRushd has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:fd639fc4-2e29-496",
+          "url": "https://github.com/posture-sec/guage/issues/62#issuecomment-6981025873"
+        },
+        {
+          "issue_number": 62,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:54Z",
+          "body_snippet": "Congratulations, @DevRushd! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/posture-sec/guage/issues/62#issuecomment-6982708101"
+        }
+      ]
+    },
+    {
+      "reservation_id": 49,
+      "booked_username": "Timmatt112",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-5",
+      "group_name": "guage - Group 5",
+      "reserved_issues": [
+        54,
+        55,
+        56
+      ],
+      "commented_issues": [
+        54,
+        55,
+        56
+      ],
+      "actual_author": "Timmatt112",
+      "comments": [
+        {
+          "issue_number": 54,
+          "author": "Timmatt112",
+          "created_at": "2026-11-18T15:16:28Z",
+          "body_snippet": "@Timmatt112 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:77e59eff-90a9-4",
+          "url": "https://github.com/posture-sec/guage/issues/54#issuecomment-6982750447"
+        },
+        {
+          "issue_number": 55,
+          "author": "Timmatt112",
+          "created_at": "2026-11-18T15:17:13Z",
+          "body_snippet": "@Timmatt112 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f90892f8-76db-4",
+          "url": "https://github.com/posture-sec/guage/issues/55#issuecomment-6982770559"
+        },
+        {
+          "issue_number": 56,
+          "author": "Timmatt112",
+          "created_at": "2026-11-18T15:17:56Z",
+          "body_snippet": "@Timmatt112 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:902e7cfc-b9cb-4",
+          "url": "https://github.com/posture-sec/guage/issues/56#issuecomment-6982789602"
+        }
+      ]
+    },
+    {
+      "reservation_id": 50,
+      "booked_username": "webdevayo",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-6",
+      "group_name": "guage - Group 6",
+      "reserved_issues": [
+        57,
+        58,
+        59
+      ],
+      "commented_issues": [
+        57,
+        58,
+        59
+      ],
+      "actual_author": "webdevayo",
+      "comments": [
+        {
+          "issue_number": 57,
+          "author": "webdevayo",
+          "created_at": "2026-11-18T14:08:37Z",
+          "body_snippet": "@webdevayo has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9489f400-ddbc-4f",
+          "url": "https://github.com/posture-sec/guage/issues/57#issuecomment-6980975096"
+        },
+        {
+          "issue_number": 57,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:55Z",
+          "body_snippet": "Congratulations, @webdevayo! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/posture-sec/guage/issues/57#issuecomment-6982708321"
+        },
+        {
+          "issue_number": 58,
+          "author": "webdevayo",
+          "created_at": "2026-11-18T14:07:24Z",
+          "body_snippet": "@webdevayo has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a8a3a3c6-4939-46",
+          "url": "https://github.com/posture-sec/guage/issues/58#issuecomment-6980944512"
+        },
+        {
+          "issue_number": 58,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:14:57Z",
+          "body_snippet": "Congratulations, @webdevayo! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/posture-sec/guage/issues/58#issuecomment-6982709428"
+        },
+        {
+          "issue_number": 59,
+          "author": "webdevayo",
+          "created_at": "2026-11-18T14:08:02Z",
+          "body_snippet": "@webdevayo has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a941f052-df1b-45",
+          "url": "https://github.com/posture-sec/guage/issues/59#issuecomment-6980960057"
+        },
+        {
+          "issue_number": 59,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:15:00Z",
+          "body_snippet": "Congratulations, @webdevayo! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/posture-sec/guage/issues/59#issuecomment-6982710844"
+        }
+      ]
+    },
+    {
+      "reservation_id": 51,
+      "booked_username": "Dahmeezy",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-14",
+      "group_name": "x402-facilitator-stellar - Group 14",
+      "reserved_issues": [
+        689,
+        690,
+        691
+      ],
+      "commented_issues": [
+        689,
+        690,
+        691
+      ],
+      "actual_author": "dahmeezy",
+      "comments": [
+        {
+          "issue_number": 689,
+          "author": "dahmeezy",
+          "created_at": "2026-11-18T14:14:43Z",
+          "body_snippet": "@dahmeezy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:8b401434-b04b-453",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/689#issuecomment-6981129003"
+        },
+        {
+          "issue_number": 689,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:48Z",
+          "body_snippet": "Congratulations, @dahmeezy! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/689#issuecomment-6982620474"
+        },
+        {
+          "issue_number": 690,
+          "author": "dahmeezy",
+          "created_at": "2026-11-18T14:21:21Z",
+          "body_snippet": "@dahmeezy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:124a5175-db59-4ae",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/690#issuecomment-6981297174"
+        },
+        {
+          "issue_number": 690,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:50Z",
+          "body_snippet": "Congratulations, @dahmeezy! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/690#issuecomment-6982621443"
+        },
+        {
+          "issue_number": 691,
+          "author": "dahmeezy",
+          "created_at": "2026-11-18T14:15:57Z",
+          "body_snippet": "@dahmeezy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:27ef237b-5698-4e0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/691#issuecomment-6981160856"
+        },
+        {
+          "issue_number": 691,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:53Z",
+          "body_snippet": "Congratulations, @dahmeezy! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/691#issuecomment-6982622870"
+        }
+      ]
+    },
+    {
+      "reservation_id": 53,
+      "booked_username": "Jacinth-star",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-9",
+      "group_name": "guage - Group 9",
+      "reserved_issues": [
+        66,
+        67,
+        69
+      ],
+      "commented_issues": [
+        66,
+        67,
+        69
+      ],
+      "actual_author": "Jacinth-star",
+      "comments": [
+        {
+          "issue_number": 66,
+          "author": "Jacinth-star",
+          "created_at": "2026-11-18T14:12:26Z",
+          "body_snippet": "@Jacinth-star has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:eeb385f4-e685",
+          "url": "https://github.com/posture-sec/guage/issues/66#issuecomment-6981070760"
+        },
+        {
+          "issue_number": 66,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:15:03Z",
+          "body_snippet": "Congratulations, @Jacinth-star! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  *",
+          "url": "https://github.com/posture-sec/guage/issues/66#issuecomment-6982711999"
+        },
+        {
+          "issue_number": 67,
+          "author": "Jacinth-star",
+          "created_at": "2026-11-18T15:11:50Z",
+          "body_snippet": "@Jacinth-star has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6ae830ba-bac5",
+          "url": "https://github.com/posture-sec/guage/issues/67#issuecomment-6982621440"
+        },
+        {
+          "issue_number": 67,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:15:06Z",
+          "body_snippet": "Congratulations, @Jacinth-star! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  *",
+          "url": "https://github.com/posture-sec/guage/issues/67#issuecomment-6982713390"
+        },
+        {
+          "issue_number": 69,
+          "author": "Jacinth-star",
+          "created_at": "2026-11-18T15:13:10Z",
+          "body_snippet": "@Jacinth-star has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:03c75170-9833",
+          "url": "https://github.com/posture-sec/guage/issues/69#issuecomment-6982661062"
+        },
+        {
+          "issue_number": 69,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:15:09Z",
+          "body_snippet": "Congratulations, @Jacinth-star! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  *",
+          "url": "https://github.com/posture-sec/guage/issues/69#issuecomment-6982714709"
+        }
+      ]
+    },
+    {
+      "reservation_id": 54,
+      "booked_username": "raymondidahor-bot",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-1",
+      "group_name": "x402-facilitator-stellar - Group 1",
+      "reserved_issues": [
+        571,
+        575,
+        649
+      ],
+      "commented_issues": [
+        571,
+        575,
+        649
+      ],
+      "actual_author": "raymondidahor-bot",
+      "comments": [
+        {
+          "issue_number": 571,
+          "author": "raymondidahor-bot",
+          "created_at": "2026-11-18T14:40:04Z",
+          "body_snippet": "@raymondidahor-bot has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:bcf40317",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/571#issuecomment-6981780416"
+        },
+        {
+          "issue_number": 571,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:56Z",
+          "body_snippet": "Congratulations, @raymondidahor-bot! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026*",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/571#issuecomment-6982624190"
+        },
+        {
+          "issue_number": 575,
+          "author": "raymondidahor-bot",
+          "created_at": "2026-11-18T14:38:36Z",
+          "body_snippet": "@raymondidahor-bot has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:234d461b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/575#issuecomment-6981742647"
+        },
+        {
+          "issue_number": 575,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:11:58Z",
+          "body_snippet": "Congratulations, @raymondidahor-bot! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026*",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/575#issuecomment-6982625396"
+        },
+        {
+          "issue_number": 649,
+          "author": "raymondidahor-bot",
+          "created_at": "2026-11-18T14:36:50Z",
+          "body_snippet": "@raymondidahor-bot has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5d24d240",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/649#issuecomment-6981697721"
+        },
+        {
+          "issue_number": 649,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:00Z",
+          "body_snippet": "Congratulations, @raymondidahor-bot! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026*",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/649#issuecomment-6982626459"
+        }
+      ]
+    },
+    {
+      "reservation_id": 59,
+      "booked_username": "smog123",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-16",
+      "group_name": "x402-facilitator-stellar - Group 16",
+      "reserved_issues": [
+        695,
+        696,
+        697
+      ],
+      "commented_issues": [
+        695,
+        696,
+        697
+      ],
+      "actual_author": "smog123",
+      "comments": [
+        {
+          "issue_number": 695,
+          "author": "smog123",
+          "created_at": "2026-11-18T15:08:43Z",
+          "body_snippet": "@smog123 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:51505de7-52ee-45db",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/695#issuecomment-6982537613"
+        },
+        {
+          "issue_number": 696,
+          "author": "smog123",
+          "created_at": "2026-11-18T15:09:12Z",
+          "body_snippet": "@smog123 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:2d9a2cdc-8811-4a87",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/696#issuecomment-6982550799"
+        },
+        {
+          "issue_number": 697,
+          "author": "smog123",
+          "created_at": "2026-11-18T15:09:40Z",
+          "body_snippet": "@smog123 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d2df8327-022b-4c78",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/697#issuecomment-6982562993"
+        }
+      ]
+    },
+    {
+      "reservation_id": 62,
+      "booked_username": "Shakourllahfashola-dev",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-15",
+      "group_name": "x402-facilitator-stellar - Group 15",
+      "reserved_issues": [
+        692,
+        693,
+        694
+      ],
+      "commented_issues": [
+        692,
+        693,
+        694
+      ],
+      "actual_author": "shakourllahfashola-dev",
+      "comments": [
+        {
+          "issue_number": 692,
+          "author": "shakourllahfashola-dev",
+          "created_at": "2026-11-18T14:07:40Z",
+          "body_snippet": "@shakourllahfashola-dev has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5b0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/692#issuecomment-6980950979"
+        },
+        {
+          "issue_number": 692,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:04Z",
+          "body_snippet": "Congratulations, @shakourllahfashola-dev! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/692#issuecomment-6982628259"
+        },
+        {
+          "issue_number": 693,
+          "author": "shakourllahfashola-dev",
+          "created_at": "2026-11-18T14:08:23Z",
+          "body_snippet": "@shakourllahfashola-dev has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:6ec",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/693#issuecomment-6980969279"
+        },
+        {
+          "issue_number": 693,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:06Z",
+          "body_snippet": "Congratulations, @shakourllahfashola-dev! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/693#issuecomment-6982629510"
+        },
+        {
+          "issue_number": 694,
+          "author": "shakourllahfashola-dev",
+          "created_at": "2026-11-18T14:09:02Z",
+          "body_snippet": "@shakourllahfashola-dev has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:941",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/694#issuecomment-6980985532"
+        },
+        {
+          "issue_number": 694,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:08Z",
+          "body_snippet": "Congratulations, @shakourllahfashola-dev! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/694#issuecomment-6982630376"
+        }
+      ]
+    },
+    {
+      "reservation_id": 64,
+      "booked_username": "soliatabdullahi",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-18",
+      "group_name": "x402-facilitator-stellar - Group 18",
+      "reserved_issues": [
+        701,
+        702,
+        703
+      ],
+      "commented_issues": [
+        701,
+        702,
+        703
+      ],
+      "actual_author": "soliatabdullahi",
+      "comments": [
+        {
+          "issue_number": 701,
+          "author": "soliatabdullahi",
+          "created_at": "2026-11-18T15:04:20Z",
+          "body_snippet": "@soliatabdullahi has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:75ecc142-9",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/701#issuecomment-6982420987"
+        },
+        {
+          "issue_number": 702,
+          "author": "soliatabdullahi",
+          "created_at": "2026-11-18T15:05:16Z",
+          "body_snippet": "@soliatabdullahi has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:72f8dfcc-b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/702#issuecomment-6982446192"
+        },
+        {
+          "issue_number": 703,
+          "author": "soliatabdullahi",
+          "created_at": "2026-11-18T15:05:54Z",
+          "body_snippet": "@soliatabdullahi has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:48523a0a-a",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/703#issuecomment-6982463255"
+        }
+      ]
+    },
+    {
+      "reservation_id": 66,
+      "booked_username": "The-Najaah",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-39",
+      "group_name": "x402-facilitator-stellar - Group 39",
+      "reserved_issues": [
+        765,
+        766,
+        767
+      ],
+      "commented_issues": [
+        765,
+        766,
+        767
+      ],
+      "actual_author": "The-Najaah",
+      "comments": [
+        {
+          "issue_number": 765,
+          "author": "The-Najaah",
+          "created_at": "2026-11-18T14:48:44Z",
+          "body_snippet": "@The-Najaah has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:988624fa-282c-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/765#issuecomment-6982009357"
+        },
+        {
+          "issue_number": 765,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:11Z",
+          "body_snippet": "Congratulations, @The-Najaah! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/765#issuecomment-6982631929"
+        },
+        {
+          "issue_number": 766,
+          "author": "The-Najaah",
+          "created_at": "2026-11-18T14:49:15Z",
+          "body_snippet": "@The-Najaah has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e4db34d4-3bc7-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/766#issuecomment-6982022877"
+        },
+        {
+          "issue_number": 766,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:12Z",
+          "body_snippet": "Congratulations, @The-Najaah! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/766#issuecomment-6982632623"
+        },
+        {
+          "issue_number": 767,
+          "author": "The-Najaah",
+          "created_at": "2026-11-18T14:49:54Z",
+          "body_snippet": "@The-Najaah has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f49f3174-1819-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/767#issuecomment-6982039838"
+        },
+        {
+          "issue_number": 767,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:15Z",
+          "body_snippet": "Congratulations, @The-Najaah! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/767#issuecomment-6982634160"
+        }
+      ]
+    },
+    {
+      "reservation_id": 68,
+      "booked_username": "Ebby46",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-23",
+      "group_name": "x402-facilitator-stellar - Group 23",
+      "reserved_issues": [
+        717,
+        718,
+        719
+      ],
+      "commented_issues": [
+        717,
+        718,
+        719
+      ],
+      "actual_author": "Ebby46",
+      "comments": [
+        {
+          "issue_number": 717,
+          "author": "Ebby46",
+          "created_at": "2026-11-18T14:59:25Z",
+          "body_snippet": "@Ebby46 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:ff448313-889f-4b59-",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/717#issuecomment-6982290983"
+        },
+        {
+          "issue_number": 717,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:19Z",
+          "body_snippet": "Congratulations, @Ebby46! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb @",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/717#issuecomment-6982635983"
+        },
+        {
+          "issue_number": 718,
+          "author": "Ebby46",
+          "created_at": "2026-11-18T15:02:50Z",
+          "body_snippet": "@Ebby46 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:4d708d57-5e50-4bf0-",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/718#issuecomment-6982381258"
+        },
+        {
+          "issue_number": 718,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:22Z",
+          "body_snippet": "Congratulations, @Ebby46! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb @",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/718#issuecomment-6982637464"
+        },
+        {
+          "issue_number": 719,
+          "author": "Ebby46",
+          "created_at": "2026-11-18T15:05:06Z",
+          "body_snippet": "@Ebby46 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:592b961a-3406-43b3-",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/719#issuecomment-6982441693"
+        },
+        {
+          "issue_number": 719,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:25Z",
+          "body_snippet": "Congratulations, @Ebby46! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb @",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/719#issuecomment-6982638986"
+        }
+      ]
+    },
+    {
+      "reservation_id": 70,
+      "booked_username": "omoh5",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-31",
+      "group_name": "x402-facilitator-stellar - Group 31",
+      "reserved_issues": [
+        741,
+        742,
+        743
+      ],
+      "commented_issues": [
+        741,
+        742,
+        743
+      ],
+      "actual_author": "omoh5",
+      "comments": [
+        {
+          "issue_number": 741,
+          "author": "omoh5",
+          "created_at": "2026-11-18T15:14:38Z",
+          "body_snippet": "@omoh5 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:17724a10-3d5a-44ae-9",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/741#issuecomment-6982700608"
+        },
+        {
+          "issue_number": 742,
+          "author": "omoh5",
+          "created_at": "2026-11-18T15:15:09Z",
+          "body_snippet": "@omoh5 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e7f3d4b6-5d16-4b20-b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/742#issuecomment-6982714543"
+        },
+        {
+          "issue_number": 743,
+          "author": "omoh5",
+          "created_at": "2026-11-18T15:14:08Z",
+          "body_snippet": "@omoh5 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:9efa5111-47e8-472b-9",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/743#issuecomment-6982687044"
+        }
+      ]
+    },
+    {
+      "reservation_id": 72,
+      "booked_username": "Yodomite",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-29",
+      "group_name": "x402-facilitator-stellar - Group 29",
+      "reserved_issues": [
+        735,
+        736,
+        737
+      ],
+      "commented_issues": [
+        735,
+        736,
+        737
+      ],
+      "actual_author": "Yodomite",
+      "comments": [
+        {
+          "issue_number": 735,
+          "author": "Yodomite",
+          "created_at": "2026-11-18T15:10:10Z",
+          "body_snippet": "@Yodomite has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5165f17d-e7bb-46b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/735#issuecomment-6982576089"
+        },
+        {
+          "issue_number": 736,
+          "author": "Yodomite",
+          "created_at": "2026-11-18T15:11:12Z",
+          "body_snippet": "@Yodomite has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5d931954-77d4-4af",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/736#issuecomment-6982603708"
+        },
+        {
+          "issue_number": 737,
+          "author": "Yodomite",
+          "created_at": "2026-11-18T15:10:43Z",
+          "body_snippet": "@Yodomite has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f49539b1-1ee7-412",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/737#issuecomment-6982590705"
+        }
+      ]
+    },
+    {
+      "reservation_id": 74,
+      "booked_username": "Mskdylan",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-30",
+      "group_name": "x402-facilitator-stellar - Group 30",
+      "reserved_issues": [
+        738,
+        739,
+        740
+      ],
+      "commented_issues": [
+        738,
+        739,
+        740
+      ],
+      "actual_author": "mskdylan",
+      "comments": [
+        {
+          "issue_number": 738,
+          "author": "mskdylan",
+          "created_at": "2026-11-18T14:02:23Z",
+          "body_snippet": "@mskdylan has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:626ea7de-c850-423",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/738#issuecomment-6980817018"
+        },
+        {
+          "issue_number": 738,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:26Z",
+          "body_snippet": "Congratulations, @mskdylan! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/738#issuecomment-6982639650"
+        },
+        {
+          "issue_number": 739,
+          "author": "mskdylan",
+          "created_at": "2026-11-18T14:11:01Z",
+          "body_snippet": "@mskdylan has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:1b40f0ed-b72b-445",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/739#issuecomment-6981035359"
+        },
+        {
+          "issue_number": 739,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:28Z",
+          "body_snippet": "Congratulations, @mskdylan! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/739#issuecomment-6982640527"
+        },
+        {
+          "issue_number": 740,
+          "author": "mskdylan",
+          "created_at": "2026-11-18T14:14:47Z",
+          "body_snippet": "@mskdylan has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:e1c3de3e-324b-445",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/740#issuecomment-6981131048"
+        },
+        {
+          "issue_number": 740,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:31Z",
+          "body_snippet": "Congratulations, @mskdylan! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/740#issuecomment-6982641896"
+        }
+      ]
+    },
+    {
+      "reservation_id": 75,
+      "booked_username": "Schorlani07678",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-41",
+      "group_name": "x402-facilitator-stellar - Group 41",
+      "reserved_issues": [
+        771,
+        772,
+        773
+      ],
+      "commented_issues": [
+        771,
+        772,
+        773
+      ],
+      "actual_author": "Schorlani07678",
+      "comments": [
+        {
+          "issue_number": 771,
+          "author": "Schorlani07678",
+          "created_at": "2026-11-18T14:03:10Z",
+          "body_snippet": "@Schorlani07678 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:dd6d3706-15",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/771#issuecomment-6980836791"
+        },
+        {
+          "issue_number": 771,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:34Z",
+          "body_snippet": "Congratulations, @Schorlani07678! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**. ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/771#issuecomment-6982643550"
+        },
+        {
+          "issue_number": 772,
+          "author": "Schorlani07678",
+          "created_at": "2026-11-18T14:04:29Z",
+          "body_snippet": "@Schorlani07678 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:22c89429-f0",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/772#issuecomment-6980869299"
+        },
+        {
+          "issue_number": 772,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:37Z",
+          "body_snippet": "Congratulations, @Schorlani07678! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**. ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/772#issuecomment-6982644924"
+        },
+        {
+          "issue_number": 773,
+          "author": "Schorlani07678",
+          "created_at": "2026-11-18T14:07:19Z",
+          "body_snippet": "@Schorlani07678 has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b0250059-e6",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/773#issuecomment-6980942003"
+        },
+        {
+          "issue_number": 773,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:39Z",
+          "body_snippet": "Congratulations, @Schorlani07678! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**. ",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/773#issuecomment-6982645658"
+        }
+      ]
+    },
+    {
+      "reservation_id": 76,
+      "booked_username": "Dev-Marcy",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-35",
+      "group_name": "x402-facilitator-stellar - Group 35",
+      "reserved_issues": [
+        753,
+        754,
+        755
+      ],
+      "commented_issues": [
+        753,
+        754,
+        755
+      ],
+      "actual_author": "Dev-Marcy",
+      "comments": [
+        {
+          "issue_number": 753,
+          "author": "Dev-Marcy",
+          "created_at": "2026-11-18T14:14:27Z",
+          "body_snippet": "@Dev-Marcy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:f74e2e25-186d-4b",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/753#issuecomment-6981122284"
+        },
+        {
+          "issue_number": 753,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:41Z",
+          "body_snippet": "Congratulations, @Dev-Marcy! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/753#issuecomment-6982646404"
+        },
+        {
+          "issue_number": 754,
+          "author": "Dev-Marcy",
+          "created_at": "2026-11-18T14:14:57Z",
+          "body_snippet": "@Dev-Marcy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b25ebd5c-2ee0-49",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/754#issuecomment-6981135495"
+        },
+        {
+          "issue_number": 754,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:44Z",
+          "body_snippet": "Congratulations, @Dev-Marcy! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/754#issuecomment-6982647926"
+        },
+        {
+          "issue_number": 755,
+          "author": "Dev-Marcy",
+          "created_at": "2026-11-18T14:15:30Z",
+          "body_snippet": "@Dev-Marcy has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:b96eb8a8-473d-4f",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/755#issuecomment-6981149382"
+        },
+        {
+          "issue_number": 755,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:46Z",
+          "body_snippet": "Congratulations, @Dev-Marcy! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/755#issuecomment-6982649380"
+        }
+      ]
+    },
+    {
+      "reservation_id": 79,
+      "booked_username": "affy-exe",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-34",
+      "group_name": "x402-facilitator-stellar - Group 34",
+      "reserved_issues": [
+        750,
+        751,
+        752
+      ],
+      "commented_issues": [
+        750,
+        751,
+        752
+      ],
+      "actual_author": "affy-exe",
+      "comments": [
+        {
+          "issue_number": 750,
+          "author": "affy-exe",
+          "created_at": "2026-11-18T14:13:07Z",
+          "body_snippet": "@affy-exe has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5e22294c-5652-488",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/750#issuecomment-6981087952"
+        },
+        {
+          "issue_number": 750,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:49Z",
+          "body_snippet": "Congratulations, @affy-exe! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/750#issuecomment-6982650911"
+        },
+        {
+          "issue_number": 751,
+          "author": "affy-exe",
+          "created_at": "2026-11-18T14:11:13Z",
+          "body_snippet": "@affy-exe has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:d7186415-6e46-414",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/751#issuecomment-6981040613"
+        },
+        {
+          "issue_number": 751,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:52Z",
+          "body_snippet": "Congratulations, @affy-exe! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/751#issuecomment-6982652386"
+        },
+        {
+          "issue_number": 752,
+          "author": "affy-exe",
+          "created_at": "2026-11-18T14:12:05Z",
+          "body_snippet": "@affy-exe has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:49a62e40-5695-4fa",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/752#issuecomment-6981061899"
+        },
+        {
+          "issue_number": 752,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:12:55Z",
+          "body_snippet": "Congratulations, @affy-exe! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1\u200d\ud83d\udcbb",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/752#issuecomment-6982653900"
+        }
+      ]
+    },
+    {
+      "reservation_id": 80,
+      "booked_username": "RealOla",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-40",
+      "group_name": "x402-facilitator-stellar - Group 40",
+      "reserved_issues": [
+        768,
+        769,
+        770
+      ],
+      "commented_issues": [
+        768,
+        769,
+        770
+      ],
+      "actual_author": "Real-Ola",
+      "comments": [
+        {
+          "issue_number": 768,
+          "author": "Real-Ola",
+          "created_at": "2026-11-18T14:21:30Z",
+          "body_snippet": "@Real-Ola has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:825761d9-eb1f-47d",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/768#issuecomment-6981301001"
+        },
+        {
+          "issue_number": 769,
+          "author": "Real-Ola",
+          "created_at": "2026-11-18T14:22:04Z",
+          "body_snippet": "@Real-Ola has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:020db768-381c-4fe",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/769#issuecomment-6981315416"
+        },
+        {
+          "issue_number": 770,
+          "author": "Real-Ola",
+          "created_at": "2026-11-18T14:40:15Z",
+          "body_snippet": "@Real-Ola has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:4877e35b-7988-4fe",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/770#issuecomment-6981785381"
+        }
+      ]
+    },
+    {
+      "reservation_id": 84,
+      "booked_username": "Martinsbab",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-5",
+      "group_name": "x402-facilitator-stellar - Group 5",
+      "reserved_issues": [
+        662,
+        663,
+        664
+      ],
+      "commented_issues": [
+        662,
+        663,
+        664
+      ],
+      "actual_author": "Martinsbab",
+      "comments": [
+        {
+          "issue_number": 662,
+          "author": "Martinsbab",
+          "created_at": "2026-11-18T14:43:04Z",
+          "body_snippet": "@Martinsbab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5a2c359a-10c4-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/662#issuecomment-6981859811"
+        },
+        {
+          "issue_number": 662,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:03Z",
+          "body_snippet": "Congratulations, @Martinsbab! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/662#issuecomment-6982657342"
+        },
+        {
+          "issue_number": 663,
+          "author": "Martinsbab",
+          "created_at": "2026-11-18T14:47:25Z",
+          "body_snippet": "@Martinsbab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:5e91fbd6-01c1-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/663#issuecomment-6981975129"
+        },
+        {
+          "issue_number": 663,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:05Z",
+          "body_snippet": "Congratulations, @Martinsbab! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/663#issuecomment-6982658543"
+        },
+        {
+          "issue_number": 664,
+          "author": "Martinsbab",
+          "created_at": "2026-11-18T14:45:20Z",
+          "body_snippet": "@Martinsbab has applied to work on this issue as part of the **Stellar Wave Program**'s 11th wave.  <!-- wave:application-id:a9370e18-41ea-4",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/664#issuecomment-6981919983"
+        },
+        {
+          "issue_number": 664,
+          "author": "drips-wave[bot]",
+          "created_at": "2026-11-18T15:13:08Z",
+          "body_snippet": "Congratulations, @Martinsbab! \ud83c\udf89 Your application was accepted by the repo's maintainers, and the issue is **due on November 25, 2026**.  **\ud83e\uddd1",
+          "url": "https://github.com/accensa/x402-facilitator-stellar/issues/664#issuecomment-6982660110"
+        }
+      ]
+    }
+  ],
+  "not_applied": [
+    {
+      "reservation_id": 3,
+      "booked_username": "oluwa1to9-web",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-10",
+      "group_name": "guage - Group 10",
+      "reserved_issues": [
+        70,
+        71,
+        72
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 6,
+      "booked_username": "cerome360",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-1",
+      "group_name": "guage - Group 1",
+      "reserved_issues": [
+        7,
+        17,
+        42
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 7,
+      "booked_username": "smaug-1",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-42",
+      "group_name": "x402-facilitator-stellar - Group 42",
+      "reserved_issues": [
+        774,
+        775
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 8,
+      "booked_username": "mayokun-max",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-12",
+      "group_name": "guage - Group 12",
+      "reserved_issues": [
+        77,
+        125,
+        126
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 9,
+      "booked_username": "wagmiiii",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-14",
+      "group_name": "guage - Group 14",
+      "reserved_issues": [
+        130,
+        131,
+        132
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 10,
+      "booked_username": "cyber-dawg",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-6",
+      "group_name": "x402-facilitator-stellar - Group 6",
+      "reserved_issues": [
+        665,
+        666,
+        667
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 11,
+      "booked_username": "bellogodfrey281-oss",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-16",
+      "group_name": "guage - Group 16",
+      "reserved_issues": [
+        136,
+        137,
+        138
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 16,
+      "booked_username": "odarome132",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-11",
+      "group_name": "guage - Group 11",
+      "reserved_issues": [
+        73,
+        74,
+        75
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 21,
+      "booked_username": "pwrhaus",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-2",
+      "group_name": "guage - Group 2",
+      "reserved_issues": [
+        43,
+        44,
+        47
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 22,
+      "booked_username": "Adediwura-dev",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-21",
+      "group_name": "guage - Group 21",
+      "reserved_issues": [
+        151,
+        152,
+        153
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 24,
+      "booked_username": "Orah-dev",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-26",
+      "group_name": "guage - Group 26",
+      "reserved_issues": [
+        166,
+        167,
+        168
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 25,
+      "booked_username": "elthelthetallgirl",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-22",
+      "group_name": "guage - Group 22",
+      "reserved_issues": [
+        154,
+        155,
+        156
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 26,
+      "booked_username": "aojomo",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-29",
+      "group_name": "guage - Group 29",
+      "reserved_issues": [
+        175,
+        176,
+        177
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 29,
+      "booked_username": "kathy-ai-art",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-23",
+      "group_name": "guage - Group 23",
+      "reserved_issues": [
+        157,
+        158,
+        159
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 30,
+      "booked_username": "Kazeemmariam98-art",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-28",
+      "group_name": "guage - Group 28",
+      "reserved_issues": [
+        172,
+        173,
+        174
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 35,
+      "booked_username": "Babaella101",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-34",
+      "group_name": "guage - Group 34",
+      "reserved_issues": [
+        190,
+        191,
+        192
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 37,
+      "booked_username": "Widadullahi",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-40",
+      "group_name": "guage - Group 40",
+      "reserved_issues": [
+        208,
+        209,
+        210
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 39,
+      "booked_username": "Toy-tech",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-11",
+      "group_name": "x402-facilitator-stellar - Group 11",
+      "reserved_issues": [
+        680,
+        681,
+        682
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 45,
+      "booked_username": "nwabaj2017",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-41",
+      "group_name": "guage - Group 41",
+      "reserved_issues": [
+        211,
+        212,
+        213
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 48,
+      "booked_username": "Perfected1",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-17",
+      "group_name": "x402-facilitator-stellar - Group 17",
+      "reserved_issues": [
+        698,
+        699,
+        700
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 52,
+      "booked_username": "Legittv-bit",
+      "repo": "posture-sec/guage",
+      "group_id": "guage-group-8",
+      "group_name": "guage - Group 8",
+      "reserved_issues": [
+        63,
+        64,
+        65
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 55,
+      "booked_username": "timo126",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-12",
+      "group_name": "x402-facilitator-stellar - Group 12",
+      "reserved_issues": [
+        683,
+        684,
+        685
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 56,
+      "booked_username": "Bayovictor",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-3",
+      "group_name": "x402-facilitator-stellar - Group 3",
+      "reserved_issues": [
+        656,
+        657,
+        658
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 57,
+      "booked_username": "Damilorlar",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-13",
+      "group_name": "x402-facilitator-stellar - Group 13",
+      "reserved_issues": [
+        686,
+        687,
+        688
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 58,
+      "booked_username": "idazea",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-8",
+      "group_name": "x402-facilitator-stellar - Group 8",
+      "reserved_issues": [
+        671,
+        672,
+        673
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 60,
+      "booked_username": "Nwoyemartha",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-19",
+      "group_name": "x402-facilitator-stellar - Group 19",
+      "reserved_issues": [
+        704,
+        705,
+        706
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 61,
+      "booked_username": "alagbesadat208-prog",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-28",
+      "group_name": "x402-facilitator-stellar - Group 28",
+      "reserved_issues": [
+        732,
+        733,
+        734
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 63,
+      "booked_username": "Imole-loj",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-21",
+      "group_name": "x402-facilitator-stellar - Group 21",
+      "reserved_issues": [
+        711,
+        712,
+        713
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 65,
+      "booked_username": "Omolola-art",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-20",
+      "group_name": "x402-facilitator-stellar - Group 20",
+      "reserved_issues": [
+        707,
+        708,
+        709
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 67,
+      "booked_username": "Davidolanrewaju",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-22",
+      "group_name": "x402-facilitator-stellar - Group 22",
+      "reserved_issues": [
+        714,
+        715,
+        716
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 69,
+      "booked_username": "baba-billy",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-24",
+      "group_name": "x402-facilitator-stellar - Group 24",
+      "reserved_issues": [
+        720,
+        721,
+        722
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 71,
+      "booked_username": "Realdone",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-26",
+      "group_name": "x402-facilitator-stellar - Group 26",
+      "reserved_issues": [
+        726,
+        727,
+        728
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 73,
+      "booked_username": "oyebolarotimi269-ai",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-33",
+      "group_name": "x402-facilitator-stellar - Group 33",
+      "reserved_issues": [
+        747,
+        748,
+        749
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 77,
+      "booked_username": "achiever",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-32",
+      "group_name": "x402-facilitator-stellar - Group 32",
+      "reserved_issues": [
+        744,
+        745,
+        746
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 78,
+      "booked_username": "anitahhh",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-36",
+      "group_name": "x402-facilitator-stellar - Group 36",
+      "reserved_issues": [
+        756,
+        757,
+        758
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 81,
+      "booked_username": "Ayfataan",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-7",
+      "group_name": "x402-facilitator-stellar - Group 7",
+      "reserved_issues": [
+        668,
+        669,
+        670
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 82,
+      "booked_username": "jessicacinderella9-cloud",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-4",
+      "group_name": "x402-facilitator-stellar - Group 4",
+      "reserved_issues": [
+        659,
+        660,
+        661
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    },
+    {
+      "reservation_id": 83,
+      "booked_username": "amonehin",
+      "repo": "accensa/x402-facilitator-stellar",
+      "group_id": "x402-facilitator-stellar-group-9",
+      "group_name": "x402-facilitator-stellar - Group 9",
+      "reserved_issues": [
+        674,
+        675,
+        676
+      ],
+      "commented_issues": [],
+      "actual_author": null,
+      "comments": []
+    }
+  ]
+}

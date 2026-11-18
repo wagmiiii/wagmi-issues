@@ -312,11 +312,18 @@
       if (!myReservation) return;
       myReservationBanner.classList.remove('hidden');
       myGroupName.textContent = myReservation.group_name;
-      myReservationDetails.textContent = `RESERVED BY @${myReservation.username.toUpperCase()} · ${new Date(myReservation.created_at).toUTCString()}`;
       
-      userStatusTag.textContent = 'BOOKED';
+      const isAssigned = !!myReservation.is_assigned;
+      const statusLabel = isAssigned ? 'ASSIGNED ON GITHUB' : 'RESERVED';
+      myReservationDetails.textContent = `${statusLabel} BY @${myReservation.username.toUpperCase()} · ${new Date(myReservation.created_at).toUTCString()}`;
+      
+      userStatusTag.textContent = isAssigned ? 'ASSIGNED' : 'BOOKED';
       userStatusTag.className = 'text-[10px] mono uppercase bg-white text-black px-2 py-0.5 font-bold';
-      statusText.innerHTML = `Active reservation: <span class="text-white font-bold">${escapeHtml(myReservation.group_name)}</span>. 1 booking maximum reached.`;
+      
+      const desc = isAssigned 
+        ? `Status: <span class="text-white font-bold">ASSIGNED ON GITHUB</span> for <span class="text-white font-bold">${escapeHtml(myReservation.group_name)}</span>.`
+        : `Active reservation: <span class="text-white font-bold">${escapeHtml(myReservation.group_name)}</span>. 1 booking maximum reached.`;
+      statusText.innerHTML = desc;
 
       myIssuesPills.innerHTML = (myReservation.issues || []).map(iss => `
         <a href="${iss.url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-black border border-neutral-700 hover:border-white text-white text-xs mono transition">

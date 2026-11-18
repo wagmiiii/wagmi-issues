@@ -1,0 +1,599 @@
+[
+  {
+    "username": "Odutola657-lab",
+    "actual_author": "odutola657-lab",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-25",
+    "group_name": "x402-facilitator-stellar - Group 25",
+    "issues": [
+      723,
+      724,
+      725
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Adeyemi-cmd",
+    "actual_author": "Adeyemi-cmd",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-24",
+    "group_name": "guage - Group 24",
+    "issues": [
+      160,
+      161,
+      162
+    ],
+    "assigned": true
+  },
+  {
+    "username": "OG-wura",
+    "actual_author": "OG-wura",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-20",
+    "group_name": "guage - Group 20",
+    "issues": [
+      148,
+      149,
+      150
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Grazial-hash",
+    "actual_author": "Grazial-hash",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-37",
+    "group_name": "x402-facilitator-stellar - Group 37",
+    "issues": [
+      759,
+      760,
+      761
+    ],
+    "assigned": true
+  },
+  {
+    "username": "composure-lad",
+    "actual_author": "composure-lad",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-19",
+    "group_name": "guage - Group 19",
+    "issues": [
+      145,
+      146,
+      147
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Ayooo-web",
+    "actual_author": "Ayooo-web",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-27",
+    "group_name": "x402-facilitator-stellar - Group 27",
+    "issues": [
+      729,
+      730,
+      731
+    ],
+    "assigned": true
+  },
+  {
+    "username": "chykason77",
+    "actual_author": "chykason77-blip",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-15",
+    "group_name": "guage - Group 15",
+    "issues": [
+      133,
+      134,
+      135
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Olu-cmd",
+    "actual_author": "olu-cmd",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-38",
+    "group_name": "x402-facilitator-stellar - Group 38",
+    "issues": [
+      762,
+      763,
+      764
+    ],
+    "assigned": true
+  },
+  {
+    "username": "melanindebbie",
+    "actual_author": "melanindebbie",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-17",
+    "group_name": "guage - Group 17",
+    "issues": [
+      139,
+      140,
+      141
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Hikmaholadele",
+    "actual_author": "Hikmaholadele",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-18",
+    "group_name": "guage - Group 18",
+    "issues": [
+      142,
+      143,
+      144
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Samlogy1",
+    "actual_author": "samlogy1",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-32",
+    "group_name": "guage - Group 32",
+    "issues": [
+      184,
+      185,
+      186
+    ],
+    "assigned": true
+  },
+  {
+    "username": "vrse-vrde",
+    "actual_author": "vrse-vrde",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-3",
+    "group_name": "guage - Group 3",
+    "issues": [
+      48,
+      49,
+      50
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Uboho-prog",
+    "actual_author": "uboho-prog",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-31",
+    "group_name": "guage - Group 31",
+    "issues": [
+      181,
+      182,
+      183
+    ],
+    "assigned": true
+  },
+  {
+    "username": "carterdev-001",
+    "actual_author": "carterdev-001",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-33",
+    "group_name": "guage - Group 33",
+    "issues": [
+      187,
+      188,
+      189
+    ],
+    "assigned": true
+  },
+  {
+    "username": "DANTE1903",
+    "actual_author": "DANTE-1903",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-36",
+    "group_name": "guage - Group 36",
+    "issues": [
+      196,
+      197,
+      198
+    ],
+    "assigned": true
+  },
+  {
+    "username": "zainabwahab_eth",
+    "actual_author": "zainabwahab-eth",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-37",
+    "group_name": "guage - Group 37",
+    "issues": [
+      199,
+      200,
+      201
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Jubilee-001",
+    "actual_author": "Jubilee-001",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-42",
+    "group_name": "guage - Group 42",
+    "issues": [
+      214,
+      215
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Bheesty",
+    "actual_author": "bheesty",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-38",
+    "group_name": "guage - Group 38",
+    "issues": [
+      202,
+      203,
+      204
+    ],
+    "assigned": true
+  },
+  {
+    "username": "ollypee22",
+    "actual_author": "ollypee22",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-10",
+    "group_name": "x402-facilitator-stellar - Group 10",
+    "issues": [
+      677,
+      678,
+      679
+    ],
+    "assigned": true
+  },
+  {
+    "username": "DevRushd",
+    "actual_author": "DevRushd",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-7",
+    "group_name": "guage - Group 7",
+    "issues": [
+      60,
+      61,
+      62
+    ],
+    "assigned": true
+  },
+  {
+    "username": "webdevayo",
+    "actual_author": "webdevayo",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-6",
+    "group_name": "guage - Group 6",
+    "issues": [
+      57,
+      58,
+      59
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Dahmeezy",
+    "actual_author": "dahmeezy",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-14",
+    "group_name": "x402-facilitator-stellar - Group 14",
+    "issues": [
+      689,
+      690,
+      691
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Jacinth-star",
+    "actual_author": "Jacinth-star",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-9",
+    "group_name": "guage - Group 9",
+    "issues": [
+      66,
+      67,
+      69
+    ],
+    "assigned": true
+  },
+  {
+    "username": "raymondidahor-bot",
+    "actual_author": "raymondidahor-bot",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-1",
+    "group_name": "x402-facilitator-stellar - Group 1",
+    "issues": [
+      571,
+      575,
+      649
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Shakourllahfashola-dev",
+    "actual_author": "shakourllahfashola-dev",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-15",
+    "group_name": "x402-facilitator-stellar - Group 15",
+    "issues": [
+      692,
+      693,
+      694
+    ],
+    "assigned": true
+  },
+  {
+    "username": "The-Najaah",
+    "actual_author": "The-Najaah",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-39",
+    "group_name": "x402-facilitator-stellar - Group 39",
+    "issues": [
+      765,
+      766,
+      767
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Ebby46",
+    "actual_author": "Ebby46",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-23",
+    "group_name": "x402-facilitator-stellar - Group 23",
+    "issues": [
+      717,
+      718,
+      719
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Mskdylan",
+    "actual_author": "mskdylan",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-30",
+    "group_name": "x402-facilitator-stellar - Group 30",
+    "issues": [
+      738,
+      739,
+      740
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Schorlani07678",
+    "actual_author": "Schorlani07678",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-41",
+    "group_name": "x402-facilitator-stellar - Group 41",
+    "issues": [
+      771,
+      772,
+      773
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Dev-Marcy",
+    "actual_author": "Dev-Marcy",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-35",
+    "group_name": "x402-facilitator-stellar - Group 35",
+    "issues": [
+      753,
+      754,
+      755
+    ],
+    "assigned": true
+  },
+  {
+    "username": "affy-exe",
+    "actual_author": "affy-exe",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-34",
+    "group_name": "x402-facilitator-stellar - Group 34",
+    "issues": [
+      750,
+      751,
+      752
+    ],
+    "assigned": true
+  },
+  {
+    "username": "RealOla",
+    "actual_author": "Real-Ola",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-40",
+    "group_name": "x402-facilitator-stellar - Group 40",
+    "issues": [
+      768,
+      769,
+      770
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Martinsbab",
+    "actual_author": "Martinsbab",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-5",
+    "group_name": "x402-facilitator-stellar - Group 5",
+    "issues": [
+      662,
+      663,
+      664
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Chase3020",
+    "actual_author": "CHASE3020",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-13",
+    "group_name": "guage - Group 13",
+    "issues": [
+      127,
+      128,
+      129
+    ],
+    "assigned": true
+  },
+  {
+    "username": "princewille277-dotcom",
+    "actual_author": "princewille277-dotcom",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-25",
+    "group_name": "guage - Group 25",
+    "issues": [
+      163,
+      164,
+      165
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Adejumo-2",
+    "actual_author": "Adejumo-2",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-2",
+    "group_name": "x402-facilitator-stellar - Group 2",
+    "issues": [
+      650,
+      653,
+      655
+    ],
+    "assigned": true
+  },
+  {
+    "username": "favoursamuel-dotcom",
+    "actual_author": "favoursamuel-dotcom",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-27",
+    "group_name": "guage - Group 27",
+    "issues": [
+      169,
+      170,
+      171
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Faith3112",
+    "actual_author": "Faith3112",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-30",
+    "group_name": "guage - Group 30",
+    "issues": [
+      178,
+      179,
+      180
+    ],
+    "assigned": true
+  },
+  {
+    "username": "posi14",
+    "actual_author": "posi14",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-35",
+    "group_name": "guage - Group 35",
+    "issues": [
+      193,
+      194,
+      195
+    ],
+    "assigned": true
+  },
+  {
+    "username": "feyisayoadetunji2-jpg",
+    "actual_author": "feyisayoadetunji2-jpg",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-39",
+    "group_name": "guage - Group 39",
+    "issues": [
+      205,
+      206,
+      207
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Fave2",
+    "actual_author": "Fave2",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-4",
+    "group_name": "guage - Group 4",
+    "issues": [
+      51,
+      52,
+      53
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Timmatt112",
+    "actual_author": "Timmatt112",
+    "repo": "posture-sec/guage",
+    "group_id": "guage-group-5",
+    "group_name": "guage - Group 5",
+    "issues": [
+      54,
+      55,
+      56
+    ],
+    "assigned": true
+  },
+  {
+    "username": "smog123",
+    "actual_author": "smog123",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-16",
+    "group_name": "x402-facilitator-stellar - Group 16",
+    "issues": [
+      695,
+      696,
+      697
+    ],
+    "assigned": true
+  },
+  {
+    "username": "soliatabdullahi",
+    "actual_author": "soliatabdullahi",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-18",
+    "group_name": "x402-facilitator-stellar - Group 18",
+    "issues": [
+      701,
+      702,
+      703
+    ],
+    "assigned": true
+  },
+  {
+    "username": "omoh5",
+    "actual_author": "omoh5",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-31",
+    "group_name": "x402-facilitator-stellar - Group 31",
+    "issues": [
+      741,
+      742,
+      743
+    ],
+    "assigned": true
+  },
+  {
+    "username": "Yodomite",
+    "actual_author": "Yodomite",
+    "repo": "accensa/x402-facilitator-stellar",
+    "group_id": "x402-facilitator-stellar-group-29",
+    "group_name": "x402-facilitator-stellar - Group 29",
+    "issues": [
+      735,
+      736,
+      737
+    ],
+    "assigned": true
+  }
+]
