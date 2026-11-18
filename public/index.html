@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellar Wave — Issue Scheduler</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      border-radius: 0px !important; /* Strict square corners */
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #000000;
+      color: #EDEDED;
+    }
+    .mono {
+      font-family: 'Geist Mono', monospace;
+    }
+    /* Clean custom scrollbar */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #262626; }
+    ::-webkit-scrollbar-thumb:hover { background: #525252; }
+
+    /* Button hover states */
+    .btn-solid {
+      background: #FFFFFF;
+      color: #000000;
+      transition: all 0.15s ease;
+    }
+    .btn-solid:hover:not(:disabled) {
+      background: #D4D4D8;
+    }
+    .btn-solid:disabled {
+      background: #27272A;
+      color: #71717A;
+      cursor: not-allowed;
+    }
+    .btn-outline {
+      border: 1px solid #27272A;
+      background: transparent;
+      color: #A1A1AA;
+      transition: all 0.15s ease;
+    }
+    .btn-outline:hover:not(:disabled) {
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+      background: #09090B;
+    }
+    .btn-outline.active {
+      background: #FFFFFF;
+      color: #000000;
+      border-color: #FFFFFF;
+    }
+    .pulse-dot {
+      animation: blink 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-white selection:text-black">
+
+  <!-- Header -->
+  <header class="border-b border-neutral-800 bg-black/90 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand -->
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 bg-white text-black font-bold text-xs flex items-center justify-center tracking-tighter mono">
+          SW
+        </div>
+        <div>
+          <h1 class="text-xs font-semibold uppercase tracking-widest text-white mono">
+            Stellar Wave <span class="text-neutral-500 font-normal">/ Issue Scheduler</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Right Nav / Controls -->
+      <div class="flex items-center gap-4">
+        <!-- Live Connection Status -->
+        <div id="connectionStatus" class="flex items-center gap-2 border border-neutral-800 px-2.5 py-1 text-[11px] mono text-neutral-400">
+          <span class="w-1.5 h-1.5 bg-white pulse-dot"></span>
+          <span>SYNC: ACTIVE</span>
+        </div>
+
+        <div class="hidden sm:block text-[11px] mono text-neutral-500 border border-neutral-800 px-2.5 py-1">
+          DEVICE: <span id="deviceIdShort" class="text-neutral-300">...</span>
+        </div>
+
+        <a href="/bookings.html" class="px-3 py-1 text-xs mono uppercase border border-neutral-700 hover:border-white text-neutral-300 hover:text-white transition">
+          Scheduled [ <span id="navReservedCount">0</span> ]
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+
+    <!-- Hero / Information Band -->
+    <section class="border border-neutral-800 bg-neutral-950 p-6 sm:p-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <div class="lg:col-span-7 space-y-3">
+          <div class="inline-block text-[10px] mono uppercase tracking-widest text-neutral-400 border border-neutral-800 px-2 py-0.5">
+            Phase 1 · Contributor Dispatch
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
+            Reserve your Stellar Wave issue triplet.
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed max-w-xl">
+            Each group contains 3 verified issues. To maintain fair distribution across contributors, each GitHub username and device is restricted to <span class="text-white font-medium">one reservation</span>.
+          </p>
+
+          <!-- Username Input Flow -->
+          <form id="userForm" class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 max-w-lg">
+            <div class="relative flex-1">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-500 mono text-xs">@</span>
+              <input 
+                type="text" 
+                id="usernameInput" 
+                placeholder="github-username" 
+                class="w-full pl-7 pr-3 py-2 bg-black border border-neutral-700 text-white placeholder-neutral-600 focus:outline-none focus:border-white text-xs mono transition"
+                required
+              />
+            </div>
+            <button 
+              type="submit" 
+              class="px-5 py-2 btn-solid text-xs font-semibold tracking-wider uppercase mono"
+            >
+              Set Handle
+            </button>
+          </form>
+        </div>
+
+        <!-- Identity & Reservation Status Box -->
+        <div class="lg:col-span-5 border border-neutral-800 bg-black p-5 flex flex-col justify-between h-full space-y-4">
+          <div class="flex items-center justify-between border-b border-neutral-900 pb-3">
+            <span class="text-[10px] mono uppercase tracking-widest text-neutral-500">Identity Status</span>
+            <span id="userStatusTag" class="text-[10px] mono uppercase border border-neutral-800 px-2 py-0.5 text-neutral-400">UNSET</span>
+          </div>
+
+          <div id="statusText" class="text-xs text-neutral-400 mono">
+            Enter your GitHub username to enable issue group reservation.
+          </div>
+
+          <div class="text-[10px] mono text-neutral-600 border-t border-neutral-900 pt-3 flex items-center justify-between">
+            <span>RULE: 1 RESERVATION / HANDLE</span>
+            <span>RULE: 1 / DEVICE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Reservation Banner (Shown when user/device has a booking) -->
+      <div id="myReservationBanner" class="hidden mt-6 p-4 border border-white bg-neutral-900">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-1.5 py-0.5 text-[10px] mono uppercase bg-white text-black font-bold">Your Active Booking</span>
+              <span id="myGroupName" class="text-sm font-bold text-white mono">...</span>
+            </div>
+            <div class="text-xs text-neutral-400 mono" id="myReservationDetails">...</div>
+          </div>
+          <div id="myIssuesPills" class="flex flex-wrap gap-1.5"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter & Search Controls Bar -->
+    <section class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-800 pb-4">
+      
+      <!-- Repository Filters -->
+      <div class="flex flex-wrap items-center gap-1.5">
+        <button data-filter="all" class="filter-tab px-3 py-1.5 text-xs mono uppercase border border-white bg-white text-black font-semibold transition">
+          All [ <span id="countAll">84</span> ]
+        </button>
+        <button data-filter="guage" class="filter-tab px-3 py-1.5 text-xs mono uppercase btn-outline">
+          guage [ <span id="countGuage">42</span> ]
+        </button>
+        <button data-filter="x402" class="filter-tab px-3 py-1.5 text-xs mono uppercase btn-outline">
+          x402-facilitator [ <span id="countX402">42</span> ]
+        </button>
+      </div>
+
+      <!-- Search & Availability Toggle -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+        <label class="inline-flex items-center gap-2 text-xs mono uppercase text-neutral-300 border border-neutral-800 px-3 py-1.5 cursor-pointer hover:border-neutral-700 transition">
+          <input type="checkbox" id="availableOnlyToggle" class="accent-white w-3.5 h-3.5" />
+          <span>Available Only (<span id="countAvailable" class="text-white font-bold">84</span>)</span>
+        </label>
+
+        <div class="relative">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="FILTER #ISSUE / GROUP..." 
+            class="pl-3 pr-3 py-1.5 bg-black border border-neutral-800 text-xs mono uppercase text-white placeholder-neutral-600 focus:outline-none focus:border-white w-full sm:w-60 transition"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid of Issue Groups -->
+    <section>
+      <div id="groupsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered via JS -->
+      </div>
+      <div id="noResults" class="hidden text-center py-16 border border-neutral-800 text-neutral-500 text-xs mono uppercase">
+        No issue groups match the active filter criteria.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimal Monochrome Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 max-w-sm w-full bg-black border border-white p-4 text-xs mono flex items-start gap-3">
+    <div class="w-2 h-2 bg-white mt-1 shrink-0"></div>
+    <div class="flex-1 space-y-0.5">
+      <div id="toastTitle" class="font-bold text-white uppercase tracking-wider">SYSTEM NOTICE</div>
+      <div id="toastMessage" class="text-neutral-400"></div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let groups = [];
+    let activeFilter = 'all';
+    let availableOnly = false;
+    let searchQuery = '';
+    let currentUser = localStorage.getItem('scheduler_username') || '';
+    let myReservation = null;
+
+    // Device Fingerprint UUID
+    let deviceId = localStorage.getItem('scheduler_device_id');
+    if (!deviceId) {
+      deviceId = 'dev_' + Math.random().toString(36).substring(2, 12) + Date.now().toString(36);
+      localStorage.setItem('scheduler_device_id', deviceId);
+    }
+    document.getElementById('deviceIdShort').textContent = deviceId.substring(0, 10).toUpperCase();
+
+    // DOM Elements
+    const usernameInput = document.getElementById('usernameInput');
+    const userForm = document.getElementById('userForm');
+    const statusText = document.getElementById('statusText');
+    const userStatusTag = document.getElementById('userStatusTag');
+    const myReservationBanner = document.getElementById('myReservationBanner');
+    const myGroupName = document.getElementById('myGroupName');
+    const myReservationDetails = document.getElementById('myReservationDetails');
+    const myIssuesPills = document.getElementById('myIssuesPills');
+    const groupsGrid = document.getElementById('groupsGrid');
+    const countAvailable = document.getElementById('countAvailable');
+    const countAll = document.getElementById('countAll');
+    const countGuage = document.getElementById('countGuage');
+    const countX402 = document.getElementById('countX402');
+    const navReservedCount = document.getElementById('navReservedCount');
+    const searchInput = document.getElementById('searchInput');
+    const availableOnlyToggle = document.getElementById('availableOnlyToggle');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const connectionStatus = document.getElementById('connectionStatus');
+
+    if (currentUser) {
+      usernameInput.value = currentUser;
+    }
+
+    // Toast
+    function showToast(title, message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastMessage').textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 4000);
+    }
+
+    // Status Checker
+    async function checkUserStatus() {
+      if (!deviceId) return;
+      try {
+        const query = new URLSearchParams({
+          device_id: deviceId,
+          username: currentUser || ''
+        });
+        const res = await fetch(`/api/user-status?${query}`);
+        const data = await res.json();
+
+        if (data.has_booked && data.reservation) {
+          myReservation = data.reservation;
+          renderMyReservation();
+        } else {
+          myReservation = null;
+          myReservationBanner.classList.add('hidden');
+          if (currentUser) {
+            userStatusTag.textContent = 'READY';
+            userStatusTag.className = 'text-[10px] mono uppercase border border-white text-white px-2 py-0.5';
+            statusText.innerHTML = `Identified as <strong class="text-white">@${escapeHtml(currentUser)}</strong>. Select an open group below to reserve.`;
+          } else {
+            userStatusTag.textContent = 'UNSET';
+            userStatusTag.className = 'text-[10px] mono uppercase border border-neutral-800 text-neutral-500 px-2 py-0.5';
+            statusText.textContent = 'Enter your GitHub username to enable issue group reservation.';
+          }
+        }
+        renderGroups();
+      } catch (err) {
+        console.error('Status check error:', err);
+      }
+    }
+
+    function renderMyReservation() {
+      if (!myReservation) return;
+      myReservationBanner.classList.remove('hidden');
+      myGroupName.textContent = myReservation.group_name;
+      myReservationDetails.textContent = `RESERVED BY @${myReservation.username.toUpperCase()} · ${new Date(myReservation.created_at).toUTCString()}`;
+      
+      userStatusTag.textContent = 'BOOKED';
+      userStatusTag.className = 'text-[10px] mono uppercase bg-white text-black px-2 py-0.5 font-bold';
+      statusText.innerHTML = `Active reservation: <span class="text-white font-bold">${escapeHtml(myReservation.group_name)}</span>. 1 booking maximum reached.`;
+
+      myIssuesPills.innerHTML = (myReservation.issues || []).map(iss => `
+        <a href="${iss.url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-black border border-neutral-700 hover:border-white text-white text-xs mono transition">
+          #${iss.number} ↗
+        </a>
+      `).join('');
+    }
+
+    // User Form Submit
+    userForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = usernameInput.value.trim();
+      if (!val) return;
+      currentUser = val;
+      localStorage.setItem('scheduler_username', currentUser);
+      showToast('HANDLE CONFIGURED', `@${currentUser} set as active contributor`);
+      checkUserStatus();
+    });
+
+    // Load Groups
+    async function loadGroups() {
+      try {
+        const res = await fetch('/api/groups');
+        const data = await res.json();
+        if (data.success) {
+          groups = data.groups;
+          updateCounters();
+          renderGroups();
+        }
+      } catch (err) {
+        console.error('Failed to load groups:', err);
+      }
+    }
+
+    function updateCounters() {
+      const avail = groups.filter(g => g.is_available).length;
+      const booked = groups.length - avail;
+      const guage = groups.filter(g => g.repo_short === 'guage').length;
+      const x402 = groups.filter(g => g.repo_short === 'x402-facilitator-stellar').length;
+
+      countAvailable.textContent = avail;
+      countAll.textContent = groups.length;
+      countGuage.textContent = guage;
+      countX402.textContent = x402;
+      navReservedCount.textContent = booked;
+    }
+
+    // Render Grid
+    function renderGroups() {
+      const filtered = groups.filter(g => {
+        if (activeFilter === 'guage' && g.repo_short !== 'guage') return false;
+        if (activeFilter === 'x402' && g.repo_short !== 'x402-facilitator-stellar') return false;
+        if (availableOnly && !g.is_available) return false;
+
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          const matchName = g.group_name.toLowerCase().includes(q);
+          const matchIssues = g.issues.some(iss => iss.number.toString().includes(q));
+          if (!matchName && !matchIssues) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        groupsGrid.innerHTML = '';
+        document.getElementById('noResults').classList.remove('hidden');
+        return;
+      }
+      document.getElementById('noResults').classList.add('hidden');
+
+      groupsGrid.innerHTML = filtered.map(g => {
+        const isMine = myReservation && myReservation.group_id === g.id;
+        const isBooked = !g.is_available;
+
+        let statusLabel = '';
+        if (isMine) {
+          statusLabel = `<span class="px-2 py-0.5 text-[10px] mono uppercase bg-white text-black font-bold">YOURS</span>`;
+        } else if (isBooked) {
+          statusLabel = `<span class="px-2 py-0.5 text-[10px] mono uppercase border border-neutral-800 text-neutral-500">@${escapeHtml(g.booked_by)}</span>`;
+        } else {
+          statusLabel = `<span class="px-2 py-0.5 text-[10px] mono uppercase border border-neutral-700 text-neutral-300">OPEN</span>`;
+        }
+
+        const issuesHtml = g.issues.map(iss => `
+          <a href="${iss.url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-black border border-neutral-800 hover:border-white text-neutral-300 hover:text-white text-xs mono transition">
+            #${iss.number}
+          </a>
+        `).join('');
+
+        let actionBtn = '';
+        if (isMine) {
+          actionBtn = `<button disabled class="w-full py-2 bg-neutral-900 border border-neutral-800 text-white text-xs mono uppercase cursor-not-allowed">RESERVED BY YOU</button>`;
+        } else if (isBooked) {
+          actionBtn = `<button disabled class="w-full py-2 bg-neutral-950 border border-neutral-900 text-neutral-600 text-xs mono uppercase cursor-not-allowed">UNAVAILABLE</button>`;
+        } else if (!currentUser) {
+          actionBtn = `<button onclick="usernameInput.focus()" class="w-full py-2 border border-neutral-800 hover:border-white text-neutral-300 text-xs mono uppercase transition">ENTER HANDLE TO BOOK</button>`;
+        } else if (myReservation) {
+          actionBtn = `<button disabled class="w-full py-2 bg-neutral-950 border border-neutral-900 text-neutral-600 text-xs mono uppercase cursor-not-allowed">1 BOOKING LIMIT MET</button>`;
+        } else {
+          actionBtn = `
+            <button 
+              onclick="bookGroup('${g.id}')" 
+              class="w-full py-2 btn-solid text-xs font-bold mono uppercase tracking-wider transition flex items-center justify-center gap-2"
+            >
+              <span>RESERVE TRIPLET</span>
+              <span>→</span>
+            </button>
+          `;
+        }
+
+        const cardBorder = isMine ? 'border-white bg-neutral-950' : 'border-neutral-800 hover:border-neutral-700 bg-black';
+
+        return `
+          <div class="border ${cardBorder} p-4 flex flex-col justify-between gap-4 transition">
+            <div class="space-y-3">
+              <div class="flex items-start justify-between gap-2 border-b border-neutral-900 pb-2.5">
+                <div>
+                  <div class="text-[10px] mono uppercase tracking-wider text-neutral-500">${escapeHtml(g.repo)}</div>
+                  <h3 class="text-sm font-bold text-white mono uppercase mt-0.5">${escapeHtml(g.group_name)}</h3>
+                </div>
+                ${statusLabel}
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                ${issuesHtml}
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-neutral-900">
+              ${actionBtn}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Reservation Action
+    async function bookGroup(groupId) {
+      if (!currentUser) {
+        usernameInput.focus();
+        return;
+      }
+      if (myReservation) {
+        showToast('LIMIT REACHED', 'You already have an active group booking.');
+        return;
+      }
+
+      const target = groups.find(g => g.id === groupId);
+      if (!confirm(`CONFIRM: Reserve ${target ? target.group_name : 'group'} under handle @${currentUser}?`)) {
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/book', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            group_id: groupId,
+            username: currentUser,
+            device_id: deviceId
+          })
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          showToast('RESERVATION CONFIRMED', data.message);
+          myReservation = data.reservation;
+          renderMyReservation();
+          const g = groups.find(i => i.id === groupId);
+          if (g) {
+            g.booked_by = currentUser;
+            g.is_available = false;
+          }
+          updateCounters();
+          renderGroups();
+        } else {
+          showToast('RESERVATION ERROR', data.error);
+          checkUserStatus();
+        }
+      } catch (err) {
+        showToast('NETWORK ERROR', err.message);
+      }
+    }
+
+    // Real-time Sync (SSE)
+    function setupSSE() {
+      const evtSource = new EventSource('/api/events');
+
+      evtSource.onopen = () => {
+        connectionStatus.innerHTML = '<span class="w-1.5 h-1.5 bg-white pulse-dot"></span><span>SYNC: ACTIVE</span>';
+      };
+
+      evtSource.addEventListener('booked', (event) => {
+        try {
+          const payload = JSON.parse(event.data);
+          const g = groups.find(i => i.id === payload.group_id);
+          if (g) {
+            g.booked_by = payload.booked_by;
+            g.booked_at = payload.booked_at;
+            g.is_available = payload.booked_by === null;
+            updateCounters();
+            renderGroups();
+
+            if (payload.booked_by && payload.booked_by !== currentUser) {
+              showToast('GROUP CLAIMED', `@${payload.booked_by} reserved ${g.group_name}`);
+            }
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      });
+
+      evtSource.onerror = () => {
+        connectionStatus.innerHTML = '<span class="w-1.5 h-1.5 bg-neutral-600"></span><span>SYNC: RECONNECTING</span>';
+      };
+    }
+
+    // Filter Listeners
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.className = 'filter-tab px-3 py-1.5 text-xs mono uppercase btn-outline';
+        });
+        tab.className = 'filter-tab px-3 py-1.5 text-xs mono uppercase border border-white bg-white text-black font-semibold transition';
+        activeFilter = tab.getAttribute('data-filter');
+        renderGroups();
+      });
+    });
+
+    availableOnlyToggle.addEventListener('change', (e) => {
+      availableOnly = e.target.checked;
+      renderGroups();
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      renderGroups();
+    });
+
+    function escapeHtml(str) {
+      return String(str || '').replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[m]);
+    }
+
+    // Init
+    loadGroups();
+    checkUserStatus();
+    setupSSE();
+  </script>
+</body>
+</html>
