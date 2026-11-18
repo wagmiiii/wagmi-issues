@@ -1,22 +1,41 @@
 # Stellar Wave Issue Scheduler
 
-A lightweight, real-time web application for reserving issue groups (triplets) across participating repositories:
-- `posture-sec/guage` (42 groups)
-- `accensa/x402-facilitator-stellar` (42 groups)
+A lightweight, real-time web application for reserving issue groups across GitHub repositories with strict **one reservation per username and device** enforcement.
 
 ## Features
-- **Contributor Identification:** Contributor inputs their GitHub handle.
 - **Strict Single-Reservation Policy:**
-  - One reservation per **username** (case-insensitive).
-  - One reservation per **device** (enforced via persistent fingerprint identifier).
-  - Atomic reservations backed by SQLite with zero race conditions.
-- **Real-Time Sync:** Uses Server-Sent Events (SSE). When any contributor reserves an issue group, all open clients update instantly without a page refresh.
-- **Repository Filtering & Search:** Filter by repo, search by issue number or group name, toggle "Available Only".
+  - One reservation per **username** (case-insensitive `UNIQUE`).
+  - One reservation per **device** (enforced via persistent client fingerprint).
+  - Atomic reservations backed by SQLite (`node:sqlite`).
+- **Real-Time Sync:** Server-Sent Events (SSE) update all open contributor browsers live when any slot is reserved.
+- **Architectural UI:** Minimalist, monochrome, sharp square geometry.
+- **Maintainer Tools:** Automated issue sync script, database reset utilities, and CSV export.
+
+---
 
 ## Quick Start
+
 ```bash
 cd scheduler-app
 npm install
 npm start
 ```
-Access the application at: `http://localhost:3000`
+* App URL: `http://localhost:3000`
+* Scheduled Registry: `http://localhost:3000/bookings.html`
+
+---
+
+## For Maintainers
+
+To sync new issues from any repository, configure labels, or reset the database, see the detailed instructions in **[MAINTAINERS.md](./MAINTAINERS.md)**:
+
+```bash
+# Sync issues from target repositories (interactively prompts for repo links & label)
+npm run sync-issues
+
+# Or pass them directly:
+python3 scripts/sync_issues.py --repos https://github.com/owner/repo1 --label "Stellar Wave" --size 3
+
+# Reset reservations and re-seed:
+npm run reset-db
+```

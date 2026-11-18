@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "sync-issues": "python3 scripts/sync_issues.py",
+    "reset-db": "node scripts/reset_db.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
