@@ -70,10 +70,14 @@ if (process.env.DATABASE_URL) {
           repo TEXT NOT NULL,
           number INTEGER NOT NULL,
           state TEXT NOT NULL,
+          assignees TEXT,
           updated_at TEXT NOT NULL,
           PRIMARY KEY (repo, number)
         );
       `);
+
+      // Databases created before assignees were recorded need the column added.
+      await pool.query('ALTER TABLE issue_states ADD COLUMN IF NOT EXISTS assignees TEXT');
 
       // Seed missing groups if needed
       const countRes = await pool.query('SELECT COUNT(*) FROM groups');
@@ -139,8 +143,11 @@ if (process.env.DATABASE_URL) {
     },
 
     async getIssueStates() {
-      const rows = (await pool.query('SELECT repo, number, state FROM issue_states')).rows;
-      return new Map(rows.map(r => [issueStateKey(r.repo, r.number), r.state]));
+      const rows = (await pool.query('SELECT repo, number, state, assignees FROM issue_states')).rows;
+      return new Map(rows.map(r => [issueStateKey(r.repo, r.number), {
+        state: r.state,
+        assignees: parseAssignees(r.assignees)
+      }]));
     },
 
     async setIssueStates(entries) {
@@ -151,9 +158,9 @@ if (process.env.DATABASE_URL) {
         const nowIso = new Date().toISOString();
         for (const e of entries) {
           await client.query(
-            `INSERT INTO issue_states (repo, number, state, updated_at) VALUES ($1, $2, $3, $4)
-             ON CONFLICT (repo, number) DO UPDATE SET state = $3, updated_at = $4`,
-            [e.repo, e.number, e.state, nowIso]
+            `INSERT INTO issue_states (repo, number, state, assignees, updated_at) VALUES ($1, $2, $3, $4, $5)
+             ON CONFLICT (repo, number) DO UPDATE SET state = $3, assignees = $4, updated_at = $5`,
+            [e.repo, e.number, e.state, JSON.stringify(e.assignees || []), nowIso]
           );
         }
         await client.query('COMMIT');
@@ -367,10 +374,17 @@ if (process.env.DATABASE_URL) {
           repo TEXT NOT NULL,
           number INTEGER NOT NULL,
           state TEXT NOT NULL,
+          assignees TEXT,
           updated_at TEXT NOT NULL,
           PRIMARY KEY (repo, number)
         );
       `);
+
+  try {
+    db.exec('ALTER TABLE issue_states ADD COLUMN assignees TEXT');
+  } catch (e) {
+    // Column already exists.
+  }
 
   const insertGroupStmt = db.prepare(`
     INSERT OR IGNORE INTO groups (id, group_name, repo, repo_short, issues_json, count)
@@ -428,19 +442,22 @@ if (process.env.DATABASE_URL) {
       this._assignedAt = 0;
     },
     async getIssueStates() {
-      const rows = db.prepare('SELECT repo, number, state FROM issue_states').all();
-      return new Map(rows.map(r => [issueStateKey(r.repo, r.number), r.state]));
+      const rows = db.prepare('SELECT repo, number, state, assignees FROM issue_states').all();
+      return new Map(rows.map(r => [issueStateKey(r.repo, r.number), {
+        state: r.state,
+        assignees: parseAssignees(r.assignees)
+      }]));
     },
     async setIssueStates(entries) {
       if (!entries.length) return;
       const nowIso = new Date().toISOString();
       const ins = db.prepare(
-        `INSERT INTO issue_states (repo, number, state, updated_at) VALUES (?, ?, ?, ?)
-         ON CONFLICT (repo, number) DO UPDATE SET state = excluded.state, updated_at = excluded.updated_at`
+        `INSERT INTO issue_states (repo, number, state, assignees, updated_at) VALUES (?, ?, ?, ?, ?)
+         ON CONFLICT (repo, number) DO UPDATE SET state = excluded.state, assignees = excluded.assignees, updated_at = excluded.updated_at`
       );
       db.exec('BEGIN TRANSACTION;');
       try {
-        for (const e of entries) ins.run(e.repo, e.number, e.state, nowIso);
+        for (const e of entries) ins.run(e.repo, e.number, e.state, JSON.stringify(e.assignees || []), nowIso);
         db.exec('COMMIT;');
       } catch (err) {
         db.exec('ROLLBACK;');
@@ -669,8 +686,9 @@ app.get('/api/admin/reservations', async (req, res) => {
       total_assigned: reservations.filter(r => r.is_assigned).length,
       total_unassigned: reservations.filter(r => !r.is_assigned).length,
       total_completed: reservations.filter(r => r.completion === 'completed').length,
+      total_taken_by_others: reservations.filter(r => r.taken_by_others).length,
       // A group whose issues are all closed is finished work, not pending work.
-      total_pending: reservations.filter(r => !r.is_assigned && r.completion !== 'completed').length
+      total_pending: reservations.filter(r => !r.is_assigned && !r.taken_by_others && r.completion !== 'completed').length
     });
   } catch (err) {
     console.error('adminReservations error:', err);
@@ -712,13 +730,22 @@ function issueStateKey(repo, number) {
   return `${String(repo).toLowerCase()}#${number}`;
 }
 
+function parseAssignees(raw) {
+  try {
+    const list = JSON.parse(raw || '[]');
+    return Array.isArray(list) ? list.map(String) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
 // Attach GitHub state to a group or reservation so the UI can mark closed
 // issues and completed groups.
 function decorateGroup(group, stateMap) {
-  const issues = (group.issues || []).map(i => ({
-    ...i,
-    state: stateMap.get(issueStateKey(group.repo, i.number)) || null
-  }));
+  const issues = (group.issues || []).map(i => {
+    const stored = stateMap.get(issueStateKey(group.repo, i.number));
+    return { ...i, state: (stored && stored.state) || null, assignees: (stored && stored.assignees) || [] };
+  });
   const total = issues.length;
   const closed = issues.filter(i => i.state === 'closed').length;
   let completion = null;
@@ -727,7 +754,33 @@ function decorateGroup(group, stateMap) {
     else if (closed > 0) completion = 'partial';
     else if (issues.every(i => i.state === 'open')) completion = 'open';
   }
-  return { ...group, issues, issues_total: total, issues_closed: closed, completion };
+
+  // A booking stops meaning "this contributor is working on it" as soon as the
+  // issues are assigned to somebody else on GitHub. Say so instead of leaving
+  // the row looking merely reserved.
+  const booker = String(group.booked_by || group.username || '').toLowerCase();
+  const takenBy = [];
+  const seen = new Set();
+  for (const issue of issues) {
+    for (const assignee of issue.assignees) {
+      const key = String(assignee).toLowerCase();
+      if (!key || key === booker || seen.has(key)) continue;
+      seen.add(key);
+      takenBy.push(assignee);
+    }
+  }
+  const bookerAssigned = !!booker &&
+    issues.some(i => i.assignees.some(a => String(a).toLowerCase() === booker));
+
+  return {
+    ...group,
+    issues,
+    issues_total: total,
+    issues_closed: closed,
+    completion,
+    assigned_to: takenBy,
+    taken_by_others: takenBy.length > 0 && !bookerAssigned
+  };
 }
 
 async function decorateMany(groups) {
@@ -788,10 +841,11 @@ async function syncAssignedFromGitHub() {
         // of assignment. They are recorded as closed rather than removed.
         const state = data.state === 'closed' ? 'closed' : 'open';
         if (state === 'closed') { closedHere += 1; issuesClosed += 1; }
+        const assigneeLogins = (data.assignees || []).map(a => a.login);
         states.set(issueStateKey(g.repo, issue.number), {
-          repo: String(g.repo).toLowerCase(), number: issue.number, state
+          repo: String(g.repo).toLowerCase(), number: issue.number, state, assignees: assigneeLogins
         });
-        const owners = (data.assignees || []).map(a => String(a.login).toLowerCase());
+        const owners = assigneeLogins.map(a => String(a).toLowerCase());
         if (owners.length) assignedToAnyone = true;
         if (owners.includes(me)) assignedToMe = true;
       } catch (err) {

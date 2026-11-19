@@ -188,7 +188,8 @@
         const matchGroup = r.group_name.toLowerCase().includes(q);
         const matchRepo = r.repo.toLowerCase().includes(q);
         const matchIssues = r.issues.some(i => i.number.toString().includes(q));
-        return matchUser || matchGroup || matchRepo || matchIssues;
+        const matchAssignee = (r.assigned_to || []).some(a => a.toLowerCase().includes(q));
+        return matchUser || matchGroup || matchRepo || matchIssues || matchAssignee;
       });
 
       const tbody = document.getElementById('reservationsTableBody');
@@ -211,7 +212,9 @@
           ? `<span class="px-2 py-0.5 border border-neutral-600 text-neutral-400 font-bold text-[10px] tracking-wider mono uppercase">COMPLETED</span>`
           : r.is_assigned
             ? `<span class="px-2 py-0.5 bg-white text-black font-bold text-[10px] tracking-wider mono uppercase">ASSIGNED</span>`
-            : `<span class="px-2 py-0.5 border border-neutral-700 text-neutral-400 text-[10px] tracking-wider mono uppercase">PENDING</span>`;
+            : r.taken_by_others
+              ? `<span class="px-2 py-0.5 border border-white text-white font-bold text-[10px] tracking-wider mono uppercase" title="Assigned on GitHub to someone else">TAKEN BY @${(r.assigned_to || []).map(escapeHtml).join(', @')}</span>`
+              : `<span class="px-2 py-0.5 border border-neutral-700 text-neutral-400 text-[10px] tracking-wider mono uppercase">PENDING</span>`;
         const closedBadge = closedCount > 0 && r.completion !== 'completed'
           ? ` <span class="text-neutral-500 text-[10px] mono uppercase">${closedCount}/${(r.issues || []).length} closed</span>`
           : '';
@@ -239,7 +242,7 @@
       const headers = ['Username', 'Group Name', 'Repository', 'Issues', 'Closed Issues', 'Status', 'Reserved At UTC'];
       const rows = reservations.map(r => {
         const closed = r.issues_closed !== undefined ? r.issues_closed : (r.issues || []).filter(i => i.state === 'closed').length;
-        const status = r.completion === 'completed' ? 'COMPLETED' : (r.is_assigned ? 'ASSIGNED' : 'PENDING');
+        const status = r.completion === 'completed' ? 'COMPLETED' : (r.is_assigned ? 'ASSIGNED' : (r.taken_by_others ? `TAKEN BY @${(r.assigned_to || []).join(', @')}` : 'PENDING'));
         return [
           r.username,
           `"${r.group_name}"`,
