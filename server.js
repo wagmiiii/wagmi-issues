@@ -1,18 +1,23 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const crypto = require('crypto');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'groups.json'), 'utf8'));
 
-// Track assigned contributors on GitHub
-function getAssignedUsersSet() {
+// Assigned contributors live in the database (table: assigned_users) and are
+// refreshed from GitHub by POST /api/admin/sync-assigned. The committed JSON
+// file is only a one-time seed for databases created before that table existed.
+const ASSIGNED_TTL_MS = 30 * 1000;
+
+function readAssignedSeed() {
   try {
     const list = JSON.parse(fs.readFileSync(path.join(__dirname, 'assigned_users.json'), 'utf8'));
-    return new Set(list.map(u => u.toLowerCase()));
+    return list.map(u => String(u).trim().toLowerCase()).filter(Boolean);
   } catch (e) {
-    return new Set();
+    return [];
   }
 }
 
@@ -51,6 +56,23 @@ if (process.env.DATABASE_URL) {
         );
 
         CREATE UNIQUE INDEX IF NOT EXISTS idx_res_user_lower ON reservations (LOWER(username));
+
+        CREATE TABLE IF NOT EXISTS assigned_users (
+          username TEXT PRIMARY KEY,
+          source TEXT NOT NULL DEFAULT 'github',
+          updated_at TEXT NOT NULL
+        );
+
+        -- Open/closed state of every grouped issue, refreshed from GitHub.
+        -- Closed issues are kept forever: closing is the outcome we want, and
+        -- a group's history must not disappear once it is completed.
+        CREATE TABLE IF NOT EXISTS issue_states (
+          repo TEXT NOT NULL,
+          number INTEGER NOT NULL,
+          state TEXT NOT NULL,
+          updated_at TEXT NOT NULL,
+          PRIMARY KEY (repo, number)
+        );
       `);
 
       // Seed missing groups if needed
@@ -65,7 +87,82 @@ if (process.env.DATABASE_URL) {
           );
         }
       }
+      const assignedCount = await pool.query('SELECT COUNT(*) FROM assigned_users');
+      if (parseInt(assignedCount.rows[0].count, 10) === 0) {
+        const seededAt = new Date().toISOString();
+        for (const u of readAssignedSeed()) {
+          await pool.query(
+            `INSERT INTO assigned_users (username, source, updated_at) VALUES ($1, 'seed', $2)
+             ON CONFLICT (username) DO NOTHING`,
+            [u, seededAt]
+          );
+        }
+        console.log(`Seeded ${readAssignedSeed().length} assigned usernames from assigned_users.json`);
+      }
       console.log('Connected to PostgreSQL (Neon). Seed verification complete.');
+    },
+
+    _assigned: null,
+    _assignedAt: 0,
+
+    async getAssignedSet() {
+      const now = Date.now();
+      if (this._assigned && now - this._assignedAt < ASSIGNED_TTL_MS) return this._assigned;
+      const rows = (await pool.query('SELECT username FROM assigned_users')).rows;
+      this._assigned = new Set(rows.map(r => r.username));
+      this._assignedAt = now;
+      return this._assigned;
+    },
+
+    async setGithubAssignments(usernames) {
+      const client = await pool.connect();
+      try {
+        await client.query('BEGIN');
+        await client.query(`DELETE FROM assigned_users WHERE source = 'github'`);
+        const nowIso = new Date().toISOString();
+        for (const u of usernames) {
+          await client.query(
+            `INSERT INTO assigned_users (username, source, updated_at) VALUES ($1, 'github', $2)
+             ON CONFLICT (username) DO UPDATE SET source = 'github', updated_at = $2`,
+            [u, nowIso]
+          );
+        }
+        await client.query('COMMIT');
+      } catch (e) {
+        await client.query('ROLLBACK');
+        throw e;
+      } finally {
+        client.release();
+      }
+      this._assigned = null;
+      this._assignedAt = 0;
+    },
+
+    async getIssueStates() {
+      const rows = (await pool.query('SELECT repo, number, state FROM issue_states')).rows;
+      return new Map(rows.map(r => [issueStateKey(r.repo, r.number), r.state]));
+    },
+
+    async setIssueStates(entries) {
+      if (!entries.length) return;
+      const client = await pool.connect();
+      try {
+        await client.query('BEGIN');
+        const nowIso = new Date().toISOString();
+        for (const e of entries) {
+          await client.query(
+            `INSERT INTO issue_states (repo, number, state, updated_at) VALUES ($1, $2, $3, $4)
+             ON CONFLICT (repo, number) DO UPDATE SET state = $3, updated_at = $4`,
+            [e.repo, e.number, e.state, nowIso]
+          );
+        }
+        await client.query('COMMIT');
+      } catch (err) {
+        await client.query('ROLLBACK');
+        throw err;
+      } finally {
+        client.release();
+      }
     },
 
     async getGroups() {
@@ -88,7 +185,7 @@ if (process.env.DATABASE_URL) {
     },
 
     async getUserStatus(username, deviceId) {
-      const assigned = getAssignedUsersSet();
+      const assigned = await this.getAssignedSet();
       if (deviceId) {
         const dev = await pool.query(
           `SELECT r.*, g.group_name, g.repo, g.issues_json
@@ -181,7 +278,7 @@ if (process.env.DATABASE_URL) {
     },
 
     async getAdminReservations() {
-      const assigned = getAssignedUsersSet();
+      const assigned = await this.getAssignedSet();
       const rows = await pool.query(`
         SELECT r.id as reservation_id, r.group_id, g.group_name, g.repo, g.issues_json, r.username, r.device_id, r.created_at
         FROM reservations r JOIN groups g ON r.group_id = g.id
@@ -251,15 +348,29 @@ if (process.env.DATABASE_URL) {
       device_id TEXT DEFAULT NULL
     );
 
-    CREATE TABLE IF NOT EXISTS reservations (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      group_id TEXT NOT NULL UNIQUE,
-      username TEXT NOT NULL COLLATE NOCASE UNIQUE,
-      device_id TEXT NOT NULL UNIQUE,
-      created_at TEXT NOT NULL,
-      FOREIGN KEY(group_id) REFERENCES groups(id)
-    );
-  `);
+            CREATE TABLE IF NOT EXISTS reservations (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          group_id TEXT NOT NULL UNIQUE,
+          username TEXT NOT NULL COLLATE NOCASE UNIQUE,
+          device_id TEXT NOT NULL UNIQUE,
+          created_at TEXT NOT NULL,
+          FOREIGN KEY(group_id) REFERENCES groups(id)
+        );
+
+        CREATE TABLE IF NOT EXISTS assigned_users (
+          username TEXT PRIMARY KEY,
+          source TEXT NOT NULL DEFAULT 'github',
+          updated_at TEXT NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS issue_states (
+          repo TEXT NOT NULL,
+          number INTEGER NOT NULL,
+          state TEXT NOT NULL,
+          updated_at TEXT NOT NULL,
+          PRIMARY KEY (repo, number)
+        );
+      `);
 
   const insertGroupStmt = db.prepare(`
     INSERT OR IGNORE INTO groups (id, group_name, repo, repo_short, issues_json, count)
@@ -270,10 +381,71 @@ if (process.env.DATABASE_URL) {
     insertGroupStmt.run(item.id, item.group_name, item.repo, item.repo_short, JSON.stringify(item.issues), item.count);
   }
 
+  if (db.prepare('SELECT COUNT(*) AS c FROM assigned_users').get().c === 0) {
+    const seedAssigned = db.prepare(
+      `INSERT INTO assigned_users (username, source, updated_at) VALUES (?, 'seed', ?)
+       ON CONFLICT (username) DO NOTHING`
+    );
+    const seededAt = new Date().toISOString();
+    for (const u of readAssignedSeed()) seedAssigned.run(u, seededAt);
+    console.log(`Seeded ${readAssignedSeed().length} assigned usernames from assigned_users.json`);
+  }
+
   dbAdapter = {
     type: 'sqlite',
     async init() {
       console.log(`Connected to SQLite at ${dbPath}`);
+    },
+
+    _assigned: null,
+    _assignedAt: 0,
+
+    async getAssignedSet() {
+      const now = Date.now();
+      if (this._assigned && now - this._assignedAt < ASSIGNED_TTL_MS) return this._assigned;
+      const rows = db.prepare('SELECT username FROM assigned_users').all();
+      this._assigned = new Set(rows.map(r => r.username));
+      this._assignedAt = now;
+      return this._assigned;
+    },
+
+    async setGithubAssignments(usernames) {
+      const nowIso = new Date().toISOString();
+      db.exec('BEGIN TRANSACTION;');
+      try {
+        db.prepare("DELETE FROM assigned_users WHERE source = 'github'").run();
+        const ins = db.prepare(
+          `INSERT INTO assigned_users (username, source, updated_at) VALUES (?, 'github', ?)
+           ON CONFLICT (username) DO UPDATE SET source = 'github', updated_at = excluded.updated_at`
+        );
+        for (const u of usernames) ins.run(u, nowIso);
+        db.exec('COMMIT;');
+      } catch (e) {
+        db.exec('ROLLBACK;');
+        throw e;
+      }
+      this._assigned = null;
+      this._assignedAt = 0;
+    },
+    async getIssueStates() {
+      const rows = db.prepare('SELECT repo, number, state FROM issue_states').all();
+      return new Map(rows.map(r => [issueStateKey(r.repo, r.number), r.state]));
+    },
+    async setIssueStates(entries) {
+      if (!entries.length) return;
+      const nowIso = new Date().toISOString();
+      const ins = db.prepare(
+        `INSERT INTO issue_states (repo, number, state, updated_at) VALUES (?, ?, ?, ?)
+         ON CONFLICT (repo, number) DO UPDATE SET state = excluded.state, updated_at = excluded.updated_at`
+      );
+      db.exec('BEGIN TRANSACTION;');
+      try {
+        for (const e of entries) ins.run(e.repo, e.number, e.state, nowIso);
+        db.exec('COMMIT;');
+      } catch (err) {
+        db.exec('ROLLBACK;');
+        throw err;
+      }
     },
     async getGroups() {
       const rows = db.prepare(`
@@ -287,7 +459,7 @@ if (process.env.DATABASE_URL) {
       }));
     },
     async getUserStatus(username, deviceId) {
-      const assigned = getAssignedUsersSet();
+      const assigned = await this.getAssignedSet();
       if (deviceId) {
         const dev = db.prepare(`
           SELECT r.*, g.group_name, g.repo, g.issues_json
@@ -341,7 +513,7 @@ if (process.env.DATABASE_URL) {
       };
     },
     async getAdminReservations() {
-      const assigned = getAssignedUsersSet();
+      const assigned = await this.getAssignedSet();
       const rows = db.prepare(`
         SELECT r.id as reservation_id, r.group_id, g.group_name, g.repo, g.issues_json, r.username, r.device_id, r.created_at
         FROM reservations r JOIN groups g ON r.group_id = g.id ORDER BY r.created_at DESC
@@ -380,7 +552,7 @@ if (process.env.DATABASE_URL) {
 }
 
 // App middlewares & routes
-app.use(express.json());
+app.use(express.json({ verify: (req, res, buf) => { req.rawBody = buf; } }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // SSE
@@ -408,7 +580,7 @@ app.get('/api/events', (req, res) => {
 // GET /api/groups
 app.get('/api/groups', async (req, res) => {
   try {
-    const groups = await dbAdapter.getGroups();
+    const groups = await decorateMany(await dbAdapter.getGroups());
     res.json({ success: true, groups });
   } catch (err) {
     console.error('getGroups error:', err);
@@ -489,7 +661,17 @@ app.post('/api/book', async (req, res) => {
 app.get('/api/admin/reservations', async (req, res) => {
   try {
     const data = await dbAdapter.getAdminReservations();
-    res.json({ success: true, ...data });
+    const reservations = await decorateMany(data.reservations);
+    res.json({
+      success: true,
+      ...data,
+      reservations,
+      total_assigned: reservations.filter(r => r.is_assigned).length,
+      total_unassigned: reservations.filter(r => !r.is_assigned).length,
+      total_completed: reservations.filter(r => r.completion === 'completed').length,
+      // A group whose issues are all closed is finished work, not pending work.
+      total_pending: reservations.filter(r => !r.is_assigned && r.completion !== 'completed').length
+    });
   } catch (err) {
     console.error('adminReservations error:', err);
     res.status(500).json({ success: false, error: err.message });
@@ -514,10 +696,225 @@ app.post('/api/admin/release', async (req, res) => {
   }
 });
 
+// --- GitHub assignment sync -------------------------------------------------
+// A booking counts as assigned when the booked contributor is themselves among
+// the assignees of at least one of their issues. Issue ownership by some
+// other account does not count. Results are stored in assigned_users, so they
+// survive redeploys and restarts.
+//
+// Issue open/closed state is stored in issue_states. Closed issues are marked,
+// never deleted: closing is the outcome we want, and a group's record must not
+// vanish once the work is finished.
+const GH_API_BASE = process.env.GITHUB_API_BASE || 'https://api.github.com';
+const SYNC_INTERVAL_MS = Math.max(60 * 1000, parseInt(process.env.SYNC_INTERVAL_MS, 10) || 30 * 60 * 1000);
+
+function issueStateKey(repo, number) {
+  return `${String(repo).toLowerCase()}#${number}`;
+}
+
+// Attach GitHub state to a group or reservation so the UI can mark closed
+// issues and completed groups.
+function decorateGroup(group, stateMap) {
+  const issues = (group.issues || []).map(i => ({
+    ...i,
+    state: stateMap.get(issueStateKey(group.repo, i.number)) || null
+  }));
+  const total = issues.length;
+  const closed = issues.filter(i => i.state === 'closed').length;
+  let completion = null;
+  if (total > 0) {
+    if (closed === total) completion = 'completed';
+    else if (closed > 0) completion = 'partial';
+    else if (issues.every(i => i.state === 'open')) completion = 'open';
+  }
+  return { ...group, issues, issues_total: total, issues_closed: closed, completion };
+}
+
+async function decorateMany(groups) {
+  const stateMap = await dbAdapter.getIssueStates();
+  return groups.map(g => decorateGroup(g, stateMap));
+}
+
+async function ghGet(p) {
+  const res = await fetch(`${GH_API_BASE}${p}`, {
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      Accept: 'application/vnd.github+json',
+      'User-Agent': 'wagmi-issues-scheduler'
+    }
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+async function mapLimit(items, limit, fn) {
+  const queue = [...items];
+  const workers = Array.from({ length: Math.min(limit, queue.length) }, async () => {
+    while (queue.length) await fn(queue.shift());
+  });
+  await Promise.all(workers);
+}
+
+async function syncAssignedFromGitHub() {
+  if (!process.env.GITHUB_TOKEN) {
+    throw new Error('GITHUB_TOKEN is not configured on the server');
+  }
+  const groups = await dbAdapter.getGroups();
+  const booked = groups.filter(g => g.booked_by && Array.isArray(g.issues) && g.issues.length);
+
+  const found = [];
+  const errors = [];
+  const states = new Map();
+  let fetched = 0;
+  let issuesClosed = 0;
+  let groupsAssigned = 0;
+  let groupsAssignedToOthers = 0;
+  let groupsCompleted = 0;
+  let groupsPartial = 0;
+
+  await mapLimit(booked, 5, async (g) => {
+    const me = String(g.booked_by).toLowerCase();
+    let assignedToMe = false;
+    let assignedToAnyone = false;
+    let closedHere = 0;
+    let seenHere = 0;
+
+    for (const issue of g.issues) {
+      try {
+        const data = await ghGet(`/repos/${g.repo}/issues/${issue.number}`);
+        fetched += 1;
+        seenHere += 1;
+        // Closed issues keep their assignees, so they still count as evidence
+        // of assignment. They are recorded as closed rather than removed.
+        const state = data.state === 'closed' ? 'closed' : 'open';
+        if (state === 'closed') { closedHere += 1; issuesClosed += 1; }
+        states.set(issueStateKey(g.repo, issue.number), {
+          repo: String(g.repo).toLowerCase(), number: issue.number, state
+        });
+        const owners = (data.assignees || []).map(a => String(a.login).toLowerCase());
+        if (owners.length) assignedToAnyone = true;
+        if (owners.includes(me)) assignedToMe = true;
+      } catch (err) {
+        errors.push(`${g.repo}#${issue.number}: ${err.message}`);
+      }
+    }
+
+    if (seenHere > 0 && closedHere === g.issues.length) groupsCompleted += 1;
+    else if (closedHere > 0) groupsPartial += 1;
+
+    if (assignedToMe) {
+      groupsAssigned += 1;
+      found.push(me);
+    } else if (assignedToAnyone) {
+      groupsAssignedToOthers += 1;
+    }
+  });
+
+  // A revoked token or a rate limit must never erase real assignment data, so
+  // a sync only writes when it could actually read GitHub.
+  if (fetched === 0) {
+    throw new Error(`Could not read any issue from GitHub (${errors[0] || 'no issues fetched'}); kept previous state.`);
+  }
+  if (errors.length / fetched > 0.1) {
+    throw new Error(`GitHub lookups failed for ${errors.length}/${fetched} issues; kept previous state. First: ${errors[0]}`);
+  }
+
+  await dbAdapter.setIssueStates([...states.values()]);
+  const usernames = [...new Set(found)];
+  await dbAdapter.setGithubAssignments(usernames);
+  return {
+    groups_checked: booked.length,
+    groups_assigned: groupsAssigned,
+    groups_assigned_to_others: groupsAssignedToOthers,
+    groups_completed: groupsCompleted,
+    groups_partial: groupsPartial,
+    assigned_users: usernames.length,
+    issues_checked: fetched,
+    issues_closed: issuesClosed,
+    users: usernames.sort(),
+    errors
+  };
+}
+
+// One reconcile at a time; a burst of webhooks collapses into one queued run.
+let syncInFlight = null;
+let syncQueued = false;
+
+async function runSync(reason) {
+  if (syncInFlight) {
+    syncQueued = true;
+    return syncInFlight;
+  }
+  syncInFlight = (async () => {
+    try {
+      const result = await syncAssignedFromGitHub();
+      console.log(`[SYNC:${reason}] ${result.assigned_users} contributor(s) assigned across ${result.groups_assigned}/${result.groups_checked} booked group(s); ${result.issues_closed}/${result.issues_checked} issue(s) closed; ${result.groups_completed} completed, ${result.groups_partial} partial; ${result.errors.length} lookup error(s)`);
+      return result;
+    } catch (err) {
+      console.error(`[SYNC:${reason}] skipped: ${err.message}`);
+      throw err;
+    } finally {
+      syncInFlight = null;
+      if (syncQueued) {
+        syncQueued = false;
+        setTimeout(() => { runSync('queued').catch(() => {}); }, 5000).unref?.();
+      }
+    }
+  })();
+  return syncInFlight;
+}
+
+// POST /api/admin/sync-assigned (manual trigger)
+app.post('/api/admin/sync-assigned', async (req, res) => {
+  try {
+    const result = await runSync('manual');
+    res.json({ success: true, ...result });
+  } catch (err) {
+    console.error('syncAssigned error:', err.message);
+    res.status(503).json({ success: false, error: err.message });
+  }
+});
+
+// POST /api/admin/gh-webhook (GitHub `issues` / `issue_comment` events)
+// The shared secret is mandatory: an unauthenticated caller could otherwise
+// make the deployment fan out hundreds of API calls per request.
+app.post('/api/admin/gh-webhook', (req, res) => {
+  const secret = process.env.GITHUB_WEBHOOK_SECRET;
+  if (!secret) {
+    return res.status(503).json({ success: false, error: 'GITHUB_WEBHOOK_SECRET is not configured on the server' });
+  }
+
+  const provided = Buffer.from(String(req.headers['x-hub-signature-256'] || ''));
+  const expected = Buffer.from('sha256=' + crypto.createHmac('sha256', secret).update(req.rawBody || Buffer.alloc(0)).digest('hex'));
+  if (provided.length !== expected.length || !crypto.timingSafeEqual(provided, expected)) {
+    return res.status(401).json({ success: false, error: 'Invalid webhook signature' });
+  }
+
+  const event = String(req.headers['x-github-event'] || 'unknown');
+  if (event === 'ping') return res.json({ success: true, pong: true });
+  if (!process.env.GITHUB_TOKEN) {
+    return res.status(503).json({ success: false, error: 'GITHUB_TOKEN is not configured on the server' });
+  }
+
+  // Acknowledge immediately: GitHub gives us 10s and a reconcile is hundreds
+  // of API calls.
+  res.status(202).json({ success: true, queued: true, event });
+  runSync(`webhook:${event}`).catch(() => {});
+});
+
 // Start server
 (async () => {
   await dbAdapter.init();
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`Issue Scheduler Server running on http://localhost:${PORT} [${dbAdapter.type.toUpperCase()}]`);
   });
+
+  if (process.env.GITHUB_TOKEN) {
+    runSync('startup').catch(() => {});
+  } else {
+    console.log('[SYNC] GITHUB_TOKEN not set: automatic sync disabled, /api/admin/sync-assigned returns 503');
+  }
+  const reconcile = setInterval(() => { runSync('interval').catch(() => {}); }, SYNC_INTERVAL_MS);
+  reconcile.unref();
+  console.log(`[SYNC] Reconciling assigned status and issue state from GitHub every ${Math.round(SYNC_INTERVAL_MS / 60000)} min`);
 })();

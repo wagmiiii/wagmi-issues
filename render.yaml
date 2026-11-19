@@ -10,3 +10,9 @@ services:
         value: 10000
       - key: NODE_ENV
         value: production
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_WEBHOOK_SECRET
+        sync: false
+      - key: SYNC_INTERVAL_MS
+        value: 1800000

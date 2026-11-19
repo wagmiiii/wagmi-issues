@@ -103,6 +103,11 @@ npm start
 | :--- | :--- | :--- |
 | `PORT` | `3000` | Port the HTTP server listens on |
 | `DB_PATH` | `./scheduler.db` | Path to persistent SQLite database file |
+| `DATABASE_URL` | *(unset)* | PostgreSQL connection string (Neon). When set, Postgres is used instead of SQLite |
+| `GITHUB_TOKEN` | *(unset)* | PAT used to read issue assignees/state. Without it, assignment sync is disabled and returns 503 |
+| `GITHUB_WEBHOOK_SECRET` | *(unset)* | Shared secret for `POST /api/admin/gh-webhook`. Without it the webhook returns 503 |
+| `SYNC_INTERVAL_MS` | `1800000` | Background reconcile period (minimum 60000) |
+| `GITHUB_API_BASE` | `https://api.github.com` | Override for local testing only |
 
 ---
 
@@ -119,6 +124,38 @@ Maintainers can view live reservations in two ways:
    # Direct SQLite Query:
    sqlite3 scheduler.db "SELECT * FROM reservations;"
    ```
+
+---
+
+## 6b. Assigned Status & Closed Issues (automatic)
+
+`is_assigned` is **not** read from a static file any more. The server derives it
+from GitHub and stores it in the `assigned_users` table:
+
+* A booking counts as **assigned** when the booked contributor is themselves
+  among the assignees of at least one of their issues. Issues assigned only to
+  someone else do not mark the booker.
+* Closed issues **keep counting** as evidence of assignment and are never
+  deleted. Their state is stored in `issue_states`, and the registry page marks
+  them (struck-through issue number, plus `x/y closed` or `COMPLETED`).
+* `completion` on every group is `completed` (all issues closed), `partial`
+  (some closed) or `open`. Groups that are fully closed are excluded from the
+  *Pending Assignment* metric — finished work is not pending work.
+
+### When does it sync?
+
+1. **On startup**, if `GITHUB_TOKEN` is set.
+2. **Every `SYNC_INTERVAL_MS`** (default 30 min) as a reconcile.
+3. **On a GitHub webhook** (recommended): repo → Settings → Webhooks → Add:
+   * Payload URL: `https://<your-host>/api/admin/gh-webhook`
+   * Content type: `application/json`
+   * Secret: same value as `GITHUB_WEBHOOK_SECRET`
+   * Events: *Issues* and *Issue comments*
+4. **Manually:** `curl -X POST https://<your-host>/api/admin/sync-assigned`
+
+A sync only writes when it could actually read GitHub: if every lookup fails, or
+more than 10% error, it aborts and keeps the previous state, so a revoked token
+or an exhausted rate limit can never wipe the registry.
 
 ---
 
