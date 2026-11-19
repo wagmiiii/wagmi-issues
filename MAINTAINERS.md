@@ -141,6 +141,10 @@ from GitHub and stores it in the `assigned_users` table:
 * `completion` on every group is `completed` (all issues closed), `partial`
   (some closed) or `open`. Groups that are fully closed are excluded from the
   *Pending Assignment* metric — finished work is not pending work.
+* When a booking's issues are assigned on GitHub to **somebody other than the
+  booker**, the row says `TAKEN BY @who` instead of `PENDING` and drops out of
+  the pending count. The booking itself is kept (it is a record of what
+  happened), but it no longer reads as work waiting to start.
 
 ### When does it sync?
 
