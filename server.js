@@ -79,17 +79,17 @@ if (process.env.DATABASE_URL) {
       // Databases created before assignees were recorded need the column added.
       await pool.query('ALTER TABLE issue_states ADD COLUMN IF NOT EXISTS assignees TEXT');
 
-      // Seed missing groups if needed
-      const countRes = await pool.query('SELECT COUNT(*) FROM groups');
-      if (parseInt(countRes.rows[0].count) < seedData.length) {
-        for (const item of seedData) {
-          await pool.query(
-            `INSERT INTO groups (id, group_name, repo, repo_short, issues_json, count)
-             VALUES ($1, $2, $3, $4, $5, $6)
-             ON CONFLICT (id) DO NOTHING`,
-            [item.id, item.group_name, item.repo, item.repo_short, JSON.stringify(item.issues), item.count]
-          );
-        }
+      // Seed or sync groups if needed
+      for (const item of seedData) {
+        await pool.query(
+          `INSERT INTO groups (id, group_name, repo, repo_short, issues_json, count)
+           VALUES ($1, $2, $3, $4, $5, $6)
+           ON CONFLICT (id) DO UPDATE SET
+             group_name = EXCLUDED.group_name,
+             issues_json = EXCLUDED.issues_json,
+             count = EXCLUDED.count`,
+          [item.id, item.group_name, item.repo, item.repo_short, JSON.stringify(item.issues), item.count]
+        );
       }
       const assignedCount = await pool.query('SELECT COUNT(*) FROM assigned_users');
       if (parseInt(assignedCount.rows[0].count, 10) === 0) {
@@ -387,8 +387,12 @@ if (process.env.DATABASE_URL) {
   }
 
   const insertGroupStmt = db.prepare(`
-    INSERT OR IGNORE INTO groups (id, group_name, repo, repo_short, issues_json, count)
+    INSERT INTO groups (id, group_name, repo, repo_short, issues_json, count)
     VALUES (?, ?, ?, ?, ?, ?)
+    ON CONFLICT (id) DO UPDATE SET
+      group_name = excluded.group_name,
+      issues_json = excluded.issues_json,
+      count = excluded.count
   `);
 
   for (const item of seedData) {

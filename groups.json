@@ -1037,13 +1037,9 @@
       {
         "number": 672,
         "url": "https://github.com/accensa/x402-facilitator-stellar/issues/672"
-      },
-      {
-        "number": 673,
-        "url": "https://github.com/accensa/x402-facilitator-stellar/issues/673"
       }
     ],
-    "count": 3
+    "count": 2
   },
   {
     "id": "x402-facilitator-stellar-group-9",
@@ -1052,19 +1048,15 @@
     "repo_short": "x402-facilitator-stellar",
     "issues": [
       {
+        "number": 673,
+        "url": "https://github.com/accensa/x402-facilitator-stellar/issues/673"
+      },
+      {
         "number": 674,
         "url": "https://github.com/accensa/x402-facilitator-stellar/issues/674"
-      },
-      {
-        "number": 675,
-        "url": "https://github.com/accensa/x402-facilitator-stellar/issues/675"
-      },
-      {
-        "number": 676,
-        "url": "https://github.com/accensa/x402-facilitator-stellar/issues/676"
       }
     ],
-    "count": 3
+    "count": 2
   },
   {
     "id": "x402-facilitator-stellar-group-10",
@@ -1751,6 +1743,23 @@
       {
         "number": 775,
         "url": "https://github.com/accensa/x402-facilitator-stellar/issues/775"
+      }
+    ],
+    "count": 2
+  },
+  {
+    "id": "x402-facilitator-stellar-group-43",
+    "group_name": "x402-facilitator-stellar - Group 43",
+    "repo": "accensa/x402-facilitator-stellar",
+    "repo_short": "x402-facilitator-stellar",
+    "issues": [
+      {
+        "number": 675,
+        "url": "https://github.com/accensa/x402-facilitator-stellar/issues/675"
+      },
+      {
+        "number": 676,
+        "url": "https://github.com/accensa/x402-facilitator-stellar/issues/676"
       }
     ],
     "count": 2
